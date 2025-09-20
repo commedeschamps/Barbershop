@@ -1,0 +1,22 @@
+.container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .item {
+            padding: 40px;
+            font-size: 25px;
+        }
+
+        .item_1 {
+
+        }
+
+        .item_2 {
+
+        }
+        
+        .item_3 {
+
+        }

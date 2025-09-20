@@ -1,22 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+
+body {
+    background-image: url('uslugi_bgimage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.haircut_bg{
+    
+    background-image: url('haircut_bg.png');
+    border-left: 5px solid black;
+    height: 300px;
+    width: 450px;
+    /* background-attachment: fixed; */
+    
+}
+
 .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: 200;
+    font-family: 'Sansita Swashed', cursive;
+}
 
-        .item {
-            padding: 40px;
-            font-size: 25px;
-        }
 
-        .item_1 {
 
-        }
+.item {
+    padding: 40px;
+    font-size: 40px;
+}
 
-        .item_2 {
 
-        }
-        
-        .item_3 {
+.item_1 {
+    color: black;
+    background-image: url('haircut_bg.png');
+    text-align: center;
+    width: 250px;
+    height: 550px;
+    border-radius: 15px;
 
-        }
+}
+.item_1:hover{
+    color: rebeccapurple;
+}
+
+.item_2 {
+    color: black;
+    background-image: url('haircut_bg.png');
+    text-align: center;
+    width: 250px;
+    height: 550px;
+    border-radius: 15px;
+
+}
+.item_2:hover{
+    color: rebeccapurple;
+}
+.item_3 {
+    color: black;
+    background-image: url('haircut_bg.png');
+    text-align: center;
+    width: 250px;
+    height: 550px;
+    border-radius: 15px;
+
+}
+.item_3:hover{
+    color:rebeccapurple;
+}

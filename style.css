@@ -9,11 +9,7 @@ body {
     padding: 0;
 }
 
-body.services-page {
-    background-image: url('uslugi_bgimage.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 h1 {
     color: white;
@@ -139,91 +135,190 @@ p {
     width: 450px;
 }
 
-/* ЧАСТЬ ДАМИРА!!! */
+/* ЧАСТЬ ДАМИРА!!! START*/
+
+
+.services_body {
+    background-image: url('uslugi_bgimage.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 
 
 .container_services {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-weight: 30;
+    font-weight: 300;
     font-family: 'Sansita', cursive;
 }
 
 
-.item {
-    padding: 40px;
-    font-size: 40px;
-}
+/* .item {
+    
+} */
 
 .p_1_services{
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
 }
 .p_1_services:hover{
-    color:orange
+    color:#ff6b35;
 }
 
 .item_1_services {
-    color: black;
+    color: #ff6b35;
     background-color: #2a2a2a;
-    text-align: center;
-    width: 350px;
-    height: 550px;
-    border: 3px solid rgb(255, 167, 4);
+    width: 430px;
+    height:870px;
+    border: 3px solid #ff6b35;
     border-radius: 15px;
 }
 
-.item_1_services:hover {
-    color: rebeccapurple;
+.h5_in_service{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 25px;
 }
 
+.item_1_services p{
+    font-size: 19px;
+    margin-left: 25px;
+}
+
+
+
+.classic p::after{
+    content: "...........................................................12$";
+}
+
+.classic:hover{
+    background-color:rgb(30, 30, 30);
+    border-radius: 15px;
+    width: 410px;
+}
+
+.modern p::after{
+    content: "...........................................................15$";
+}
+
+.modern:hover{
+    background-color: rgb(30, 30, 30);
+    border-radius: 15px;
+    width: 410px;
+}
+
+.promotion_f p::after{
+    content: "...........................................................-50%";
+}
+
+.promotion_f:hover{
+    background-color:rgb(30, 30, 30);
+    border-radius: 15px;
+    width: 410px;
+}
+
+.promotion_s p::after{
+    content:"...........................................................-40%";
+
+}
+
+.promotion_s:hover{
+    background-color:rgb(30, 30, 30) ;
+    border-radius: 15px;
+    width:410px;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+
+
 .p_2_services{
-    font-size:35px;
+    font-size:30px;
     text-align: center;
 }
 .p_2_services:hover{
-    color:orange;
+    color:#ff6b35;
 }
 
 .item_2_services {
-    color: black;
+    color: #ff6b35;
     background-color:#2a2a2a;
-    text-align: center;
-    width: 350px;
-    height: 550px;
-    border: 3px solid rgb(255, 167, 4);
+    width: 430px;
+    height: 1150px;
+    border: 3px solid #ff6b35;
     border-radius: 15px;
 }
 
-.item_2_services:hover {
-    color: rebeccapurple;
+.item_2_services p{
+    font-size: 19px;
+    margin-left: 25px;
 }
 
+
+.cleaning p::after{
+    content: ".........................................................10$";
+}
+
+.cleaning:hover{
+    background-color: rgb(30, 30, 30);
+    border-radius:15px;
+    width: 415px;
+}
+
+.relax p::after{
+    content:".........................................................12$";
+}
+.relax:hover{
+    background-color: rgb(30, 30, 30);
+    border-radius:15px;
+    width:415px;
+}
+
+.sc p::after{
+    content: ".........................................................18$";
+}
+
+.sc:hover{
+    background-color: rgb(30, 30, 30);
+    border-radius:15px;
+    width:415px;
+}
+
+.cws p::after{
+    content: ".........................................................7$";
+}
+
+.cws:hover{
+    background-color: rgb(30, 30, 30);
+    border-radius:15px;
+    width:430px;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
 .p_3_services{
-    font-size: 35px;
+    font-size: 30px;
     text-align:center;
 }
 
 .p_3_services:hover{
-    color:orange;
+    color:#ff6b35;
 }
 
 .item_3_services {
-    color: black;
+    color: #ff6b35;
     background-color: #2a2a2a;
     text-align: center;
-    width: 350px;
-    height: 550px;
-    border: 3px solid rgb(255, 167, 4);
+    width: 430px;
+    height: 870px;
+    border: 3px solid #ff6b35;
     border-radius: 15px;
 }
 
-.item_3_services:hover {
-    color: rebeccapurple;
-}
 
-/* ЧАСТЬ ДАМИРА!!! */
+/* ЧАСТЬ ДАМИРА!!! FINISH */
 
 nav a {
     color: white;

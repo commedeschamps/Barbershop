@@ -141,11 +141,12 @@ p {
 
 /* ЧАСТЬ ДАМИРА!!! */
 
-.container {
+
+.container_services {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    font-weight: 200;
+    justify-content: space-evenly;
+    font-weight: 30;
     font-family: 'Sansita', cursive;
 }
 
@@ -155,42 +156,70 @@ p {
     font-size: 40px;
 }
 
-.item_1 {
-    color: black;
-    background-image: url('haircut_bg.png');
+.p_1_services{
+    font-size: 35px;
     text-align: center;
-    width: 250px;
+}
+.p_1_services:hover{
+    color:orange
+}
+
+.item_1_services {
+    color: black;
+    background-color: #2a2a2a;
+    text-align: center;
+    width: 350px;
     height: 550px;
+    border: 3px solid rgb(255, 167, 4);
     border-radius: 15px;
 }
 
-.item_1:hover {
+.item_1_services:hover {
     color: rebeccapurple;
 }
 
-.item_2 {
-    color: black;
-    background-image: url('haircut_bg.png');
+.p_2_services{
+    font-size:35px;
     text-align: center;
-    width: 250px;
+}
+.p_2_services:hover{
+    color:orange;
+}
+
+.item_2_services {
+    color: black;
+    background-color:#2a2a2a;
+    text-align: center;
+    width: 350px;
     height: 550px;
+    border: 3px solid rgb(255, 167, 4);
     border-radius: 15px;
 }
 
-.item_2:hover {
+.item_2_services:hover {
     color: rebeccapurple;
 }
 
-.item_3 {
+.p_3_services{
+    font-size: 35px;
+    text-align:center;
+}
+
+.p_3_services:hover{
+    color:orange;
+}
+
+.item_3_services {
     color: black;
-    background-image: url('haircut_bg.png');
+    background-color: #2a2a2a;
     text-align: center;
-    width: 250px;
+    width: 350px;
     height: 550px;
+    border: 3px solid rgb(255, 167, 4);
     border-radius: 15px;
 }
 
-.item_3:hover {
+.item_3_services:hover {
     color: rebeccapurple;
 }
 

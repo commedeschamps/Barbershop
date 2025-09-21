@@ -140,6 +140,8 @@ p {
 
 .services_body {
     background-image: url('uslugi_bgimage.png');
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(3px); 
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -310,11 +312,25 @@ p {
 .item_3_services {
     color: #ff6b35;
     background-color: #2a2a2a;
-    text-align: center;
     width: 430px;
-    height: 870px;
+    height: 650px;
     border: 3px solid #ff6b35;
     border-radius: 15px;
+}
+
+.item_3_services p{
+    font-size: 19px;
+    margin-left: 25px;
+}
+
+.beard p:after{
+    content: ".........................................................15$";
+}
+
+.beard:hover{
+    background-color: rgb(30, 30, 30);
+    border-radius:15px;
+    width:415px;
 }
 
 

@@ -57,13 +57,13 @@ p {
     padding: 0 20px;
 }
 
-.container.services-container {
+/* .container.services-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-weight: 200;
     font-family: 'Sansita', cursive;
-}
+} */
 
 .header-nav {
     display: flex;
@@ -139,6 +139,17 @@ p {
     width: 450px;
 }
 
+/* ЧАСТЬ ДАМИРА!!! */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: 200;
+    font-family: 'Sansita', cursive;
+}
+
+
 .item {
     padding: 40px;
     font-size: 40px;
@@ -182,6 +193,8 @@ p {
 .item_3:hover {
     color: rebeccapurple;
 }
+
+/* ЧАСТЬ ДАМИРА!!! */
 
 nav a {
     color: white;

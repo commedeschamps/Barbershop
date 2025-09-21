@@ -2,23 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "shortcut icon" href = "Barbershop_icon.png" type = "image/x-icon">
-    <link rel = "stylesheet" href = "style.css">
-    <title>BarberShop</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop Elegance - Professional Men's Grooming</title>
+    <!-- Step 1: Link external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
-    <div class = "container">
-        <div class = "item item_1">Стрижка</div><br>
-        <!-- <div class = "haircut_bg">Мужская стрижка</div> -->
-        <br>
-        <br>
-        <div class = "item item_2">Уход за лицом</div>
-        <div class = "item item_3">Стрижка и оформление бороды</div>
-    </div>
+    <!-- Header with ID selector -->
+    <header id="main-header">
+        <nav class="header-nav container">
+            <div class="logo">
+                <img src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
+                Barbershop Elegance
+            </div>
+            <!-- Step 6: Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="masters.html">Masters</a></li>
+                <li><a href="examples.html">Examples</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Hero Section with ID -->
+    <section id="hero-section">
+        <div class="container">
+            <h1><i class="fas fa-crown" style="margin-right: 15px;"></i>Welcome to Barbershop Elegance</h1>
+            <p><i class="fas fa-star" style="margin-right: 8px; color: #ff6b35;"></i>Men's haircuts and beard grooming at the highest level</p>
+            <!-- Step 7: Circular image using border-radius: 50% -->
+            <div class="hero-image">
+                <i class="fas fa-scissors"></i>
+            </div>
+            <a href="booking.html" class="btn-primary"><i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book Appointment</a>
+        </div>
+    </section>
 
-    
+    <!-- About Section -->
+    <section id="about-section">
+        <div class="container">
+            <h2><i class="fas fa-store" style="margin-right: 10px;"></i>About Our Barbershop</h2>
+            <p>Barbershop Elegance has been serving gentlemen since 2010, combining traditional barbering techniques with modern style. Our shop offers a unique atmosphere where classic craftsmanship meets contemporary comfort.</p>
+            <p>Step into our elegant space and experience the art of grooming in an environment designed for the modern gentleman who appreciates quality, precision, and timeless style.</p>
+            <!-- Step 7: Image styling -->
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2><i class="fas fa-concierge-bell" style="margin-right: 10px;"></i>Popular Services</h2>
+            <!-- Step 5: Box Model with margin, padding, border -->
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-cut" style="font-size: 2rem; color: #ff6b35; margin-bottom: 1rem;"></i>
+                    <h3>Classic Haircut</h3>
+                    <p>Traditional barbering with modern precision</p>
+                    <span style="font-size: 1.2rem; font-weight: bold; color: #ff6b35;">$30</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spa" style="font-size: 2rem; color: #ff6b35; margin-bottom: 1rem;"></i>
+                    <h3>Straight Razor Shave</h3>
+                    <p>Traditional hot towel and straight razor experience</p>
+                    <span style="font-size: 1.2rem; font-weight: bold; color: #ff6b35;">$25</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-beard" style="font-size: 2rem; color: #ff6b35; margin-bottom: 1rem;"></i>
+                    <h3>Beard Trim</h3>
+                    <p>Professional beard shaping and styling</p>
+                    <span style="font-size: 1.2rem; font-weight: bold; color: #ff6b35;">$20</span>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="services.html" class="btn-secondary"><i class="fas fa-list" style="margin-right: 8px;"></i>All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section style="padding: 60px 20px; background-color: #2a2a2a;">
+        <div class="container">
+            <h2><i class="fas fa-star" style="margin-right: 10px;"></i>Customer Reviews</h2>
+            <!-- Reviews Grid -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0;">
+                <!-- Review 1 -->
+                <div style="background: #333333; padding: 25px; border-radius: 10px; max-width: 300px; border: 2px solid #ff6b35;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; background-color: #ff6b35; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-user" style="color: white; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: white; margin: 0;">Alexander</h4>
+                            <div style="color: #ff6b35;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #e0e0e0; font-style: italic;">"Excellent service! The barbers are true professionals. Got exactly the haircut I wanted. Will definitely come back!"</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div style="background: #333333; padding: 25px; border-radius: 10px; max-width: 300px; border: 2px solid #ff6b35;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; background-color: #ff6b35; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-user" style="color: white; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: white; margin: 0;">Dmitry</h4>
+                            <div style="color: #ff6b35;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #e0e0e0; font-style: italic;">"The classic straight razor shave is absolutely incredible! The atmosphere of the salon is just amazing. Highly recommend to everyone!"</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div style="background: #333333; padding: 25px; border-radius: 10px; max-width: 300px; border: 2px solid #ff6b35;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; background-color: #ff6b35; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-user" style="color: white; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: white; margin: 0;">Maxim</h4>
+                            <div style="color: #ff6b35;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #e0e0e0; font-style: italic;">"Best place for beard care! The master knows his craft 100%. Fair prices, top-notch quality!"</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="reviews.html" class="btn-secondary"><i class="fas fa-comments" style="margin-right: 8px;"></i>Read More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="team-section">
+                <h4><i class="fas fa-users" style="margin-right: 10px; color: #ff6b35;"></i>Our Team</h4>
+                <p>Seidigali Rakhman, Zarkesh Damir, Aidarbek Rasul, Maratov Nurassyl (SE-2411)</p>
+            </div>
+            <div style="margin: 20px 0;">
+                <i class="fas fa-phone" style="color: #ff6b35; margin-right: 8px;"></i>
+                <span>+7 (700) 123-4567</span>
+                <span style="margin: 0 15px;">|</span>
+                <i class="fas fa-map-marker-alt" style="color: #ff6b35; margin-right: 8px;"></i>
+                <span>Astana, Kazakhstan</span>
+            </div>
+            <p><i class="fas fa-copyright" style="margin-right: 5px;"></i>2025 Barbershop Elegance. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

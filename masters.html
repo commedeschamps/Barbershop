@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Master Barbers - Barbershop Elegance</title>
+    <!-- Step 1: Link external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with ID selector -->
+    <header id="main-header">
+        <nav class="header-nav container">
+            <div class="logo">
+                <img src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
+                Barbershop Elegance
+            </div>
+            <!-- Step 6: Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="masters.html" class="active">Masters</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header Section -->
+    <section style="background-color: #2a2a2a; padding: 80px 20px; text-align: center;">
+        <div class="container">
+            <h1><i class="fas fa-users" style="margin-right: 15px; color: #ff6b35;"></i>Meet Our Master Barbers</h1>
+            <p style="font-size: 1.2rem; margin-top: 20px;">Experienced professionals dedicated to the art of classic barbering</p>
+        </div>
+    </section>
+
+    <!-- Masters Grid Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2><i class="fas fa-star" style="margin-right: 10px;"></i>Our Professional Team</h2>
+            
+            <!-- Masters Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 50px 0;">
+                
+                <!-- Master 1 -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="barber1.png" alt="Alexander Thompson - Senior Master Barber" />
+                    </div>
+                    <div class="master-info">
+                        <div class="master-content">
+                            <h3>Alexander Thompson</h3>
+                            <p class="master-title">Senior Master Barber</p>
+                            <div class="master-experience">
+                                <i class="fas fa-award" style="color: #ff6b35; margin-right: 8px;"></i>
+                                <span>15+ Years Experience</span>
+                            </div>
+                            <div class="master-specialties">
+                                <h4>Specialties:</h4>
+                                <ul>
+                                    <li><i class="fas fa-cut"></i> Classic Haircuts</li>
+                                    <li><i class="fas fa-spa"></i> Straight Razor Shaves</li>
+                                    <li><i class="fas fa-beard"></i> Beard Design</li>
+                                </ul>
+                            </div>
+                            <div class="master-bio">
+                                <p>"Barbering is not just a profession, it's an art form. I take pride in creating the perfect look for every gentleman who sits in my chair."</p>
+                            </div>
+                            <div class="master-schedule">
+                                <strong>Working Hours:</strong><br>
+                                Mon-Fri: 9:00 AM - 7:00 PM<br>
+                                Sat: 8:00 AM - 6:00 PM
+                            </div>
+                        </div>
+                        <div class="master-booking">
+                            <a href="booking.html?master=alexander" class="btn-primary">
+                                <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book with Alexander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master 2 -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="barber2.png" alt="Marcus Rodriguez - Master Stylist" />
+                    </div>
+                    <div class="master-info">
+                        <div class="master-content">
+                            <h3>Marcus Johnson</h3>
+                            <p class="master-title">Master Stylist</p>
+                            <div class="master-experience">
+                                <i class="fas fa-award" style="color: #ff6b35; margin-right: 8px;"></i>
+                                <span>12+ Years Experience</span>
+                            </div>
+                            <div class="master-specialties">
+                                <h4>Specialties:</h4>
+                                <ul>
+                                    <li><i class="fas fa-cut"></i> Modern Cuts</li>
+                                    <li><i class="fas fa-paint-brush"></i> Hair Styling</li>
+                                    <li><i class="fas fa-beard"></i> Mustache Grooming</li>
+                                </ul>
+                            </div>
+                            <div class="master-bio">
+                                <p>"I blend traditional techniques with modern trends to create unique styles that reflect each client's personality and lifestyle preferences."</p>
+                            </div>
+                            <div class="master-schedule">
+                                <strong>Working Hours:</strong><br>
+                                Tue-Sat: 10:00 AM - 8:00 PM<br>
+                                Sun: 10:00 AM - 4:00 PM
+                            </div>
+                        </div>
+                        <div class="master-booking">
+                            <a href="booking.html?master=marcus" class="btn-primary">
+                                <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book with Marcus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master 3 -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="barber3.png" alt="James Wilson - Traditional Barber" />
+                    </div>
+                    <div class="master-info">
+                        <div class="master-content">
+                            <h3>James Wilson</h3>
+                            <p class="master-title">Traditional Barber</p>
+                            <div class="master-experience">
+                                <i class="fas fa-award" style="color: #ff6b35; margin-right: 8px;"></i>
+                                <span>10+ Years Experience</span>
+                            </div>
+                            <div class="master-specialties">
+                                <h4>Specialties:</h4>
+                                <ul>
+                                    <li><i class="fas fa-spa"></i> Hot Towel Treatments</li>
+                                    <li><i class="fas fa-cut"></i> Vintage Styles</li>
+                                    <li><i class="fas fa-beard"></i> Full Beard Care</li>
+                                </ul>
+                            </div>
+                            <div class="master-bio">
+                                <p>"With years of experience, I specialize in timeless classic cuts and the finest traditional barbering services for distinguished gentlemen."</p>
+                            </div>
+                            <div class="master-schedule">
+                                <strong>Working Hours:</strong><br>
+                                Mon-Fri: 8:00 AM - 6:00 PM<br>
+                                Sat: 9:00 AM - 5:00 PM
+                            </div>
+                        </div>
+                        <div class="master-booking">
+                            <a href="booking.html?master=james" class="btn-primary">
+                                <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book with James
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Examples Section -->
+    <section id="examples" style="background-color: #333; padding: 80px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">
+                <i class="fas fa-images" style="margin-right: 10px;"></i>Our Work Examples
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                <div style="background: #1a1a1a; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    <img src="example1.png" alt="Classic Haircut Example" style="width: 100%; height: 250px; object-fit: cover;" />
+                    <div style="padding: 20px;">
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">Classic Gentleman's Cut</h3>
+                        <p>Perfect blend of traditional barbering with modern precision. Clean lines and sophisticated styling.</p>
+                        <p style="color: #ff6b35; font-style: italic; margin-top: 15px;">By Alexander Thompson</p>
+                    </div>
+                </div>
+                
+                <div style="background: #1a1a1a; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    <img src="example2.png" alt="Modern Style Example" style="width: 100%; height: 250px; object-fit: cover;" />
+                    <div style="padding: 20px;">
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">Modern Fade Style</h3>
+                        <p>Contemporary styling with expertly crafted fade and texture. Perfect for the modern gentleman.</p>
+                        <p style="color: #ff6b35; font-style: italic; margin-top: 15px;">By Marcus Johnson</p>
+                    </div>
+                </div>
+                
+                <div style="background: #1a1a1a; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    <img src="example3.png" alt="Traditional Style Example" style="width: 100%; height: 250px; object-fit: cover;" />
+                    <div style="padding: 20px;">
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">Traditional Barber Cut</h3>
+                        <p>Timeless vintage styling with attention to detail. Classic barbering at its finest.</p>
+                        <p style="color: #ff6b35; font-style: italic; margin-top: 15px;">By James Wilson</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Examples Button -->
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="examples.html" class="btn-primary" style="font-size: 1.1rem; padding: 15px 30px;">
+                    <i class="fas fa-plus-circle" style="margin-right: 10px;"></i>More Examples
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Masters Section -->
+    <section style="background-color: #2a2a2a; padding: 80px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">
+                <i class="fas fa-trophy" style="margin-right: 10px;"></i>Why Choose Our Masters?
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center; padding: 30px;">
+                    <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
+                    <h3>Certified Professionals</h3>
+                    <p>All our masters are certified and continuously trained in the latest techniques and trends.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 30px;">
+                    <i class="fas fa-clock" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
+                    <h3>Years of Experience</h3>
+                    <p>Combined experience of over 45 years in traditional and modern barbering techniques.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 30px;">
+                    <i class="fas fa-heart" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
+                    <h3>Passionate About Service</h3>
+                    <p>Each master is dedicated to providing personalized service and exceeding expectations.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 30px;">
+                    <i class="fas fa-tools" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
+                    <h3>Premium Tools</h3>
+                    <p>We use only the finest professional tools and products for the best results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment CTA -->
+    <section class="services-section">
+        <div class="container" style="text-align: center;">
+            <h2>Ready to Experience Excellence?</h2>
+            <p style="font-size: 1.2rem; margin: 30px 0;">Choose your preferred master and book your appointment today</p>
+            <a href="booking.html" class="btn-primary" style="font-size: 1.2rem; padding: 15px 30px;">
+                <i class="fas fa-calendar-plus" style="margin-right: 10px;"></i>Book Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="team-section">
+                <h4><i class="fas fa-users" style="margin-right: 10px; color: #ff6b35;"></i>Our Team</h4>
+                <p>Seidigali Rakhman, Zarkesh Damir, Aidarbek Rasul, Maratov Nurassyl (SE-2411)</p>
+            </div>
+            <div style="margin: 20px 0;">
+                <i class="fas fa-phone" style="color: #ff6b35; margin-right: 8px;"></i>
+                <span>+7 (700) 123-4567</span>
+                <span style="margin: 0 15px;">|</span>
+                <i class="fas fa-map-marker-alt" style="color: #ff6b35; margin-right: 8px;"></i>
+                <span>Astana, Kazakhstan</span>
+            </div>
+            <p><i class="fas fa-copyright" style="margin-right: 5px;"></i>2025 Barbershop Elegance. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

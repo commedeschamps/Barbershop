@@ -344,6 +344,10 @@ p {
     background-color:#2a2a2a;
 }
 
+.container_products{
+    display:grid;
+    grid-template-columns: 50px 50px 50px;
+}
 
 /* ЧАСТЬ ДАМИРА!!! FINISH */
 

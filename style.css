@@ -1,8 +1,8 @@
 /* home and services page styles */
-@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #1a1a1a;
     color: #f5f5f5;
     margin: 0;
@@ -58,7 +58,7 @@ p {
     flex-direction: row;
     justify-content: space-around;
     font-weight: 200;
-    font-family: 'Sansita', cursive;
+    font-family: 'Poppins', sans-serif;
 } */
 
 .header-nav {
@@ -152,7 +152,7 @@ p {
     flex-direction: row;
     justify-content: space-evenly;
     font-weight: 300;
-    font-family: 'Sansita', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -581,4 +581,81 @@ h2::before {
     h1 {
         font-size: 2rem;
     }
+}
+
+.reviews_body {
+    background-image: url('reviews_bg.png');
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.reviews_body {
+    background: repeating-linear-gradient(
+        45deg,
+        #1a1a1a,
+        #1a1a1a 25px,
+        #111 25px,
+        #111 50px
+    );
+    color: #f5f5f5;
+}
+
+.container_reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px;
+}
+
+.p_reviews {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ff6b35;
+}
+
+.review_item {
+    background-color: #2a2a2a;
+    border: 3px solid #ff6b35;
+    border-radius: 15px;
+    padding: 25px;
+    width: 80%;
+    max-width: 700px;
+    color: #f5f5f5;
+    transition: transform 0.2s ease;
+}
+
+.review_item:hover {
+    transform: translateY(-5px);
+    background-color: #1f1f1f;
+}
+
+.h5_in_review {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff6b35;
+}
+
+.leave_review_btn {
+    display: block;
+    margin: 30px auto 0 auto; /* top margin + center horizontally */
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.leave_review_btn:hover {
+    background-color: #e85c2b;
+    transform: scale(1.05);
 }

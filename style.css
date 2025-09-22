@@ -186,6 +186,7 @@ p {
 .item_1_services p{
     font-size: 19px;
     margin-left: 25px;
+    cursor: pointer;
 }
 
 
@@ -255,6 +256,7 @@ p {
 .item_2_services p{
     font-size: 19px;
     margin-left: 25px;
+    cursor: pointer;
 }
 
 
@@ -321,6 +323,7 @@ p {
 .item_3_services p{
     font-size: 19px;
     margin-left: 25px;
+    cursor: pointer;
 }
 
 .beard p:after{

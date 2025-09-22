@@ -401,6 +401,24 @@ p {
     margin-right: 30px;
 }
 
+.item_4_pr{
+    height:350px;
+}
+
+.item_5_pr{
+    height: 450px;
+}
+
+.pr_5_photo{
+    width:300px;
+    height: 450px;
+    border-radius: 3px;
+    justify-items: start;
+}
+
+.item_6_pr{
+    height:450px;
+}
 
 
 /* ЧАСТЬ ДАМИРА!!! FINISH */

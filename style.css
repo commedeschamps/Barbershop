@@ -342,9 +342,8 @@ p {
 
 .products_body{
     background-image: url('products_bg.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    margin: 30px;
 }
 
 

@@ -581,6 +581,14 @@ h2::before {
 }
 
 .reviews_body {
+    background-image: url('reviews_bg.png');
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.reviews_body {
     background: repeating-linear-gradient(
         45deg,
         #1a1a1a,

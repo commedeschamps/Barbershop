@@ -340,6 +340,9 @@ p {
 
 /* =============================PRODUCTS========================= */
 
+
+
+
 .container_products_pr{
     display: grid;
     grid-template-columns: 300px 700px;
@@ -350,12 +353,20 @@ p {
 }
 
 
+
+
 .item_pr{
     border: 2px solid #ff6b35;
     height: 300px;
     margin-top: 30px;
     border-radius:5px;
     position:relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-out; 
+}
+
+.item_pr:hover{
+    transform: scale(1.009);
 }
 
 .h1_pr:hover{

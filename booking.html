@@ -5,32 +5,52 @@
     <title>Barbershop Booking</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="booking-container">
-        <h1>Book Your Appointment</h1>
-        <form class="booking-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="service">Service:</label>
-            <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="haircut">Haircut</option>
-                <option value="shave">Shave</option>
-                <option value="beard-trim">Beard Trim</option>
-                <option value="combo">Haircut & Shave</option>
-            </select>
-
-            <label for="date">Date:</label>
+<body style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh;"></body>
+    <header id="main-header">
+        <nav class="header-nav container">
+            <div class="logo">
+                <img src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
+                Barbershop Elegance
+            </div>
+            <!-- Step 6: Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="masters.html">Masters</a></li>
+                <li><a href="examples.html">Examples</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="booking-container" style="display: flex; flex-direction: column; align-items: center;">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Barbershop" style="width:100%;max-width:400px;border-radius:10px;margin-bottom:20px;">
+        <h1 style="margin-bottom: 20px;">💈 Book Your Appointment 💈</h1>
+        <form class="booking-form" style="width:100%;max-width:400px;">
+            <label for="date">📅 Date:</label>
             <input type="date" id="date" name="date" required>
 
-            <label for="time">Time:</label>
+            <label for="time">⏰ Time:</label>
             <input type="time" id="time" name="time" required>
 
-            <button type="submit">Book Now</button>
+            <label for="service">✂️ Service:</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="haircut">💇 Haircut</option>
+                <option value="shave">🪒 Shave</option>
+                <option value="beard-trim">🧔 Beard Trim</option>
+                <option value="combo">💇🪒 Haircut & Shave</option>
+            </select>
+
+            <label for="name">👤 Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">📞 Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit" style="margin-top:20px;">🚀 Book Now</button>
         </form>
     </div>
 </body>

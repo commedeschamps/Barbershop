@@ -344,6 +344,7 @@ p {
     background-image: url('products_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 30px;
 }
 
 

@@ -137,6 +137,7 @@ p {
 
 /* ЧАСТЬ ДАМИРА!!! START*/
 
+/* ================================SERVICES============================== */
 
 .services_body {
     background-image: url('uslugi_bgimage.png');
@@ -334,6 +335,15 @@ p {
     background-color: rgb(30, 30, 30);
     border-radius:15px;
     width:415px;
+}
+
+
+/* =============================PRODUCTS========================= */
+
+.products_body{
+    background-image: url("products_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 

@@ -341,7 +341,7 @@ p {
 /* =============================PRODUCTS========================= */
 
 .products_body{
-    background-image: url("products_bg.jpg");
+    background-image: url('products_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }

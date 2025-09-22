@@ -7,32 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Us 💈✂️</h1>
-        <div class="contact-info">
-            <p><strong>📞 Phone:</strong> +8 (701) 924-7111</p>
-            <p><strong>📧 Email:</strong> 240115@astanait.edu.kz</p>
-            <p><strong>📍 Address:</strong> 123 Main Street, Cityville</p>
-            <p><strong>🕒 Hours:</strong> Mon-Sat: 9am - 7pm</p>
+    <div class="container" style="display: flex; flex-direction: row; gap: 40px; align-items: flex-start;">
+        <div style="flex: 1;">
+            <h1 style="text-align: left;">Contact Us 💈✂️</h1>
+            <div class="contact-info" style="margin-bottom: 30px;">
+                <p><strong>📞 Phone:</strong> +8 (701) 924-7111</p>
+                <p><strong>📧 Email:</strong> 240115@astanait.edu.kz</p>
+                <p><strong>📍 Address:</strong> 123 Main Street, Cityville</p>
+                <p><strong>🕒 Hours:</strong> Mon-Sat: 9am - 7pm</p>
+            </div>
+            <form class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message 🚀</button>
+            </form>
         </div>
-        <div class="map" style="margin: 20px 0;">
+        <div class="map" style="flex: 1; margin-top: 10px;">
             <iframe
                 src="https://www.openstreetmap.org/export/embed.html?bbox=71.419%2C51.169%2C71.429%2C51.179&amp;layer=mapnik&amp;marker=51.174%2C71.424"
-                style="border:1px solid #ccc; width:100%; height:300px;"
+                style="border:1px solid #ccc; width:100%; height:400px;"
                 allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-        <form class="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Send Message 🚀</button>
-        </form>
     </div>
 </body>
 </html>

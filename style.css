@@ -689,10 +689,18 @@ h2::before {
   min-height: 100vh;
 }
 
-.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-.main-content { grid-area: main; padding: 20px; }
-.footer { grid-area: footer; text-align: center; padding: 15px; background: #111; color: #fff; }
+.header { 
+    grid-area: header; 
+}
+.sidebar { 
+    grid-area: sidebar; 
+}
+.main-content { 
+    grid-area: main; padding: 20px; 
+}
+.footer { 
+    grid-area: footer; text-align: center; padding: 15px; background: #111; color: #fff; 
+}
 
 .reviews_body {
   background: repeating-linear-gradient(

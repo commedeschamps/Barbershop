@@ -164,6 +164,8 @@ p {
 .p_1_services{
     font-size: 30px;
     text-align: center;
+    
+    
 }
 .p_1_services:hover{
     color:#ff6b35;
@@ -351,8 +353,6 @@ p {
     grid-auto-rows: minmax(50px, auto);
     
 }
-
-
 
 
 .item_pr{

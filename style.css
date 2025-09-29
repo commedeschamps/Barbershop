@@ -365,14 +365,14 @@ p {
     transform: scale(1.009);
 }
 
-/* .h1_pr{
+.h1_pr{
     position: absolute;
     right: 35%;
-} */
-
-.h1_pr:hover{
-    color:#ff6b35;
 }
+
+/* .h1_pr:hover{
+    color:#ff6b35;
+} */
 
 /* .item_1_pr{
     

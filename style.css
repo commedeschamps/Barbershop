@@ -53,13 +53,7 @@ p {
     padding: 0 20px;
 }
 
-/* .container.services-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-weight: 200;
-    font-family: 'Poppins', sans-serif;
-} */
+
 
 .header-nav {
     display: flex;
@@ -346,6 +340,8 @@ p {
 
 
 .container_products_pr{
+    position: absolute;
+    right: 5%;
     display: grid;
     grid-template-columns: 300px 700px;
     justify-content: center;
@@ -369,6 +365,11 @@ p {
     transform: scale(1.009);
 }
 
+/* .h1_pr{
+    position: absolute;
+    right: 35%;
+} */
+
 .h1_pr:hover{
     color:#ff6b35;
 }
@@ -376,6 +377,101 @@ p {
 /* .item_1_pr{
     
 } */
+
+
+.menu_products{
+    width:50px;
+    height: 50px;
+    position: absolute;
+    z-index: 1000;
+    top: 19%;
+    left: 1%;
+    background: #ff6b35;
+    border-radius: 8px;
+}
+
+.menu_products span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left:-10px;
+    
+}
+
+.menu_products span,
+.menu_products span::before, 
+.menu_products span::after{
+    display: block;
+    width:22px;
+    height:3px;
+    background-color: #fff;
+    transition-duration: .3s;
+}
+
+
+
+.menu_products span::before, 
+.menu_products span::after{
+    content:'';
+    position:absolute;
+
+}
+
+.menu_products span::before{
+    top: -9px;
+    width: 22px;
+}
+
+.menu_products span::after{
+    top: 9px;
+    width: 22px;
+}
+
+.menu_products:hover{
+    cursor:pointer;
+}
+
+.menu_products.clicked span{
+    background-color: transparent;
+}
+
+.menu_products.clicked span::before{
+    transform:translateY(9px) rotate(45deg);
+    width: 22px;
+}
+
+.menu_products.clicked span::after{
+    transform:translateY(-9px) rotate(-45deg); 
+}
+
+
+#nav_products_sb{
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    z-index: 10px;
+    background-color: black;
+    top: 16,5%;  
+    height: 1350px;
+    width: 100%;    
+    max-width: 245px;
+    margin-top: 5px;
+    margin-left: 5px;
+    transition: transform .5s ease-in;
+    transform: translateX(-105%)
+}
+#nav_products_sb.show{
+    transform: translateX(0px);
+}
+
+.nav-list_pr{
+    list-style: none;
+    line-height:60px;
+    padding: 100px 40px 60px 30px;
+}
+
+
+
 
 .pr_1_photo{
     width:300px;

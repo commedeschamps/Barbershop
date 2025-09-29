@@ -27,7 +27,35 @@
             </ul>
         </nav>
     </header>
-    <div><h1 class = "h1_pr">Products</h1></div>
+    <!-- <div><h1 class = "h1_pr">Products</h1></div> -->
+
+    <div class = "menu_products">
+        <span></span>
+    </div>
+
+    <nav id = "nav_products_sb">
+        <ul class="nav-list_pr">
+            <li><a href="#">Face</a></li>
+            <li><a href="#">Hair</a></li>
+            <li><a href="#">Beard</a></li>
+            <li><a href="#">Nails</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        let menu_pr = document.querySelector('.menu_products');
+        let navbar_pr = document.querySelector('#nav_products_sb')
+
+        menu_pr.onclick = () => {
+            menu_pr.classList.toggle('clicked');
+            navbar_pr.classList.toggle('show');
+        }
+
+
+    </script>
+
+
+    <br>
     <div class = "container_products_pr">
             <div class="item_pr item_1_pr">
                 <img src = "hair_pr_1.jpg" class = "pr_1_photo"> 
@@ -42,14 +70,18 @@
                     <p style = "margin-left: 20px; margin-top: 57px;"><i>PRICE <i style = "text-decoration:line-through">10$</i>  => 5$</i></p>
                     <button class = "pr_1_button">BUY</button>
             </div>
-            <div class="item_pr item_3_pr"><img class = "pr_3_photo" src = 'face_cream_pr.png' ></div>
+            <div class="item_pr item_3_pr">
+                <img class = "pr_3_photo" src = 'face_cream_pr.png' >
+            </div>
             <div class="item_pr item_4_pr"><p style = "padding: 15px"><b style = "font-size: 20px;">Face Cream </b><br>
                     Moisturizing and soothing cream designed for men’s skin.
                      Provides hydration, reduces dryness, and leaves the skin fresh and healthy-looking.
                       Perfect for daily care after shaving</p><br>
                     <p style = "margin-left: 20px; margin-top: 115px"><i>PRICE 20$</i></p>
                     <button class = "pr_3_button">BUY</button></div>
-            <div class="item_pr item_5_pr"><img class = "pr_5_photo" src = 'shampoo_pr.png'></div>
+            <div class="item_pr item_5_pr">
+                <img class = "pr_5_photo" src = 'shampoo_pr.png'>
+            </div>
             <div class="item_pr item_6_pr"><p style = "padding: 15px"><b style = "font-size: 20px;">Premium Hair Shampoo </b><br>
                     A professional formula designed for all hair types. 
                     Gently cleanses while nourishing and strengthening the hair. 
@@ -58,6 +90,7 @@
                     <br><br><br><br><br><br><br><br>
                     <p style = "margin-left: 20px; margin-bottom:5px;"><i>PRICE 35$</i></p>
                     <button class = "pr_1_button">BUY</button></div>
+
     </div>
 
 

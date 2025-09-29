@@ -7,15 +7,55 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #1a1a1a;
             min-height: 100vh;
         }
         .container {
-            background: rgba(255,255,255,0.85);
+            background: #2a2a2a;
+            border: 2px solid #ff6b35;
             border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 24px rgba(255, 107, 53, 0.1);
             padding: 40px;
             margin-top: 40px;
+        }
+        .contact-content {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .contact-info {
+            flex: 1;
+        }
+        .map-section {
+            flex: 1;
+            margin-top: 10px;
+        }
+        .contact-info p {
+            color: #e0e0e0;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+        .contact-form label {
+            display: block;
+            color: #ff6b35;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .map-section iframe {
+            border: 2px solid #ff6b35;
+            border-radius: 10px;
+            width: 100%;
+            height: 400px;
+        }
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+            }
+            .map-section iframe {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -39,33 +79,34 @@
         </nav>
     </header>
 
-    <div class="container" style="display: flex; flex-direction: row; gap: 40px; align-items: flex-start;">
-        <div style="flex: 1;">
-            <h1 style="text-align: left;">Contact Us 💈✂️</h1>
-            <div class="contact-info" style="margin-bottom: 30px;">
-                <p><strong>📞 Phone:</strong> +8 (701) 924-7111</p>
-                <p><strong>📧 Email:</strong> 240115@astanait.edu.kz</p>
-                <p><strong>📍 Address:</strong> 123 Main Street, Cityville</p>
-                <p><strong>🕒 Hours:</strong> Mon-Sat: 9am - 7pm</p>
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h1 style="text-align: left;">Contact Us 💈✂️</h1>
+                <div style="margin-bottom: 30px;">
+                    <p><strong>📞 Phone:</strong> +8 (701) 924-7111</p>
+                    <p><strong>📧 Email:</strong> 240115@astanait.edu.kz</p>
+                    <p><strong>📍 Address:</strong> 123 Main Street, Cityville</p>
+                    <p><strong>🕒 Hours:</strong> Mon-Sat: 9am - 7pm</p>
+                </div>
+                <form class="contact-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Send Message 🚀</button>
+                </form>
             </div>
-            <form class="contact-form">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send Message 🚀</button>
-            </form>
-        </div>
-        <div class="map" style="flex: 1; margin-top: 10px;">
-            <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=71.419%2C51.169%2C71.429%2C51.179&amp;layer=mapnik&amp;marker=51.174%2C71.424"
-                style="border:1px solid #ccc; width:100%; height:400px;"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <div class="map-section">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=71.419%2C51.169%2C71.429%2C51.179&amp;layer=mapnik&amp;marker=51.174%2C71.424"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </div>
 </body>

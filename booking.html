@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <title>Barbershop Booking</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .booking-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 40px auto;
+            background: #2a2a2a;
+            border: 2px solid #ff6b35;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 24px rgba(255, 107, 53, 0.1);
+        }
+        
+        .booking-image {
+            width: 100%;
+            max-width: 350px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #ff6b35;
+        }
+        
+        .booking-form {
+            width: 100%;
+        }
+        
+        .booking-form label {
+            display: block;
+            color: #ff6b35;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .booking-form select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #444;
+            border-radius: 5px;
+            margin: 5px 0;
+            background-color: #2a2a2a;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .booking-form select:focus {
+            border-color: #ff6b35;
+            outline: none;
+        }
+        
+        .booking-form button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .booking-container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
-<body style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh;"></body>
+<body>
     <header id="main-header">
         <nav class="header-nav container">
             <div class="logo">
@@ -25,10 +93,13 @@
             </ul>
         </nav>
     </header>
-    <div class="booking-container" style="display: flex; flex-direction: column; align-items: center;">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Barbershop" style="width:100%;max-width:400px;border-radius:10px;margin-bottom:20px;">
-        <h1 style="margin-bottom: 20px;">💈 Book Your Appointment 💈</h1>
-        <form class="booking-form" style="width:100%;max-width:400px;">
+    
+    <div class="booking-container">
+        <img src="booking.png" 
+             alt="Barbershop Booking" 
+             class="booking-image">
+        <h1 style="margin-bottom: 20px; text-align: center;">💈 Book Your Appointment 💈</h1>
+        <form class="booking-form">
             <label for="date">📅 Date:</label>
             <input type="date" id="date" name="date" required>
 
@@ -50,7 +121,7 @@
             <label for="phone">📞 Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <button type="submit" style="margin-top:20px;">🚀 Book Now</button>
+            <button type="submit">🚀 Book Now</button>
         </form>
     </div>
 </body>

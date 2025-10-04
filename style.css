@@ -936,6 +936,7 @@ h2::before {
   padding: 12px 25px;
   transition: transform 0.2s ease;
 }
+
 .leave_review_btn:hover {
   transform: scale(1.05);
 }

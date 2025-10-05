@@ -481,7 +481,7 @@ p {
     justify-items: start;
 }
 
-.pr_1_button{
+/* .pr_1_button{
     position: absolute;
     bottom:0;
     right:0;
@@ -490,9 +490,37 @@ p {
     margin-right: 30px;
 }
 
-.item_2_pr{
-    
+.pr_3_button{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 90px;
+    margin-bottom: 15px;
+    margin-right: 30px;
+} */
+
+.btn-secondary{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 90px;
+    margin-bottom: 15px;
+    margin-right: 30px;
 }
+
+.btn-success{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 90px;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+
+/* .item_2_pr{
+    
+} */
 
 
 .item_3_pr{
@@ -507,14 +535,7 @@ p {
     justify-items: start;
 }
 
-.pr_3_button{
-    position: absolute;
-    bottom:0;
-    right:0;
-    width: 90px;
-    margin-bottom: 15px;
-    margin-right: 30px;
-}
+
 
 .item_4_pr{
     height:350px;
@@ -522,11 +543,12 @@ p {
 
 .item_5_pr{
     height: 450px;
+    width: 300px;
 }
 
 .pr_5_photo{
     width:300px;
-    height: 450px;
+    height: 449.9999px;
     border-radius: 3px;
     justify-items: start;
 }

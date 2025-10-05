@@ -337,7 +337,13 @@ p {
 /* =============================PRODUCTS========================= */
 
 
-
+.logotype_pr{
+    position: relative;
+    top: -10px;
+    left: 10px;
+    border: 2px solid #ff6b35;
+    border-radius: 50%;
+}
 
 .container_products_pr{
     position: absolute;
@@ -346,9 +352,38 @@ p {
     grid-template-columns: 300px 700px;
     justify-content: center;
     grid-row-gap: 50px;
-    grid-auto-rows: minmax(50px, auto);
+    /* grid-auto-rows: minmax(50px, auto); */
     
-    
+}
+
+.navbar_brand_pr{
+    position:relative;
+    top: -10px;
+    left: 10px;
+}
+
+.header_pr{
+    background-color: #2a2a2a;
+    height: 85px;
+    display:grid;
+    padding:auto;
+}
+
+
+
+
+
+.nav_item_pr{
+    position: relative;
+    top: 12px;
+    left: -170px;
+
+}
+
+.nav_item_pr:hover{
+    background-color: #e55a2b;
+    height: 45px;
+    border-radius: 9px;
 }
 
 
@@ -385,7 +420,7 @@ p {
     height: 50px;
     position: absolute;
     z-index: 1000;
-    top: 19%;
+    top: 14%;
     left: 1%;
     background: #ff6b35;
     border-radius: 8px;
@@ -453,7 +488,8 @@ p {
     z-index: 10px;
     background-color: black;
     top: 16,5%;  
-    height: 1420px;
+    min-height: 1420px;
+    max-height: auto;
     width: 100%;    
     max-width: 270px;
     margin-top: 5px;
@@ -508,14 +544,6 @@ p {
     margin-right: 30px;
 }
 
-.btn-success{
-    position: absolute;
-    bottom:0;
-    right:0;
-    width: 90px;
-    margin-bottom: 15px;
-    margin-right: 30px;
-}
 
 
 /* .item_2_pr{
@@ -555,6 +583,10 @@ p {
 
 .item_6_pr{
     height:450px;
+}
+
+.footer_pr{
+    margin-top: 15px;
 }
 
 

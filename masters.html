@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Master Barbers - Barbershop Elegance</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Step 1: Link external CSS file -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,268 +13,360 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header with ID selector -->
-    <header id="main-header">
-        <nav class="header-nav container">
-            <div class="logo">
-                <img src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
-                Barbershop Elegance
+    <!-- Enhanced Bootstrap Navigation Bar (Task 5) -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg" role="navigation" aria-label="Main navigation"
+         style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);">
+        <div class="container-fluid px-4 justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" 
+               style="font-size: 1.4rem; font-weight: bold;" aria-label="Barbershop Elegance - Home">
+                <img src="logotype.png" alt="Barbershop Elegance Logo" 
+                     style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #ff6b35;" class="me-3">
+                <span style="color: #ff6b35; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Barbershop Elegance</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu"
+                    style="border-radius: 8px; background-color: #ff6b35;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-2">
+                        <a class="nav-link px-3 py-2" href="index.html" 
+                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35';" 
+                           onmouseout="this.style.backgroundColor='transparent';">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link px-3 py-2" href="services.html" 
+                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35';" 
+                           onmouseout="this.style.backgroundColor='transparent';">Services</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link px-3 py-2" href="products.html" 
+                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35';" 
+                           onmouseout="this.style.backgroundColor='transparent';">Products</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link active px-3 py-2" aria-current="page" href="masters.html" 
+                           style="border-radius: 20px; background-color: #ff6b35; color: white !important; font-weight: 500;">Masters</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link px-3 py-2" href="examples.html" 
+                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35';" 
+                           onmouseout="this.style.backgroundColor='transparent';">Examples</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link px-3 py-2" href="reviews.html" 
+                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35';" 
+                           onmouseout="this.style.backgroundColor='transparent';">Reviews</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link px-3 py-2" href="booking.html" 
+                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35';" 
+                           onmouseout="this.style.backgroundColor='transparent';">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="contact.html" 
+                           style="border: 2px solid #ff6b35; border-radius: 20px; color: #ff6b35 !important; font-weight: 600; transition: all 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#ff6b35'; this.style.color='white';" 
+                           onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff6b35';">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <!-- Step 6: Navigation Menu -->
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="masters.html" class="active">Masters</a></li>
-                <li><a href="examples.html">Examples</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Page Header Section -->
-    <section style="background-color: #2a2a2a; padding: 80px 20px; text-align: center;">
-        <div class="container">
-            <h1><i class="fas fa-users" style="margin-right: 15px; color: #ff6b35;"></i>Meet Our Master Barbers</h1>
-            <p style="font-size: 1.2rem; margin-top: 20px;">Experienced professionals dedicated to the art of classic barbering</p>
         </div>
-    </section>
+    </nav>
 
-    <!-- Masters Grid Section -->
-    <section class="services-section">
+    <!-- Bootstrap Page Header Section (Task 3, 4) -->
+    <div class="container-fluid py-5" style="background-color: #2a2a2a;">
+        <div class="container text-center">
+            <h1 class="text-light mb-4" id="masters-heading">
+                <i class="fas fa-users me-3" style="color: #ff6b35;" aria-hidden="true"></i>Meet Our Master Barbers
+            </h1>
+            <p class="text-light fs-5">Experienced professionals dedicated to the art of classic barbering</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap Masters Grid Section (Task 3, 4, 8) -->
+    <div class="container-fluid py-5" style="background-color: #1a1a1a;">
         <div class="container">
-            <h2><i class="fas fa-star" style="margin-right: 10px;"></i>Our Professional Team</h2>
+            <h2 class="text-center text-light mb-5" id="team-heading">
+                <i class="fas fa-star me-2" style="color: #ff6b35;" aria-hidden="true"></i>Our Professional Team
+            </h2>
             
-            <!-- Masters Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 50px 0;">
+            <!-- Bootstrap Grid for Masters -->
+            <div class="row g-4" role="list" aria-labelledby="team-heading"
+                 aria-label="List of master barbers with their specialties and booking options">
                 
-                <!-- Master 1 -->
-                <div class="master-card">
-                    <div class="master-photo">
-                        <img src="barber1.png" alt="Alexander Thompson - Senior Master Barber" />
-                    </div>
-                    <div class="master-info">
-                        <div class="master-content">
-                            <h3>Alexander Thompson</h3>
-                            <p class="master-title">Senior Master Barber</p>
-                            <div class="master-experience">
-                                <i class="fas fa-award" style="color: #ff6b35; margin-right: 8px;"></i>
+                <!-- Master 1 Bootstrap Card -->
+                <div class="col-lg-4 col-md-6" role="listitem">
+                    <div class="card h-100 bg-dark text-light border-0 shadow">
+                        <img src="barber1.png" class="card-img-top" alt="Alexander Thompson - Senior Master Barber with 15+ years experience" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title" style="color: #ff6b35;">Alexander Thompson</h3>
+                            <p class="text-muted mb-3">Senior Master Barber</p>
+                            <div class="mb-3">
+                                <i class="fas fa-award me-2" style="color: #ff6b35;" aria-hidden="true"></i>
                                 <span>15+ Years Experience</span>
                             </div>
-                            <div class="master-specialties">
-                                <h4>Specialties:</h4>
-                                <ul>
-                                    <li><i class="fas fa-cut"></i> Classic Haircuts</li>
-                                    <li><i class="fas fa-spa"></i> Straight Razor Shaves</li>
-                                    <li><i class="fas fa-beard"></i> Beard Design</li>
+                            <div class="mb-3">
+                                <h5 class="text-light">Specialties:</h5>
+                                <ul class="list-unstyled" role="list" aria-label="Alexander's specialties">
+                                    <li><i class="fas fa-cut me-2" aria-hidden="true"></i> Classic Haircuts</li>
+                                    <li><i class="fas fa-spa me-2" aria-hidden="true"></i> Straight Razor Shaves</li>
+                                    <li><i class="fas fa-beard me-2" aria-hidden="true"></i> Beard Design</li>
                                 </ul>
                             </div>
-                            <div class="master-bio">
-                                <p>"Barbering is not just a profession, it's an art form. I take pride in creating the perfect look for every gentleman who sits in my chair."</p>
-                            </div>
-                            <div class="master-schedule">
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-0 text-light">"Barbering is not just a profession, it's an art form. I take pride in creating the perfect look for every gentleman who sits in my chair."</p>
+                            </blockquote>
+                            <div class="text-muted mb-3">
                                 <strong>Working Hours:</strong><br>
                                 Mon-Fri: 9:00 AM - 7:00 PM<br>
                                 Sat: 8:00 AM - 6:00 PM
                             </div>
-                        </div>
-                        <div class="master-booking">
-                            <a href="booking.html?master=alexander" class="btn-primary">
-                                <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book with Alexander
-                            </a>
+                            <div class="mt-auto">
+                                <a href="booking.html?master=alexander" class="btn btn-primary w-100 py-2" 
+                                   style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                                          border: none; font-weight: 600; border-radius: 10px;"
+                                   aria-label="Book an appointment with Alexander Thompson">
+                                    <i class="fas fa-calendar-check me-2" aria-hidden="true"></i>Book with Alexander
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Master 2 -->
-                <div class="master-card">
-                    <div class="master-photo">
-                        <img src="barber2.png" alt="Marcus Rodriguez - Master Stylist" />
-                    </div>
-                    <div class="master-info">
-                        <div class="master-content">
-                            <h3>Marcus Johnson</h3>
-                            <p class="master-title">Master Stylist</p>
-                            <div class="master-experience">
-                                <i class="fas fa-award" style="color: #ff6b35; margin-right: 8px;"></i>
+                <!-- Master 2 Bootstrap Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-dark text-light border-0 shadow">
+                        <img src="barber2.png" class="card-img-top" alt="Marcus Rodriguez - Master Stylist" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title" style="color: #ff6b35;">Marcus Johnson</h3>
+                            <p class="text-muted mb-3">Master Stylist</p>
+                            <div class="mb-3">
+                                <i class="fas fa-award me-2" style="color: #ff6b35;"></i>
                                 <span>12+ Years Experience</span>
                             </div>
-                            <div class="master-specialties">
-                                <h4>Specialties:</h4>
-                                <ul>
-                                    <li><i class="fas fa-cut"></i> Modern Cuts</li>
-                                    <li><i class="fas fa-paint-brush"></i> Hair Styling</li>
-                                    <li><i class="fas fa-beard"></i> Mustache Grooming</li>
+                            <div class="mb-3">
+                                <h5 class="text-light">Specialties:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-cut me-2"></i> Modern Cuts</li>
+                                    <li><i class="fas fa-paint-brush me-2"></i> Hair Styling</li>
+                                    <li><i class="fas fa-beard me-2"></i> Mustache Grooming</li>
                                 </ul>
                             </div>
-                            <div class="master-bio">
-                                <p>"I blend traditional techniques with modern trends to create unique styles that reflect each client's personality and lifestyle preferences."</p>
-                            </div>
-                            <div class="master-schedule">
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-0 text-light">"I blend traditional techniques with modern trends to create unique styles that reflect each client's personality and lifestyle preferences."</p>
+                            </blockquote>
+                            <div class="text-muted mb-3">
                                 <strong>Working Hours:</strong><br>
                                 Tue-Sat: 10:00 AM - 8:00 PM<br>
                                 Sun: 10:00 AM - 4:00 PM
                             </div>
-                        </div>
-                        <div class="master-booking">
-                            <a href="booking.html?master=marcus" class="btn-primary">
-                                <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book with Marcus
-                            </a>
+                            <div class="mt-auto">
+                                <a href="booking.html?master=marcus" class="btn btn-primary w-100 py-2" 
+                                   style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                                          border: none; font-weight: 600; border-radius: 10px;">
+                                    <i class="fas fa-calendar-check me-2"></i>Book with Marcus
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Master 3 -->
-                <div class="master-card">
-                    <div class="master-photo">
-                        <img src="barber3.png" alt="James Wilson - Traditional Barber" />
-                    </div>
-                    <div class="master-info">
-                        <div class="master-content">
-                            <h3>James Wilson</h3>
-                            <p class="master-title">Traditional Barber</p>
-                            <div class="master-experience">
-                                <i class="fas fa-award" style="color: #ff6b35; margin-right: 8px;"></i>
+                <!-- Master 3 Bootstrap Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-dark text-light border-0 shadow">
+                        <img src="barber3.png" class="card-img-top" alt="James Wilson - Traditional Barber" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title" style="color: #ff6b35;">James Wilson</h3>
+                            <p class="text-muted mb-3">Traditional Barber</p>
+                            <div class="mb-3">
+                                <i class="fas fa-award me-2" style="color: #ff6b35;"></i>
                                 <span>10+ Years Experience</span>
                             </div>
-                            <div class="master-specialties">
-                                <h4>Specialties:</h4>
-                                <ul>
-                                    <li><i class="fas fa-spa"></i> Hot Towel Treatments</li>
-                                    <li><i class="fas fa-cut"></i> Vintage Styles</li>
-                                    <li><i class="fas fa-beard"></i> Full Beard Care</li>
+                            <div class="mb-3">
+                                <h5 class="text-light">Specialties:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-spa me-2"></i> Hot Towel Treatments</li>
+                                    <li><i class="fas fa-cut me-2"></i> Vintage Styles</li>
+                                    <li><i class="fas fa-beard me-2"></i> Full Beard Care</li>
                                 </ul>
                             </div>
-                            <div class="master-bio">
-                                <p>"With years of experience, I specialize in timeless classic cuts and the finest traditional barbering services for distinguished gentlemen."</p>
-                            </div>
-                            <div class="master-schedule">
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-0 text-light">"With years of experience, I specialize in timeless classic cuts and the finest traditional barbering services for distinguished gentlemen."</p>
+                            </blockquote>
+                            <div class="text-muted mb-3">
                                 <strong>Working Hours:</strong><br>
                                 Mon-Fri: 8:00 AM - 6:00 PM<br>
                                 Sat: 9:00 AM - 5:00 PM
                             </div>
-                        </div>
-                        <div class="master-booking">
-                            <a href="booking.html?master=james" class="btn-primary">
-                                <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book with James
-                            </a>
+                            <div class="mt-auto">
+                                <a href="booking.html?master=james" class="btn btn-primary w-100 py-2" 
+                                   style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                                          border: none; font-weight: 600; border-radius: 10px;">
+                                    <i class="fas fa-calendar-check me-2"></i>Book with James
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Work Examples Section -->
-    <section id="examples" style="background-color: #333; padding: 80px 20px;">
+    <!-- Bootstrap Work Examples Section (Task 3, 4, 8) -->
+    <div class="container-fluid py-5" style="background-color: #333;">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">
-                <i class="fas fa-images" style="margin-right: 10px;"></i>Our Work Examples
+            <h2 class="text-center text-light mb-5">
+                <i class="fas fa-images me-2" style="color: #ff6b35;"></i>Our Work Examples
             </h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
-                <div style="background: #1a1a1a; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <img src="example1.png" alt="Classic Haircut Example" style="width: 100%; height: 250px; object-fit: cover;" />
-                    <div style="padding: 20px;">
-                        <h3 style="color: #ff6b35; margin-bottom: 10px;">Classic Gentleman's Cut</h3>
-                        <p>Perfect blend of traditional barbering with modern precision. Clean lines and sophisticated styling.</p>
-                        <p style="color: #ff6b35; font-style: italic; margin-top: 15px;">By Alexander Thompson</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <img src="example1.png" class="card-img-top" alt="Classic Haircut Example" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff6b35;">Classic Gentleman's Cut</h4>
+                            <p class="card-text">Perfect blend of traditional barbering with modern precision. Clean lines and sophisticated styling.</p>
+                            <p class="text-muted fst-italic mt-3">By Alexander Thompson</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div style="background: #1a1a1a; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <img src="example2.png" alt="Modern Style Example" style="width: 100%; height: 250px; object-fit: cover;" />
-                    <div style="padding: 20px;">
-                        <h3 style="color: #ff6b35; margin-bottom: 10px;">Modern Fade Style</h3>
-                        <p>Contemporary styling with expertly crafted fade and texture. Perfect for the modern gentleman.</p>
-                        <p style="color: #ff6b35; font-style: italic; margin-top: 15px;">By Marcus Johnson</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <img src="example2.png" class="card-img-top" alt="Modern Style Example" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff6b35;">Modern Fade Style</h4>
+                            <p class="card-text">Contemporary styling with expertly crafted fade and texture. Perfect for the modern gentleman.</p>
+                            <p class="text-muted fst-italic mt-3">By Marcus Johnson</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div style="background: #1a1a1a; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <img src="example3.png" alt="Traditional Style Example" style="width: 100%; height: 250px; object-fit: cover;" />
-                    <div style="padding: 20px;">
-                        <h3 style="color: #ff6b35; margin-bottom: 10px;">Traditional Barber Cut</h3>
-                        <p>Timeless vintage styling with attention to detail. Classic barbering at its finest.</p>
-                        <p style="color: #ff6b35; font-style: italic; margin-top: 15px;">By James Wilson</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card bg-dark text-light border-0 shadow">
+                        <img src="example3.png" class="card-img-top" alt="Traditional Style Example" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff6b35;">Traditional Barber Cut</h4>
+                            <p class="card-text">Timeless vintage styling with attention to detail. Classic barbering at its finest.</p>
+                            <p class="text-muted fst-italic mt-3">By James Wilson</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- More Examples Button -->
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="examples.html" class="btn-primary" style="font-size: 1.1rem; padding: 15px 30px;">
-                    <i class="fas fa-plus-circle" style="margin-right: 10px;"></i>More Examples
+            <div class="text-center mt-5">
+                <a href="examples.html" class="btn btn-outline-primary btn-lg px-5 py-3" 
+                   style="border: 2px solid #ff6b35; color: #ff6b35; font-weight: 600; 
+                          border-radius: 25px; transition: all 0.3s ease;"
+                   onmouseover="this.style.backgroundColor='#ff6b35'; this.style.color='white'; this.style.borderColor='#ff6b35';"
+                   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff6b35'; this.style.borderColor='#ff6b35';">
+                    <i class="fas fa-plus-circle me-2"></i>More Examples
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Why Choose Our Masters Section -->
-    <section style="background-color: #2a2a2a; padding: 80px 20px;">
+    <!-- Bootstrap Why Choose Our Masters Section (Task 3, 4) -->
+    <div class="container-fluid py-5" style="background-color: #2a2a2a;">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">
-                <i class="fas fa-trophy" style="margin-right: 10px;"></i>Why Choose Our Masters?
+            <h2 class="text-center text-light mb-5">
+                <i class="fas fa-trophy me-2" style="color: #ff6b35;"></i>Why Choose Our Masters?
             </h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                <div style="text-align: center; padding: 30px;">
-                    <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
-                    <h3>Certified Professionals</h3>
-                    <p>All our masters are certified and continuously trained in the latest techniques and trends.</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-graduation-cap mb-3" style="font-size: 3rem; color: #ff6b35;"></i>
+                        <h4 class="text-light">Certified Professionals</h4>
+                        <p class="text-light">All our masters are certified and continuously trained in the latest techniques and trends.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; padding: 30px;">
-                    <i class="fas fa-clock" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
-                    <h3>Years of Experience</h3>
-                    <p>Combined experience of over 45 years in traditional and modern barbering techniques.</p>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-clock mb-3" style="font-size: 3rem; color: #ff6b35;"></i>
+                        <h4 class="text-light">Years of Experience</h4>
+                        <p class="text-light">Combined experience of over 45 years in traditional and modern barbering techniques.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; padding: 30px;">
-                    <i class="fas fa-heart" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
-                    <h3>Passionate About Service</h3>
-                    <p>Each master is dedicated to providing personalized service and exceeding expectations.</p>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-heart mb-3" style="font-size: 3rem; color: #ff6b35;"></i>
+                        <h4 class="text-light">Passionate About Service</h4>
+                        <p class="text-light">Each master is dedicated to providing personalized service and exceeding expectations.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; padding: 30px;">
-                    <i class="fas fa-tools" style="font-size: 3rem; color: #ff6b35; margin-bottom: 20px;"></i>
-                    <h3>Premium Tools</h3>
-                    <p>We use only the finest professional tools and products for the best results.</p>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-tools mb-3" style="font-size: 3rem; color: #ff6b35;"></i>
+                        <h4 class="text-light">Premium Tools</h4>
+                        <p class="text-light">We use only the finest professional tools and products for the best results.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Book Appointment CTA -->
-    <section class="services-section">
-        <div class="container" style="text-align: center;">
-            <h2>Ready to Experience Excellence?</h2>
-            <p style="font-size: 1.2rem; margin: 30px 0;">Choose your preferred master and book your appointment today</p>
-            <a href="booking.html" class="btn-primary" style="font-size: 1.2rem; padding: 15px 30px;">
-                <i class="fas fa-calendar-plus" style="margin-right: 10px;"></i>Book Now
+    <!-- Bootstrap CTA Section (Task 3, 4, 6) -->
+    <div class="container-fluid py-5" style="background-color: #1a1a1a;">
+        <div class="container text-center">
+            <h2 class="text-light mb-4">Ready to Experience Excellence?</h2>
+            <p class="text-light fs-5 mb-4">Choose your preferred master and book your appointment today</p>
+            <a href="booking.html" class="btn btn-primary btn-lg px-5 py-3" 
+               style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                      border: none; font-weight: 600; border-radius: 25px;
+                      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+                      transition: all 0.3s ease;">
+                <i class="fas fa-calendar-plus me-2"></i>Book Now
             </a>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer-section">
+    <!-- Bootstrap Footer with Team (Task 10) -->
+    <footer class="bg-dark text-light py-4">
         <div class="container">
-            <div class="team-section">
-                <h4><i class="fas fa-users" style="margin-right: 10px; color: #ff6b35;"></i>Our Team</h4>
-                <p>Seidigali Rakhman, Zarkesh Damir, Aidarbek Rasul, Maratov Nurassyl (SE-2411)</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>
+                        <i class="fas fa-users me-2" style="color: #ff6b35;"></i>Our Team
+                    </h5>
+                    <p class="mb-2">Seidigali Rakhman, Zarkesh Damir, Aidarbek Rasul, Maratov Nurassyl (SE-2411)</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-wrap justify-content-md-end">
+                        <span class="me-3">
+                            <i class="fas fa-phone" style="color: #ff6b35;"></i>
+                            +7 (700) 123-4567
+                        </span>
+                        <span>
+                            <i class="fas fa-map-marker-alt" style="color: #ff6b35;"></i>
+                            Astana, Kazakhstan
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div style="margin: 20px 0;">
-                <i class="fas fa-phone" style="color: #ff6b35; margin-right: 8px;"></i>
-                <span>+7 (700) 123-4567</span>
-                <span style="margin: 0 15px;">|</span>
-                <i class="fas fa-map-marker-alt" style="color: #ff6b35; margin-right: 8px;"></i>
-                <span>Astana, Kazakhstan</span>
+            <hr class="my-3" style="border-color: #ff6b35;">
+            <div class="text-center">
+                <p class="mb-0">
+                    <i class="fas fa-copyright me-1"></i>2025 Barbershop Elegance. All rights reserved.
+                </p>
             </div>
-            <p><i class="fas fa-copyright" style="margin-right: 5px;"></i>2025 Barbershop Elegance. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

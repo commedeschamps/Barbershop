@@ -3,35 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Barbershop Elegance</title>
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Step 1: Link external CSS file -->
-    <link rel="stylesheet" href="style.css">
-    <link class = "icon" rel = "shortcut icon" href = "logotype.png" type = "image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link class = "icon" rel = "shortcut icon" href = "logotype.png">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Products</title>
 </head>
 <body class = "products_body">
-    <header id="main-header">
-        <nav class="header-nav container">
-            <div class="logo">
-                <img src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
-                Barbershop Elegance
+    <header class = "header_pr ">
+        <nav class="navbar navbar-expand-xxl ">
+            <div class="container-fluid">
+                <img class = "logotype_pr" src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
+                <a class="navbar-brand navbar_brand_pr" href="index.html">Barbershop  Elegance</a>
+                <div class="collapse navbar-collapse hd_text_custom" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto hd_text_custom">
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" aria-current="page" href="index.html"><p>Home</p></a>
+                        </li>
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" href="services.html"><p>Services</p></a>
+                        </li>
+                        <li class="nav-item nav_item_pr dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p>Products</p>
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href = "face_care.html">Face</a></li>
+                            <li><a class="dropdown-item" href="face_care.html">Hair</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="products.html">ALL PRODUCTS</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" aria-current="page" href="masters.html"><p>Masters</p></a>
+                        </li>
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" aria-current="page" href="examples.html"><p>Examples</p></a>
+                        </li>
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" aria-current="page" href="reviews.html"><p>Reviews</p></a>
+                        </li>
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" aria-current="page" href="booking.html"><p>Booking</p></a>
+                        </li>
+                        <li class="nav-item nav_item_pr">
+                            <a class="nav-link" aria-current="page" href="contact.html"><p>Contact</p></a>
+                        </li>
+                    </ul>
+                        
+                </div>
             </div>
-            <!-- Step 6: Navigation Menu -->
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="masters.html">Masters</a></li>
-                <li><a href="examples.html">Examples</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
         </nav>
+        
     </header>
-    <!-- <div><h1 class = "h1_pr">Products</h1></div> -->
+    
 
     <div class = "menu_products">
         <span></span>
@@ -101,7 +125,6 @@
     </div>
     
 
-    <!-- Bootstrap 5.3 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

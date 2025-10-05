@@ -336,6 +336,11 @@ p {
 
 /* =============================PRODUCTS========================= */
 
+@media (max-width: 576px) {
+  .products_body {
+    justify-content: center; /* выравниваем по центру */
+  }
+}
 
 .logotype_pr{
     position: relative;

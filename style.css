@@ -336,9 +336,28 @@ p {
 
 /* =============================PRODUCTS========================= */
 
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .item_pr p {
+    font-size: 0.9rem;
+  }
+}
+
+
 @media (max-width: 576px) {
-  .products_body {
-    justify-content: center; /* выравниваем по центру */
+  .container_products_pr {
+    grid-template-columns: 1fr; 
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .pr_1_photo, .pr_3_photo, .pr_5_photo {
+    width: 100%;
+    height: auto;
   }
 }
 

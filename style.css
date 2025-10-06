@@ -336,35 +336,19 @@ p {
 
 /* =============================PRODUCTS========================= */
 
-@media (max-width: 992px) {
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-  .item_pr p {
-    font-size: 0.9rem;
-  }
-}
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
 
 
-@media (max-width: 576px) {
-  .container_products_pr {
-    grid-template-columns: 1fr; 
-  }
 
-  .navbar-brand {
-    font-size: 1rem;
-  }
-
-  .pr_1_photo, .pr_3_photo, .pr_5_photo {
-    width: 100%;
-    height: auto;
-  }
-}
 
 .logotype_pr{
     position: relative;
     top: -10px;
-    left: 10px;
+    left: 25px;
     border: 2px solid #ff6b35;
     border-radius: 50%;
 }
@@ -383,14 +367,17 @@ p {
 .navbar_brand_pr{
     position:relative;
     top: -10px;
-    left: 10px;
+    left: 20px;
+}
+
+:root{
+    --color1: #2a2a2a;
 }
 
 .header_pr{
-    background-color: #2a2a2a;
+    background: var(--color1);
+    background: linear-gradient(to right,  #000000 25%,#d42b1f 100%);
     height: 85px;
-    display:grid;
-    padding:auto;
 }
 
 
@@ -406,6 +393,7 @@ p {
     background-color: #e55a2b;
     height: 45px;
     border-radius: 9px;
+    transition: all 0.3s ease
 }
 
 
@@ -435,6 +423,7 @@ p {
 /* .item_1_pr{
     
 } */
+
 
 
 .menu_products{
@@ -503,6 +492,11 @@ p {
 }
 
 
+.catalog_pr{
+    text-align:center;
+    margin-top:60px;
+}
+
 #nav_products_sb{
     display: grid;
     justify-content: center;
@@ -517,16 +511,29 @@ p {
     margin-top: 5px;
     margin-left: 5px;
     transition: transform .5s ease-in;
-    transform: translateX(-105%)
+    transform: translateX(-105%);
+    
 }
 #nav_products_sb.show{
     transform: translateX(0px);
 }
 
 .nav-list_pr{
+    text-align: center;
     list-style: none;
     line-height:60px;
-    padding: 100px 40px 60px 30px;
+    padding: 0px 40px 60px 30px;
+}
+
+@media (max-width:576px){
+    
+    .nav_products_sb{
+        justify-content: center;
+    }
+    .nav-list_pr{
+        text-align:center;
+    }
+
 }
 
 

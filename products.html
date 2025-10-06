@@ -90,6 +90,12 @@
             menu_pr.classList.toggle('clicked');
             navbar_pr.classList.toggle('show');
         }
+        
+        const myButton = document.querySelector('.nav_item_pr');
+
+        myButton.addEventListener('click', () => {
+        myButton.classList.toggle('active');
+    });
     </script>
 
 
@@ -100,7 +106,7 @@
                 <img src = "hair_pr_1.jpg" class = "pr_1_photo"> 
             </div>
             <div class="item_pr item_2_pr">
-                <p style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Hair Styling Paste </b><br>
+                <p class = "p_custom" style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Hair Styling Paste </b><br>
                     Our professional hair styling paste gives your hair a natural 
                     matte finish with strong yet flexible hold. Ideal for everyday styling, 
                     it keeps your hairstyle in place without making it stiff or greasy. The lightweight formula 
@@ -112,22 +118,22 @@
             <div class="item_pr item_3_pr">
                 <img class = "pr_3_photo" src = 'face_cream_pr.png' >
             </div>
-            <div class="item_pr item_4_pr"><p style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Face Cream </b><br>
+            <div class="item_pr item_4_pr"><p class = "p_custom" style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Face Cream </b><br>
                     Moisturizing and soothing cream designed for men's skin.
                      Provides hydration, reduces dryness, and leaves the skin fresh and healthy-looking.
                       Perfect for daily care after shaving</p><br>
-                    <p style = "margin-left: 20px; margin-top: 115px"><i style = "color: rgb(241, 70, 70)">PRICE 20$</i></p>
+                    <p style = "margin-left: 20px; margin-top: 115px"><i class = "price_item_4" style = "color: rgb(241, 70, 70)">PRICE 20$</i></p>
                     <button type = "button" class = "btn btn-secondary">BUY</button></div>
             <div class="item_pr item_5_pr">
                 <img class = "pr_5_photo" src = 'shampoo_pr.png'>
             </div>
-            <div class="item_pr item_6_pr"><p style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Premium Hair Shampoo </b><br>
+            <div class="item_pr item_6_pr"><p class = "p_custom" style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Premium Hair Shampoo </b><br>
                     A professional formula designed for all hair types. 
                     Gently cleanses while nourishing and strengthening the hair. 
                     Enriched with smoothing ingredients for a healthy, natural shine. 
                     Leaves hair soft, refreshed, and easy to style — the perfect choice for modern gentlemen.</p>
                     <br><br><br><br><br><br><br><br>
-                    <p style = "margin-left: 20px; margin-bottom:5px;"><i style = "color: rgb(241, 70, 70)">PRICE 35$</i></p>
+                    <p style = "margin-left: 20px; margin-bottom:5px;"><i class = "price_item_6" style = "color: rgb(241, 70, 70)">PRICE 35$</i></p>
                     <button type = "button" class = "btn btn-secondary">BUY</button></div>
 
         <footer class = "footer_pr">

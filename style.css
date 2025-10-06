@@ -392,8 +392,14 @@ p {
 .nav_item_pr:hover{
     background-color: #e55a2b;
     height: 45px;
-    border-radius: 9px;
+    border-radius: 10px;
     transition: all 0.3s ease
+}
+
+.nav_item_pr:active{
+    background-color: #e55a2b;
+    height: 45px;
+    border-radius: 9px;
 }
 
 
@@ -416,13 +422,9 @@ p {
     right: 35%;
 }
 
-/* .h1_pr:hover{
-    color:#ff6b35;
-} */
 
-/* .item_1_pr{
-    
-} */
+
+
 
 
 
@@ -594,15 +596,42 @@ p {
         left: 5px;
     }
 
-    .item_2_pr p{
-        font-size: 2000px;
+    .item_2_pr p, .item_4_pr p, .item_6_pr p{
+        color: rgb(230, 230, 177);
     }
 
-    
-    
+    .item_2_pr{
+        height: 400px;
+    }
 
-    
-    
+    .price_item_4{
+        position: relative;
+        top: -50px;
+    }
+
+    .price_item_6{
+        position: relative;
+        top: -45px;
+    }
+
+
+    .container_services{
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .p_1_services{
+        margin-top: 20px;
+    }
+
+    .item_1_services, .item_2_services, .item_3_services{
+        width: 390px;
+        text-align: center;
+    }
+
+    .modern, .classic, .promotion_f, .promotion_s, .cleaning, .relax, .sc, .cws, .beard:hover{
+        width: 200px;
+    }
 
 }
 

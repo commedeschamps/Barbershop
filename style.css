@@ -548,8 +548,8 @@ p {
     }
 
     .navbar_brand_pr{
-        top:13px;
-        left: -60px;
+        top:15px;
+        left: -50px;
     }
 
     .menu_products{
@@ -557,7 +557,6 @@ p {
     }
 
     #nav_products_sb{
-
         display: grid;
         justify-content: center;
         z-index: 100px;
@@ -582,6 +581,8 @@ p {
         cursor:pointer;
         color:#ff6b35;
     }
+
+    
 
     .h1_pr{
         position: relative;

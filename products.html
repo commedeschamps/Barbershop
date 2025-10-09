@@ -10,67 +10,68 @@
 </head>
 <body class = "products_body">
     
-    <div class = "container-L">
+    <div class = "container-xs">
         <div class = "row">
             <header class = "header_pr">
-            <nav class="navbar navbar-expand-xxl ">
-            <div class="container-fluid">
-                <img class = "logotype_pr" src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
-                <a class="navbar-brand navbar_brand_pr" href="index.html">Barbershop  Elegance</a>
-                <div class="collapse navbar-collapse hd_text_custom" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto hd_text_custom">
+                <nav class="navbar navbar-expand-xxl navbar-expand-xs navbar-light">
+                <div class="container-fluid">
+                    <img class = "logotype_pr" src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
+                    <a class="navbar-brand navbar_brand_pr" href="index.html">Barbershop  Elegance</a>
+                    <div class="collapse navbar-collapse hd_text_custom" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto hd_text_custom">
 
-                        <li class="nav-item nav_item_pr">
-                            <a class="nav-link" aria-current="page" href="index.html"><p>Home</p></a>
-                        </li>
+                            <li class="nav-item nav_item_pr">
+                                <a class="nav-link" aria-current="page" href="index.html"><p>Home</p></a>
+                            </li>
 
-                        <li class="nav-item nav_item_pr">
-                            <a class="nav-link" href="services.html"><p>Services</p></a>
-                        </li>
-                        <li class="nav-item nav_item_pr dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item nav_item_pr">
+                                <a class="nav-link" href="services.html"><p>Services</p></a>
+                            </li>
+                            <li class="nav-item nav_item_pr dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <p>Products</p>
-                            </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href = "face_care.html">Face</a></li>
-                            <li><a class="dropdown-item" href="face_care.html">Hair</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="products.html">ALL PRODUCTS</a></li>
-                        </ul>
-                        </li>
-                        <li class="nav-item nav_item_pr">
-                            <a class="nav-link" aria-current="page" href="masters.html"><p>Masters</p></a>
-                        </li>
-                        <li class="nav-item nav_item_pr">
-                            <a class="nav-link" aria-current="page" href="examples.html"><p>Examples</p></a>
-                        </li>
-                        <li class="nav-item nav_item_pr">
-                            <a class="nav-link" aria-current="page" href="reviews.html"><p>Reviews</p></a>
-                        </li>
-                        <li class="nav-item nav_item_pr">
+                                </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href = "face_care.html">Face</a></li>
+                                <li><a class="dropdown-item" href="face_care.html">Hair</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="products.html">ALL PRODUCTS</a></li>
+                            </ul>
+                            </li>
+                            <li class="nav-item nav_item_pr">
+                                <a class="nav-link" aria-current="page" href="masters.html"><p>Masters</p></a>
+                            </li>
+                            <li class="nav-item nav_item_pr">
+                                <a class="nav-link" aria-current="page" href="examples.html"><p>Examples</p></a>
+                            </li>
+                            <li class="nav-item nav_item_pr">
+                                <a class="nav-link" aria-current="page" href="reviews.html"><p>Reviews</p></a>
+                            </li>
+                            <li class="nav-item nav_item_pr">
                             <a class="nav-link" aria-current="page" href="booking.html"><p>Booking</p></a>
-                        </li>
-                        <li class="nav-item nav_item_pr">
-                            <a class="nav-link" aria-current="page" href="contact.html"><p>Contact</p></a>
-                        </li>
-                    </ul>
+                            </li>
+                            <li class="nav-item nav_item_pr">
+                                <a class="nav-link" aria-current="page" href="contact.html"><p>Contact</p></a>
+                            </li>
+                        </ul>
                      
                         
+                    </div>
                 </div>
-            </div>
+            </header>
         
             </nav>
             </div>
         </div>
     </div>
-    </header>
+    
     
 
-    <div class = "menu_products container">
+    <div class = "menu_products container navbar-expand-xs">
         <span></span>
     </div>
 
-    <nav id = "nav_products_sb" class = "opacity-100">
+    <nav id = "nav_products_sb" class = "">
         <ul class="nav-list_pr">
             <h1 class = "catalog_pr">Catalog</h1>
             <li><a href="services.html">Services</a></li>
@@ -82,13 +83,15 @@
         </ul>
     </nav>
 
-    <script>
+    <script class = "navbar-expand">
         let menu_pr = document.querySelector('.menu_products');
-        let navbar_pr = document.querySelector('#nav_products_sb')
+        let navbar_pr = document.querySelector('#nav_products_sb');
+        let xs_navbar_pr = document.querySelector('.nav_item_pr')
 
         menu_pr.onclick = () => {
             menu_pr.classList.toggle('clicked');
             navbar_pr.classList.toggle('show');
+            xs_navbar_pr.classList.toggle('show')
         }
         
         const myButton = document.querySelector('.nav_item_pr');

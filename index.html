@@ -9,6 +9,8 @@
     <!-- Step 1: Link external CSS file -->
     <link rel="stylesheet" href="style.css">
     <link class = "icon" rel = "shortcut icon" href = "logotype.png" type = "image/x-icon">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="accordeon_date.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -79,6 +81,9 @@
             </div>
         </div>
     </nav>
+
+    <!-- Date and Time Display Widget (Task 5) -->
+    <div id="date-time" aria-live="polite" aria-label="Current date and time"></div>
 
     <!-- Hero Section with Bootstrap Grid and Spacing (Task 3, Task 4) -->
     <section id="hero-section" class="py-5" role="banner" aria-label="Welcome section">
@@ -264,6 +269,63 @@
         </div>
     </section>
 
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" aria-label="Frequently Asked Questions">
+        <div class="faq-container">
+            <h2 class="faq-title">
+                <i class="fas fa-question-circle me-3"></i>
+                Frequently Asked Questions
+            </h2>
+            
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What services do you offer?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We offer a comprehensive range of professional barbering services including classic men's haircuts, traditional straight razor shaves, beard trimming and styling, mustache grooming, and complete grooming packages. All services include professional consultation and styling advice to help you achieve your perfect look.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        How can I book an appointment?
+                    </button>
+                    <div class="accordion-content">
+                        <p>You can easily book an appointment through multiple convenient methods: our online booking form on the website, by calling us at +7 (700) 123-4567, via WhatsApp, or by visiting us in person at our barbershop. We highly recommend booking in advance to secure your preferred time slot.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do you accept walk-in customers?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, we welcome walk-in customers when time permits, though priority is given to clients with scheduled appointments. To avoid waiting time and ensure availability, we recommend calling ahead or booking online through our convenient booking system.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What are your operating hours?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We're open Monday through Saturday from 9:00 AM to 7:00 PM, and Sunday from 10:00 AM to 5:00 PM. Please note that holiday hours may vary. For the most current schedule information, please call us or check our website.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What payment methods do you accept?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We accept various payment methods for your convenience: cash, all major credit and debit cards, and modern mobile payment options including Apple Pay, Google Pay, and Samsung Pay. Tips can be added to card payments or given in cash directly to your barber.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer with Team Names (Task 11) -->
     <footer class="footer-section py-5">
         <div class="container">
@@ -299,9 +361,9 @@
                 <i class="fas fa-copyright me-2"></i>2025 Barbershop Elegance. All rights reserved.
             </p>
         </div>
+
     </footer>
     
-    <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
 </body>
 </html>

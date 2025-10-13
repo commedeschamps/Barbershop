@@ -343,6 +343,40 @@ p {
 @include media-breakpoint-up(xxl) { ... }
 
 
+.pr_color_ch_button{
+    text-align: center;
+    background:#ff6b35;
+    border: 3px solid #2a2a2a;
+    border-radius: 20px;
+    height: auto;
+    width: 200px;
+    position: fixed;
+    right: 10px;
+    top: 120px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out; 
+}
+
+#pr_date{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:#ff6b35;
+    border: 3px solid #2a2a2a;
+    border-radius: 20px;
+    height: 100px;
+    width: 200px;
+    position: fixed;
+    right: 10px;
+    top: 235px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#pr_date:hover{
+    background-color: #df5a2a;
+    fill: var(--text-white-color)
+}
 
 
 .logotype_pr{

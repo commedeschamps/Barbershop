@@ -73,23 +73,11 @@
         </ul>
     </nav>
 
-    <script class = "navbar-expand">
-        let menu_pr = document.querySelector('.menu_products');
-        let navbar_pr = document.querySelector('#nav_products_sb');
-        let xs_navbar_pr = document.querySelector('.nav_item_pr')
+    <div>
+        <button class = "pr_color_ch_button" onclick="change_bg_color(body)">Click me for change color</button>
+        <div id = "pr_date"></div>
+    </div>
 
-        menu_pr.onclick = () => {
-            menu_pr.classList.toggle('clicked');
-            navbar_pr.classList.toggle('show');
-            xs_navbar_pr.classList.toggle('show')
-        }
-        
-        const myButton = document.querySelector('.nav_item_pr');
-
-        myButton.addEventListener('click', () => {
-        myButton.classList.toggle('active');
-    });
-    </script>
 
 
     <br>
@@ -135,6 +123,8 @@
     </div>
     
 
+    
+    <script src = "damir_products.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

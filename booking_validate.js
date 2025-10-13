@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             showError('Phone number must contain at least 10 digits');
             return false;
         }
+        if (cleanPhone.length > 15) {
+            showError('Phone number must not exceed 15 digits');
+            return false;
+        }
         return true;
     }
     
@@ -103,6 +107,20 @@ document.addEventListener('DOMContentLoaded', function() {
         dateInput.min = today;
         dateInput.max = maxDate.toISOString().split('T')[0];
     }
+    
+    // Prevent Sunday selection by checking when user changes date
+    function handleDateChange() {
+        const selectedDate = new Date(dateInput.value);
+        
+        if (selectedDate.getDay() === 0) { // Sunday = 0
+            showError('We are closed on Sundays. Please select another date.');
+            dateInput.value = ''; 
+        }
+    }
+    
+    // Add event listener for real-time Sunday checking
+    dateInput.addEventListener('change', handleDateChange);
+
 
     
     form.addEventListener('submit', function(e) {

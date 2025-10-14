@@ -30,7 +30,7 @@ function checkSubmit(event){
 
     let cardNumber = el.cardNumber.value;
     let cvv = el.cvv.value;
-    let date_purchase = el.date_purchase.value;
+    // let date_purchase = el.date_purchase.value;
 
     let fail = "";
 

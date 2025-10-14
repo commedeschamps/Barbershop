@@ -13,11 +13,27 @@ myButton.addEventListener('click', () => {
 });
     
 
+let button = false;
 
 function change_bg_color(el){
     el.style.background = "#2a2a2a";
 }
 
 
-document.getElementById("pr_date").innerHTML = Date();
+let date = document.getElementById("pr_date").innerHTML = "Date: <br>" + Date();
+
+document.getElementById('purchase_form_id').addEventListener('submit', checkSubmit)
+
+function checkSubmit(event){
+    event.preventDefault();
+    let el = document.getElementById('purchase_form_id');
+
+    let cardNumber = el.cardNumber.value;
+    let cvv = el.cvv.value;
+    let date_purchase = el.date_purchase.value;
+
+    
+
+}
+
 

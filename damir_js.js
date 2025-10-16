@@ -6,11 +6,7 @@ menu_pr.onclick = () => {
     navbar_pr.classList.toggle('show'); 
 }
         
-// const myButton = document.querySelector('.nav_item_pr');
 
-// myButton.addEventListener('clicked', () => {
-//     myButton.classList.toggle('active');
-// });
     
 
 
@@ -25,8 +21,9 @@ let date = document.getElementById("pr_date").innerHTML = "Date: <br>" + Date();
 document.getElementById('purchase_form_id').addEventListener("submit", checkSubmit)
 
 function checkSubmit(event){
+    event.preventDefault();
+
     let el = document.getElementById('purchase_form_id');
-    el.preventDefault();
     let cardNumber = el.cardNumber.value;
     let cvv = el.cvv.value;
     // let date_purchase = el.date_purchase.value;
@@ -35,26 +32,34 @@ function checkSubmit(event){
 
     if(cardNumber == "" || cvv == ""){
         fail = "Fil all field!";
-        // document.getElementById('cardNumber').innerHTML = error;
-        // document.getElementById('cvv').innerHTML = error;
-        // document.getElementById('date_purchase').innerHTML = error;
+        document.getElementById('cardNumber').innerHTML = error;
+        document.getElementById('cvv').innerHTML = error;
+        document.getElementById('date_purchase').innerHTML = error;
     }
     else if(cardNumber.length < 16 || /\p{L}/u.test(cardNumber)){
         fail = "Fill card number correctly!";
-        // document.getElementById('cardNumber').innerHTML = error;
+        document.getElementById('cardNumber').innerHTML = error;
     }
     else if(cvv.length > 3 || /\p{L}/u.test(cvv)){
         fail = "CVV is not correct!";
-        
-        // document.getElementById('cvv').innerHTML = error;
+        document.getElementById('cvv').innerHTML = error;
     }
 
-    if(fail != ""){
-        document.getElementById('fail').innerHTML = fail;
-        
-    }else{
-        alert("Succesfully bought!");
-    }
+    // if(fail != ""){
+    //     document.getElementById('error').innerHTML = fail;
+    // }
+    // else{
+    //     alert("Succesfully bought!");
+    // }
 }
+
+
+
+
+
+
+
+
+
 
 

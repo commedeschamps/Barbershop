@@ -60,15 +60,15 @@
 
     <div class = "purchase_div">
         <div class = "purchaseForm">
-            <form id = "purchase_form_id">
+            <form id = "purchase_form_id" method="post">
                 <label for = "cardNumber">Card statements</label>
                 <input type="text" name = "cardNumber" placeholder="Card number" id = "cardNumber">
-                <label for = "cvv">CVV</label>
+                <label for = "password">CVV</label>
                 <input type = "password" name = "cvv" placeholder="123" id = "cvv">
                 <!-- <label>Date</label>
                 <input type = "date" name = "date_purchase" id = "date_purchase"> -->
-                <div id = "fail"></div>
-                <input type = "submit" value="READY" style="background: #ff6b35;;">
+                <span id = "error"></span>
+                <input type = "submit" value="SUBMIT" style="background: #ff6b35;;">
             </form>
         </div>
     </div>

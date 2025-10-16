@@ -774,6 +774,8 @@ p {
     top: 100px;
 } */
 
+
+
 .purchaseForm{
     display: flex;
     justify-content: space-around;
@@ -786,8 +788,6 @@ p {
     position:absolute;
     top: 30%;
     left: 40%;
-    
-    
 }
 
 

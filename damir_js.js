@@ -16,9 +16,12 @@ function change_bg_color(el){
 }
 
 
+
 let date = document.getElementById("pr_date").innerHTML = "Date: <br>" + Date();
 
-document.getElementById('purchase_form_id').addEventListener("submit", checkSubmit)
+
+
+document.getElementById('purchase_form_id').addEventListener("submit", checkSubmit);
 
 function checkSubmit(event){
     event.preventDefault();
@@ -32,19 +35,21 @@ function checkSubmit(event){
 
     if(cardNumber == "" || cvv == ""){
         fail = "Fil all field!";
-        document.getElementById('cardNumber').innerHTML = error;
-        document.getElementById('cvv').innerHTML = error;
-        document.getElementById('date_purchase').innerHTML = error;
+        document.getElementById('cardNumber').innerHTML = fail;
+        document.getElementById('cvv').innerHTML = fail;
+        document.getElementById('date_purchase').innerHTML = fail;
     }
     else if(cardNumber.length < 16 || /\p{L}/u.test(cardNumber)){
         fail = "Fill card number correctly!";
-        document.getElementById('cardNumber').innerHTML = error;
+        document.getElementById('cardNumber').innerHTML = fail;
     }
     else if(cvv.length > 3 || /\p{L}/u.test(cvv)){
         fail = "CVV is not correct!";
-        document.getElementById('cvv').innerHTML = error;
+        document.getElementById('cvv').innerHTML = fail;
     }
 
+
+    
     // if(fail != ""){
     //     document.getElementById('error').innerHTML = fail;
     // }

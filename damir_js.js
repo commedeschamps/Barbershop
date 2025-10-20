@@ -7,13 +7,28 @@ menu_pr.onclick = () => {
 }
         
 
-    
 
 
 
-function change_bg_color(el){
-    el.style.background = "#2a2a2a";
-}
+
+document.getElementById('changeBgColor').addEventListener('click', change_bg_color);
+let body_color = document.querySelector('body');
+
+let colors = ['#1a1a1a', '#2a2a2a', '#3a3a3a', '#4a5a4b', '#730a5cff'];
+let counter = 0;
+
+
+function change_bg_color(){
+    body_color.style.background = colors[counter];
+    counter = (counter + 1) % colors.length;
+};
+
+let sound1 = new Audio('sound-1.mp3');
+
+document.getElementById('changeBgColor').addEventListener("click", () => {
+    sound1.play();
+});
+
 
 
 
@@ -54,11 +69,6 @@ button.forEach(el => {
     });
 
 });
-
-
-
-
-
 
 
 

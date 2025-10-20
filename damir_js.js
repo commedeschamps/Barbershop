@@ -21,48 +21,38 @@ let date = document.getElementById("pr_date").innerHTML = "Date: <br>" + Date();
 
 
 
-document.getElementById('purchase_form_id').addEventListener("submit", checkSubmit);
 
-function checkSubmit(event){
-    event.preventDefault();
 
-    let el = document.getElementById('purchase_form_id');
-    let cardNumber = el.cardNumber.value;
-    let cvv = el.cvv.value;
-    // let date_purchase = el.date_purchase.value;
 
-    let fail = "";
-
-    if(cardNumber == "" || cvv == ""){
-        fail = "Fil all field!";
-        document.getElementById('cardNumber').innerHTML = fail;
-        document.getElementById('cvv').innerHTML = fail;
-        document.getElementById('date_purchase').innerHTML = fail;
+let other_lang = {
+    "kazakh" : 
+    {
+        "description" : 
+            "Біздің кәсіби шашты сәндеуге арналған паста шашыңызға күшті, бірақ икемді ұстайтын табиғи күңгірт жабын береді. Күнделікті сәндеу үшін мінсіз, ол сіздің шаш үлгісін қатты немесе майлы қылмай орнында сақтайды. Жеңіл формуланы қолдану оңай, оңай жуылады және қысқа және орташа ұзындықтағы шаштар үшін тамаша жұмыс істейді. Күні бойы шашыңызды сау және сәнді ұстау үшін нәрлендіретін ингредиенттермен байытылған."
+    },
+    "russian": 
+    {
+        "description" :
+            "Наша профессиональная паста для укладки волос придаёт вашим волосам естественный матовый оттенок и обеспечивает сильную, но гибкую фиксацию. Идеально подходит для ежедневной укладки, фиксируя причёску, не делая её жёсткой и жирной. Лёгкая формула легко наносится и смывается, идеально подходит как для коротких, так и для волос средней длины. Обогащена питательными компонентами, которые сохранят ваши волосы здоровыми и стильными в течение всего дня."
+    },
+    "english":
+    {
+        "description" :
+            "Our professional hair styling paste gives your hair a natural matte finish with strong yet flexible hold. Ideal for everyday styling, it keeps your hairstyle in place without making it stiff or greasy. The lightweight formula is easy to apply, washes out effortlessly, and works perfectly for both short and medium-length hair. Enriched with nourishing ingredients to keep your hair healthy and stylish all day long."
     }
-    else if(cardNumber.length < 16 || /\p{L}/u.test(cardNumber)){
-        fail = "Fill card number correctly!";
-        document.getElementById('cardNumber').innerHTML = fail;
-    }
-    else if(cvv.length > 3 || /\p{L}/u.test(cvv)){
-        fail = "CVV is not correct!";
-        document.getElementById('cvv').innerHTML = fail;
-    }
-
-
-    
-    // if(fail != ""){
-    //     document.getElementById('error').innerHTML = fail;
-    // }
-    // else{
-    //     alert("Succesfully bought!");
-    // }
-}
+};
 
 
 
+// document.getElementsByClassName('Flag_button').addEventListener("click", changeToKz);
+
+const button = document.querySelectorAll('.Flag_button');
+
+button.forEach(el => {
+    const attr  = el.getAttribute('language');
 
 
-
+})
 
 
 

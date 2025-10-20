@@ -336,11 +336,9 @@ p {
 
 /* =============================PRODUCTS========================= */
 
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }
-@include media-breakpoint-up(lg) { ... }
-@include media-breakpoint-up(xl) { ... }
-@include media-breakpoint-up(xxl) { ... }
+/*  */
+
+
 
 
 .pr_color_ch_button{
@@ -379,6 +377,35 @@ p {
 }
 
 
+.kzFlag_button{
+    width: 60px;
+    position:relative;
+    right: 30px;
+    top: 5px;
+}
+
+.ruFlag_button{
+    width: 60px;
+    position: relative;
+    right: 20px;
+    top: 5px;
+}
+
+.enFlag_button{
+    width: 60px;
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+
+.flags{
+    position: relative;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+}
+
+
 .logotype_pr{
     position: relative;
     top: -10px;
@@ -394,7 +421,7 @@ p {
     grid-template-columns: 300px 700px;
     justify-content: center;
     grid-row-gap: 50px;
-    /* grid-auto-rows: minmax(50px, auto); */
+
     
 }
 

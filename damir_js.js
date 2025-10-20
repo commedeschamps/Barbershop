@@ -17,10 +17,7 @@ function change_bg_color(el){
 
 
 
-let date = document.getElementById("pr_date").innerHTML = "Date: <br>" + Date();
-
-
-
+// let date = document.getElementById("pr_date").innerHTML = "Date: <br>" + Date();
 
 
 
@@ -47,12 +44,16 @@ let other_lang = {
 // document.getElementsByClassName('Flag_button').addEventListener("click", changeToKz);
 
 const button = document.querySelectorAll('.Flag_button');
+console.log(button);
 
 button.forEach(el => {
-    const attr  = el.getAttribute('language');
+    el.addEventListener("click", () => {
+        const attr = el.getAttribute('language');
 
+        document.getElementById('pr1_text').innerHTML = other_lang[attr].description;
+    });
 
-})
+});
 
 
 

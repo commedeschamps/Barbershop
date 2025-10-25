@@ -358,7 +358,7 @@ $(document).ready(function() {
     // TASK 5: ANIMATED NUMBER COUNTER
     // ==========================================
     
-    function animateCounter($element, start, end, duration) {
+    function animateCounter($element, start, end, duration, decimals = 0) {
         let startTime = null;
         
         function animation(currentTime) {
@@ -366,13 +366,22 @@ $(document).ready(function() {
             const timeElapsed = currentTime - startTime;
             const progress = Math.min(timeElapsed / duration, 1);
             
-            const currentNumber = Math.floor(progress * (end - start) + start);
-            $element.text(currentNumber + '+');
+            const currentNumber = progress * (end - start) + start;
+            
+            if (decimals > 0) {
+                $element.text(currentNumber.toFixed(decimals));
+            } else {
+                $element.text(Math.floor(currentNumber) + '+');
+            }
             
             if (progress < 1) {
                 requestAnimationFrame(animation);
             } else {
-                $element.text(end + '+');
+                if (decimals > 0) {
+                    $element.text(end.toFixed(decimals));
+                } else {
+                    $element.text(end + '+');
+                }
             }
         }
         
@@ -391,11 +400,11 @@ $(document).ready(function() {
             if (scrollTop + windowHeight > statsOffset + 100) {
                 statsAnimated = true;
                 
-                // Animate each counter
-                animateCounter($('#counter-experience'), 0, 74, 2000);
-                animateCounter($('#counter-clients'), 0, 5000, 2500);
-                animateCounter($('#counter-masters'), 0, 6, 1500);
-                animateCounter($('#counter-services'), 0, 18, 1800);
+                // Animate each counter with NEW values
+                animateCounter($('#counter-monthly-clients'), 0, 450, 2200);  // 450+ clients per month
+                animateCounter($('#counter-services'), 0, 25, 1800);          // 25 premium hair styles
+                animateCounter($('#counter-masters'), 0, 6, 1500);            // 6 expert master barbers
+                animateCounter($('#counter-rating'), 0, 4.9, 2000, 1);        // 4.9 star rating
             }
         }
     });

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <link class = "icon" rel = "shortcut icon" href = "logotype.png" type = "image/x-icon">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="accordeon_date.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -334,6 +336,99 @@
                         <p>We accept various payment methods for your convenience: cash, all major credit and debit cards, and modern mobile payment options including Apple Pay, Google Pay, and Samsung Pay. Tips can be added to card payments or given in cash directly to your barber.</p>
                     </div>
                 </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        How long does a typical haircut take?
+                    </button>
+                    <div class="accordion-content">
+                        <p>A classic haircut typically takes 30-45 minutes, including consultation and styling. More complex styles or combinations (like haircut + beard trim) may take 60-75 minutes. Our masters take their time to ensure precision and quality, never rushing through your service.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do I need to bring anything to my appointment?
+                    </button>
+                    <div class="accordion-content">
+                        <p>No, you don't need to bring anything! We provide all necessary tools, products, and supplies. However, if you have specific hair products you prefer or reference photos of styles you like, feel free to bring them. We also recommend arriving 5-10 minutes early for your first visit to complete our client form.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What's your cancellation policy?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We understand that plans change. Please give us at least 24 hours notice if you need to cancel or reschedule your appointment. You can call, text, or use our online booking system to make changes. Last-minute cancellations (less than 4 hours before your appointment) may result in a cancellation fee.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do you offer student or senior discounts?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! We offer a 10% discount for students (with valid student ID) and seniors (65+). We also have special combo packages and loyalty programs for regular clients. Ask your barber about our current promotions and membership options during your visit.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Can I request a specific barber?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely! When booking online or by phone, you can request your preferred master. Each of our six barbers has unique specialties and styles. Check out our Masters page to learn about Alexander, Marcus, James, Brandon, Tyler, and Alex Turner (yes, the former Arctic Monkeys frontman!).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What safety and hygiene measures do you follow?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We maintain the highest standards of cleanliness and hygiene. All tools are sanitized between clients, we use disposable blades for straight razor shaves, capes and towels are laundered after each use, and our stations are thoroughly cleaned throughout the day. Your health and safety are our top priorities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (for animated counters) -->
+    <section id="stats-section" class="py-5" style="background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);">
+        <div class="container">
+            <h2 class="text-center text-light mb-5">
+                <i class="fas fa-chart-line me-3" style="color: #ff6b35;"></i>Our Achievements
+            </h2>
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card" style="background: #333; padding: 30px; border-radius: 15px; border: 2px solid #ff6b35;">
+                        <i class="fas fa-award" style="font-size: 3rem; color: #ff6b35; margin-bottom: 15px;"></i>
+                        <h3 id="counter-experience" class="text-warning" style="font-size: 2.5rem; font-weight: bold;">0+</h3>
+                        <p class="text-light">Years of Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card" style="background: #333; padding: 30px; border-radius: 15px; border: 2px solid #ff6b35;">
+                        <i class="fas fa-users" style="font-size: 3rem; color: #ff6b35; margin-bottom: 15px;"></i>
+                        <h3 id="counter-clients" class="text-warning" style="font-size: 2.5rem; font-weight: bold;">0+</h3>
+                        <p class="text-light">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card" style="background: #333; padding: 30px; border-radius: 15px; border: 2px solid #ff6b35;">
+                        <i class="fas fa-cut" style="font-size: 3rem; color: #ff6b35; margin-bottom: 15px;"></i>
+                        <h3 id="counter-masters" class="text-warning" style="font-size: 2.5rem; font-weight: bold;">0+</h3>
+                        <p class="text-light">Master Barbers</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card" style="background: #333; padding: 30px; border-radius: 15px; border: 2px solid #ff6b35;">
+                        <i class="fas fa-scissors" style="font-size: 3rem; color: #ff6b35; margin-bottom: 15px;"></i>
+                        <h3 id="counter-services" class="text-warning" style="font-size: 2.5rem; font-weight: bold;">0+</h3>
+                        <p class="text-light">Services Offered</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -376,6 +471,8 @@
 
     </footer>
     
+    <!-- jQuery Features Script -->
+    <script src="jquery-features.js"></script>
    
 </body>
 </html>

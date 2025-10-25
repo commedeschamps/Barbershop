@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link class = "icon" rel = "shortcut icon" href = "logotype.png" type = "image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="accordeon_date.js"></script>
     <style>
         .booking-container {
@@ -235,6 +237,90 @@
             font-weight: 600;
         }
         
+        /* Copy to Clipboard Button Styles */
+        .copy-booking-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .copy-booking-btn:hover {
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+        }
+        
+        .copy-booking-btn.copied {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            animation: pulse 0.5s ease;
+        }
+        
+        .copy-booking-btn i {
+            font-size: 1.1rem;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Tooltip for Copy Button */
+        .copy-tooltip {
+            position: relative;
+        }
+        
+        .copy-tooltip-text {
+            visibility: hidden;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 8px 12px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .copy-tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        
+        .copy-tooltip-text.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        
         @media (max-width: 768px) {
             .booking-container {
                 margin: 20px;
@@ -267,6 +353,16 @@
             .btn-next,
             .btn-submit {
                 order: 2;
+            }
+            
+            .copy-booking-btn {
+                font-size: 0.95rem;
+                padding: 12px 20px;
+            }
+            
+            .copy-tooltip-text {
+                font-size: 0.85rem;
+                padding: 6px 10px;
             }
         }
     </style>
@@ -401,10 +497,12 @@
                 <label for="barber">👨‍💼 Preferred Barber (Optional):</label>
                 <select id="barber" name="barber">
                     <option value="">No preference</option>
-                    <option value="john">John Martinez</option>
-                    <option value="mike">Mike Stevens</option>
-                    <option value="alex">Alex Rodriguez</option>
-                    <option value="chris">Chris Thompson</option>
+                    <option value="alexander">Alexander Thompson</option>
+                    <option value="marcus">Marcus Johnson</option>
+                    <option value="james">James Wilson</option>
+                    <option value="brandon">Brandon Mitchell</option>
+                    <option value="tyler">Tyler Anderson</option>
+                    <option value="alex">Alex Turner 🎸</option>
                 </select>
                 
                 <div class="form-navigation">
@@ -490,6 +588,15 @@
                     </div>
                 </div>
                 
+                <!-- Copy to Clipboard Button -->
+                <div class="copy-tooltip">
+                    <button type="button" class="copy-booking-btn" id="copyBookingBtn">
+                        <i class="fas fa-copy"></i>
+                        <span id="copyBtnText">Copy Booking Info</span>
+                    </button>
+                    <span class="copy-tooltip-text" id="copyTooltip">Copied to clipboard!</span>
+                </div>
+                
                 <div class="form-navigation">
                     <button type="button" class="btn-prev" onclick="prevStep(4)">
                         <i class="fas fa-arrow-left"></i> Back
@@ -515,6 +622,8 @@
     <script src="multistep_form.js"></script>
     <!-- Reset Form Function -->
     <script src="reset_form.js"></script>
+    <!-- Copy to Clipboard (jQuery) -->
+    <script src="booking_copy.js"></script>
     <script>
     document.body.style.background = "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)";
 </script>

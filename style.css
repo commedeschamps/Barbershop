@@ -340,6 +340,17 @@ p {
 
 
 
+#searching_in_products{
+    width: auto;
+}
+
+.search_products{
+    position: relative;
+    left: 200px;
+    width: 700px;
+}
+
+
 
 .pr_color_ch_button{
     text-align: center;

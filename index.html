@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <link class = "icon" rel = "shortcut icon" href = "logotype.png" type = "image/x-icon">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="accordeon_date.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -334,6 +336,207 @@
                         <p>We accept various payment methods for your convenience: cash, all major credit and debit cards, and modern mobile payment options including Apple Pay, Google Pay, and Samsung Pay. Tips can be added to card payments or given in cash directly to your barber.</p>
                     </div>
                 </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        How long does a typical haircut take?
+                    </button>
+                    <div class="accordion-content">
+                        <p>A classic haircut typically takes 30-45 minutes, including consultation and styling. More complex styles or combinations (like haircut + beard trim) may take 60-75 minutes. Our masters take their time to ensure precision and quality, never rushing through your service.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do I need to bring anything to my appointment?
+                    </button>
+                    <div class="accordion-content">
+                        <p>No, you don't need to bring anything! We provide all necessary tools, products, and supplies. However, if you have specific hair products you prefer or reference photos of styles you like, feel free to bring them. We also recommend arriving 5-10 minutes early for your first visit to complete our client form.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What's your cancellation policy?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We understand that plans change. Please give us at least 24 hours notice if you need to cancel or reschedule your appointment. You can call, text, or use our online booking system to make changes. Last-minute cancellations (less than 4 hours before your appointment) may result in a cancellation fee.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do you offer student or senior discounts?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! We offer a 10% discount for students (with valid student ID) and seniors (65+). We also have special combo packages and loyalty programs for regular clients. Ask your barber about our current promotions and membership options during your visit.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Can I request a specific barber?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely! When booking online or by phone, you can request your preferred master. Each of our six barbers has unique specialties and styles. Check out our Masters page to learn about Alexander, Marcus, James, Brandon, Tyler, and Alex Turner (yes, the former Arctic Monkeys frontman!).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What safety and hygiene measures do you follow?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We maintain the highest standards of cleanliness and hygiene. All tools are sanitized between clients, we use disposable blades for straight razor shaves, capes and towels are laundered after each use, and our stations are thoroughly cleaned throughout the day. Your health and safety are our top priorities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (for animated counters) -->
+    <section id="stats-section" class="py-5" style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); position: relative; overflow: hidden;">
+        <!-- Decorative background elements -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 0l30 30-30 30L0 30z\' fill=\'%23ff6b35\' fill-opacity=\'1\' fill-rule=\'evenodd\'/%3E%3C/svg%3E'); background-size: 60px 60px;"></div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="text-center text-light mb-2" style="font-weight: 700; letter-spacing: 1px;">
+                <i class="fas fa-chart-bar me-3" style="color: #ff6b35;"></i>Our Stats
+            </h2>
+            <p class="text-center text-secondary mb-5" style="font-size: 1.1rem;">Real numbers, real quality</p>
+            
+            <div class="row text-center g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%); 
+                                                    padding: 35px 25px; 
+                                                    border-radius: 20px; 
+                                                    border: 2px solid transparent;
+                                                    background-clip: padding-box;
+                                                    position: relative;
+                                                    transition: all 0.4s ease;
+                                                    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+                                                    height: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;"
+                         onmouseenter="this.style.transform='translateY(-10px) scale(1.02)'; this.style.borderColor='#ff6b35'; this.style.boxShadow='0 15px 40px rgba(255,107,53,0.3)';"
+                         onmouseleave="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='transparent'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';">
+                        <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%); 
+                                    width: 80px; 
+                                    height: 80px; 
+                                    border-radius: 50%; 
+                                    margin: 0 auto 20px; 
+                                    display: flex; 
+                                    align-items: center; 
+                                    justify-content: center;
+                                    box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+                                    flex-shrink: 0;">
+                            <i class="fas fa-users-line" style="font-size: 2.2rem; color: white;"></i>
+                        </div>
+                        <h3 id="counter-monthly-clients" class="text-warning mb-2" style="font-size: 3rem; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1;">0+</h3>
+                        <p class="text-light mb-0 text-center" style="font-size: 1.05rem; font-weight: 500; letter-spacing: 0.5px; min-height: 50px; display: flex; align-items: center;">Clients Monthly</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%); 
+                                                    padding: 35px 25px; 
+                                                    border-radius: 20px; 
+                                                    border: 2px solid transparent;
+                                                    background-clip: padding-box;
+                                                    position: relative;
+                                                    transition: all 0.4s ease;
+                                                    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+                                                    height: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;"
+                         onmouseenter="this.style.transform='translateY(-10px) scale(1.02)'; this.style.borderColor='#ff6b35'; this.style.boxShadow='0 15px 40px rgba(255,107,53,0.3)';"
+                         onmouseleave="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='transparent'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';">
+                        <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%); 
+                                    width: 80px; 
+                                    height: 80px; 
+                                    border-radius: 50%; 
+                                    margin: 0 auto 20px; 
+                                    display: flex; 
+                                    align-items: center; 
+                                    justify-content: center;
+                                    box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+                                    flex-shrink: 0;">
+                            <i class="fas fa-scissors" style="font-size: 2.2rem; color: white;"></i>
+                        </div>
+                        <h3 id="counter-services" class="text-warning mb-2" style="font-size: 3rem; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1;">0</h3>
+                        <p class="text-light mb-0 text-center" style="font-size: 1.05rem; font-weight: 500; letter-spacing: 0.5px; min-height: 50px; display: flex; align-items: center;">Premium Hair Styles</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%); 
+                                                    padding: 35px 25px; 
+                                                    border-radius: 20px; 
+                                                    border: 2px solid transparent;
+                                                    background-clip: padding-box;
+                                                    position: relative;
+                                                    transition: all 0.4s ease;
+                                                    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+                                                    height: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;"
+                         onmouseenter="this.style.transform='translateY(-10px) scale(1.02)'; this.style.borderColor='#ff6b35'; this.style.boxShadow='0 15px 40px rgba(255,107,53,0.3)';"
+                         onmouseleave="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='transparent'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';">
+                        <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%); 
+                                    width: 80px; 
+                                    height: 80px; 
+                                    border-radius: 50%; 
+                                    margin: 0 auto 20px; 
+                                    display: flex; 
+                                    align-items: center; 
+                                    justify-content: center;
+                                    box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+                                    flex-shrink: 0;">
+                            <i class="fas fa-user-tie" style="font-size: 2.2rem; color: white;"></i>
+                        </div>
+                        <h3 id="counter-masters" class="text-warning mb-2" style="font-size: 3rem; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1;">0</h3>
+                        <p class="text-light mb-0 text-center" style="font-size: 1.05rem; font-weight: 500; letter-spacing: 0.5px; min-height: 50px; display: flex; align-items: center;">Expert Master Barbers</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%); 
+                                                    padding: 35px 25px; 
+                                                    border-radius: 20px; 
+                                                    border: 2px solid transparent;
+                                                    background-clip: padding-box;
+                                                    position: relative;
+                                                    transition: all 0.4s ease;
+                                                    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+                                                    height: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;"
+                         onmouseenter="this.style.transform='translateY(-10px) scale(1.02)'; this.style.borderColor='#ff6b35'; this.style.boxShadow='0 15px 40px rgba(255,107,53,0.3)';"
+                         onmouseleave="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='transparent'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';">
+                        <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%); 
+                                    width: 80px; 
+                                    height: 80px; 
+                                    border-radius: 50%; 
+                                    margin: 0 auto 20px; 
+                                    display: flex; 
+                                    align-items: center; 
+                                    justify-content: center;
+                                    box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+                                    flex-shrink: 0;">
+                            <i class="fas fa-star" style="font-size: 2.2rem; color: white;"></i>
+                        </div>
+                        <h3 id="counter-rating" class="text-warning mb-2" style="font-size: 3rem; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1;">0</h3>
+                        <p class="text-light mb-0 text-center" style="font-size: 1.05rem; font-weight: 500; letter-spacing: 0.5px; min-height: 50px; display: flex; align-items: center;">Customer Rating</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -376,6 +579,8 @@
 
     </footer>
     
+    <!-- jQuery Features Script -->
+    <script src="jquery-features.js"></script>
    
 </body>
 </html>

@@ -212,8 +212,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Global keydown event listener for arrow key navigation
         document.addEventListener('keydown', function(e) {
-            // Check if any nav link has focus
+            // Ignore if user is typing in an input field
             const activeElement = document.activeElement;
+            if (activeElement.tagName === 'INPUT' || 
+                activeElement.tagName === 'TEXTAREA' || 
+                activeElement.isContentEditable) {
+                return;
+            }
+            
+            // Check if any nav link has focus
             const isFocusedOnNav = navLinksArray.includes(activeElement);
             
             // If no nav link is focused, ignore

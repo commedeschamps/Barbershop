@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link class = "icon" rel = "shortcut icon" href = "logotype.png" type = "image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- Enhanced Bootstrap Navigation Bar (Task 5) -->
@@ -313,6 +315,217 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Master 4 Bootstrap Card - NEW -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-dark text-light border-0 shadow">
+                        <img src="newmaster1.jpeg" class="card-img-top" alt="Brandon Mitchell - Expert Barber" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title" style="color: #ff6b35;">Brandon Mitchell</h3>
+                            <p class="text-muted mb-3">Expert Barber</p>
+                            <div class="mb-3">
+                                <i class="fas fa-award me-2" style="color: #ff6b35;"></i>
+                                <span>11+ Years Experience</span>
+                            </div>
+                            <div class="mb-3">
+                                <h5 class="text-light">Specialties:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-cut me-2"></i> Precision Fades</li>
+                                    <li><i class="fas fa-layer-group me-2"></i> Textured Cuts</li>
+                                    <li><i class="fas fa-palette me-2"></i> Hair Coloring</li>
+                                </ul>
+                            </div>
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-0 text-light">"Creating fresh, modern looks that make my clients feel confident and ready to take on the world. Your style is my passion."</p>
+                            </blockquote>
+                            
+                            <!-- Read More Content for Brandon -->
+                            <div id="brandonMoreInfo" style="display: none;" class="mt-3 mb-3">
+                                <div style="background-color: #2a2a2a; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6b35;">
+                                    <h5 class="text-light mb-3"><i class="fas fa-info-circle me-2" style="color: #ff6b35;"></i>About Brandon</h5>
+                                    <p class="text-light mb-2">
+                                        Brandon specializes in modern urban styles and precision fades. He's known for his ability 
+                                        to transform any hair type into a sharp, contemporary look that suits each client's lifestyle.
+                                    </p>
+                                    <p class="text-light mb-2">
+                                        <strong style="color: #ff6b35;">Expertise:</strong><br>
+                                        • Urban Contemporary Styles<br>
+                                        • Taper & Drop Fades<br>
+                                        • Creative Hair Design<br>
+                                        • Men's Hair Coloring
+                                    </p>
+                                    <p class="text-light mb-0">
+                                        <strong style="color: #ff6b35;">Client Favorite:</strong><br>
+                                        Known for his friendly personality and ability to make every client feel at home. 
+                                        Brandon ensures you leave looking fresh and feeling great.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <button onclick="toggleReadMore('brandonMoreInfo', 'brandonBtn')" 
+                                    id="brandonBtn"
+                                    class="btn btn-outline-light mb-3 w-100"
+                                    style="border-color: #ff6b35; color: #ff6b35; border-radius: 8px;">
+                                <i class="fas fa-chevron-down me-2"></i>Read More
+                            </button>
+                            
+                            <div class="text-muted mb-3">
+                                <strong>Working Hours:</strong><br>
+                                Tue-Sat: 10:00 AM - 7:00 PM<br>
+                                Sun: 11:00 AM - 5:00 PM
+                            </div>
+                            <div class="mt-auto">
+                                <a href="booking.html?master=brandon" class="btn btn-primary w-100 py-2" 
+                                   style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                                          border: none; font-weight: 600; border-radius: 10px;">
+                                    <i class="fas fa-calendar-check me-2"></i>Book with Brandon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master 5 Bootstrap Card - NEW -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-dark text-light border-0 shadow">
+                        <img src="newmaster2.jpg" class="card-img-top" alt="Tyler Anderson - Style Specialist" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title" style="color: #ff6b35;">Tyler Anderson</h3>
+                            <p class="text-muted mb-3">Style Specialist</p>
+                            <div class="mb-3">
+                                <i class="fas fa-award me-2" style="color: #ff6b35;"></i>
+                                <span>9+ Years Experience</span>
+                            </div>
+                            <div class="mb-3">
+                                <h5 class="text-light">Specialties:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-cut me-2"></i> Trendy Hairstyles</li>
+                                    <li><i class="fas fa-magic me-2"></i> Styling Consultation</li>
+                                    <li><i class="fas fa-scissors me-2"></i> Texture Specialists</li>
+                                </ul>
+                            </div>
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-0 text-light">"Every haircut tells a story. I work with you to create a style that matches your personality and enhances your natural features."</p>
+                            </blockquote>
+                            
+                            <!-- Read More Content for Tyler -->
+                            <div id="tylerMoreInfo" style="display: none;" class="mt-3 mb-3">
+                                <div style="background-color: #2a2a2a; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6b35;">
+                                    <h5 class="text-light mb-3"><i class="fas fa-info-circle me-2" style="color: #ff6b35;"></i>About Tyler</h5>
+                                    <p class="text-light mb-2">
+                                        Tyler brings a fresh perspective to classic barbering. With an eye for detail and passion 
+                                        for staying ahead of trends, he creates looks that are both stylish and easy to maintain.
+                                    </p>
+                                    <p class="text-light mb-2">
+                                        <strong style="color: #ff6b35;">Special Skills:</strong><br>
+                                        • Trend Forecasting & Style Consultation<br>
+                                        • Men's Grooming Education<br>
+                                        • Advanced Scissor Techniques<br>
+                                        • Product Recommendations
+                                    </p>
+                                    <p class="text-light mb-0">
+                                        <strong style="color: #ff6b35;">Why Clients Love Tyler:</strong><br>
+                                        His patience and expertise make him perfect for first-time clients or anyone 
+                                        looking to try a new style. Tyler takes time to explain everything step by step.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <button onclick="toggleReadMore('tylerMoreInfo', 'tylerBtn')" 
+                                    id="tylerBtn"
+                                    class="btn btn-outline-light mb-3 w-100"
+                                    style="border-color: #ff6b35; color: #ff6b35; border-radius: 8px;">
+                                <i class="fas fa-chevron-down me-2"></i>Read More
+                            </button>
+                            
+                            <div class="text-muted mb-3">
+                                <strong>Working Hours:</strong><br>
+                                Mon-Fri: 11:00 AM - 8:00 PM<br>
+                                Sat: 9:00 AM - 6:00 PM
+                            </div>
+                            <div class="mt-auto">
+                                <a href="booking.html?master=tyler" class="btn btn-primary w-100 py-2" 
+                                   style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                                          border: none; font-weight: 600; border-radius: 10px;">
+                                    <i class="fas fa-calendar-check me-2"></i>Book with Tyler
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master 6 Bootstrap Card - NEW -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-dark text-light border-0 shadow">
+                        <img src="newmaster31.jpg" class="card-img-top" alt="Alex Turner - Rock Star Barber" style="height: 300px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title" style="color: #ff6b35;">Alex Turner</h3>
+                            <p class="text-muted mb-3">Rock Star Barber</p>
+                            <div class="mb-3">
+                                <i class="fas fa-award me-2" style="color: #ff6b35;"></i>
+                                <span>12+ Years Experience</span>
+                            </div>
+                            <div class="mb-3">
+                                <h5 class="text-light">Specialties:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-cut me-2"></i> Rock & Indie Styles</li>
+                                    <li><i class="fas fa-guitar me-2"></i> Musician Haircuts</li>
+                                    <li><i class="fas fa-star me-2"></i> Celebrity Looks</li>
+                                </ul>
+                            </div>
+                            <blockquote class="blockquote flex-grow-1">
+                                <p class="mb-0 text-light">"Do I wanna know... if this feeling flows both ways? Let me style your hair and you'll never look back. Rock 'n' roll is all about attitude."</p>
+                            </blockquote>
+                            
+                            <!-- Read More Content for Alex -->
+                            <div id="alexMoreInfo" style="display: none;" class="mt-3 mb-3">
+                                <div style="background-color: #2a2a2a; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6b35;">
+                                    <h5 class="text-light mb-3"><i class="fas fa-info-circle me-2" style="color: #ff6b35;"></i>About Alex</h5>
+                                    <p class="text-light mb-2">
+                                        Before becoming a barber, Alex was the frontman of the legendary rock band Arctic Monkeys. 
+                                        After touring the world and perfecting his iconic slicked-back pompadour, he decided to share 
+                                        his passion for style with the world. Now he brings that rock star edge to every cut.
+                                    </p>
+                                    <p class="text-light mb-2">
+                                        <strong style="color: #ff6b35;">Signature Services:</strong><br>
+                                        • Arctic Monkeys-Inspired Pompadours<br>
+                                        • Indie/Alternative Rocker Styles<br>
+                                        • Vintage 50s & 60s Rock Cuts<br>
+                                        • Greaser & Teddy Boy Looks<br>
+                                        • Music Video Ready Styling
+                                    </p>
+                                    <p class="text-light mb-0">
+                                        <strong style="color: #ff6b35;">Fun Fact:</strong><br>
+                                        Alex still plays guitar between appointments and often shares stories from his Arctic Monkeys days. 
+                                        His shop playlist features the best of British rock, and clients say getting a haircut from him 
+                                        feels like backstage at Glastonbury Festival. "I bet you look good on the dancefloor" - especially 
+                                        after one of Alex's cuts!
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <button onclick="toggleReadMore('alexMoreInfo', 'alexBtn')" 
+                                    id="alexBtn"
+                                    class="btn btn-outline-light mb-3 w-100"
+                                    style="border-color: #ff6b35; color: #ff6b35; border-radius: 8px;">
+                                <i class="fas fa-chevron-down me-2"></i>Read More
+                            </button>
+                            
+                            <div class="text-muted mb-3">
+                                <strong>Working Hours:</strong><br>
+                                Tue-Sat: 12:00 PM - 9:00 PM<br>
+                                Sun: 1:00 PM - 6:00 PM
+                            </div>
+                            <div class="mt-auto">
+                                <a href="booking.html?master=alex" class="btn btn-primary w-100 py-2" 
+                                   style="background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%); 
+                                          border: none; font-weight: 600; border-radius: 10px;">
+                                    <i class="fas fa-calendar-check me-2"></i>Book with Alex
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -392,7 +605,7 @@
                     <div class="p-4">
                         <i class="fas fa-clock mb-3" style="font-size: 3rem; color: #ff6b35;"></i>
                         <h4 class="text-light">Years of Experience</h4>
-                        <p class="text-light">Combined experience of over 45 years in traditional and modern barbering techniques.</p>
+                        <p class="text-light">Combined experience of over 74 years in traditional and modern barbering techniques plus rock star flair.</p>
                     </div>
                 </div>
                 
@@ -442,7 +655,7 @@
                         How do I choose the right master for my style?
                     </button>
                     <div class="accordion-content">
-                        <p>Each of our masters has unique specialties and expertise. Alexander specializes in classic cuts and straight razor shaves, Marcus focuses on modern styles and hair styling, while James excels in traditional barbering and vintage looks. Consider your preferred style, hair type, and the experience you're looking for when selecting your master.</p>
+                        <p>Each of our masters has unique specialties and expertise. Alexander, Marcus, and James specialize in classic and traditional cuts. Brandon excels in precision fades and modern styles. Tyler is perfect for trendy hairstyles and consultations. Alex Turner brings rock star flair and specializes in indie, rock, and celebrity looks - he's a former Arctic Monkeys frontman! Consider your preferred style, hair type, and the experience you're looking for when selecting your master.</p>
                     </div>
                 </div>
 
@@ -460,7 +673,7 @@
                         What qualifications do your masters have?
                     </button>
                     <div class="accordion-content">
-                        <p>All our masters are licensed professional barbers with extensive training and certifications. They have combined experience of over 45 years, completed professional barbering programs, and continue their education with regular training on the latest techniques, trends, and safety protocols in the industry.</p>
+                        <p>All our masters are licensed professional barbers with extensive training and certifications. They have combined experience of over 74 years, completed professional barbering programs, and continue their education with regular training on the latest techniques, trends, and safety protocols in the industry. Plus, we have a former Arctic Monkeys member bringing rock star style expertise!</p>
                     </div>
                 </div>
 
@@ -479,6 +692,60 @@
                     </button>
                     <div class="accordion-content">
                         <p>Customer satisfaction is our top priority. If you're not completely satisfied with your service, please let us know immediately. We offer complimentary touch-ups within 7 days of your appointment and will work with you to ensure you leave our shop looking and feeling your best.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Can I book multiple services at once?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! You can book combination services like haircut + beard trim or our popular Ultimate Grooming Package. When booking, simply select multiple services or ask for our combo recommendations. We also offer package deals that save you money when you book multiple services together.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do your masters work with all hair types?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely! Our masters are trained and experienced in working with all hair types - straight, wavy, curly, coily, thick, fine, you name it. They're skilled in techniques specific to different textures and can recommend styles that work best with your natural hair type and growth patterns.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        What makes Alex Turner special as a barber?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Alex Turner is our rock star barber - literally! As the former frontman of Arctic Monkeys, he brings a unique perspective to hair styling. He specializes in rock & indie styles, musician haircuts, and celebrity looks. His iconic pompadour from the AM era has inspired countless clients. Plus, he plays guitar between appointments and shares amazing stories from his touring days!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        How often should I get a haircut?
+                    </button>
+                    <div class="accordion-content">
+                        <p>It depends on your style and hair growth rate! Generally, we recommend every 3-4 weeks for short styles and fades, 4-6 weeks for medium-length cuts, and 6-8 weeks for longer styles. Your master will give you a personalized recommendation based on your cut and styling goals during your consultation.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Do you offer group bookings or events?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! We offer group bookings for special occasions like bachelor parties, corporate events, or group celebrations. Contact us in advance to arrange exclusive time slots for your group. We can even arrange after-hours private sessions for larger groups with refreshments included!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-title" aria-expanded="false">
+                        Can I bring my child for their first haircut?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Of course! Our masters are patient and experienced with children's haircuts. We make first haircuts a special experience with extra care and attention. We recommend booking with James or Marcus, who have extensive experience working with kids and making them feel comfortable in the chair.</p>
                     </div>
                 </div>
             </div>
@@ -523,6 +790,8 @@
     <script src="accordeon_date.js"></script>
     <!-- Masters Read More Functionality -->
     <script src="masters_read_more.js"></script>
+    <!-- jQuery Features Script -->
+    <script src="jquery-features.js"></script>
 </body>
 </html>
 

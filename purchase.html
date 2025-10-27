@@ -60,15 +60,15 @@
 
     <div class = "purchase_div">
         <div class = "purchaseForm">
-            <form id = 'purchase_form_id'>
+            <form id = 'purchase_form_id' method="get">
                 <p style = "text-align: center;font-weight: bold; font-size: px;">Form</p>
                 <label for = "cardNumber">Card statements</label>
                 <input type="text" name = "cardNumber" placeholder="Card number" id = "cardNumber">
+                <p id = 'cardNumberError' style = "color: red;"></p>
                 <label for = "password">CVV</label>
                 <input type = "password" name = "cvv" placeholder="123" id = "cvv">
-                <!-- <label>Date</label>
-                <input type = "date" name = "date_purchase" id = "date_purchase"> -->
-                <span id = "error"></span>
+                <p id = 'cvvError' style = "color: red;"></p>
+                <p id = "error"></p>
                 <input type = "submit" value="SUBMIT" style="background: #ff6b35;;">
             </form>
         </div>

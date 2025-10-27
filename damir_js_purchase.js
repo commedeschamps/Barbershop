@@ -1,36 +1,29 @@
-document.getElementById('purchase_form_id').addEventListener("submit", checkSubmit);
-
-function checkSubmit(event){
+document.getElementById('purchase_form_id').addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let el = document.getElementById('purchase_form_id');
-    let cardNumber = el.cardNumber.value;
-    let cvv = el.cvv.value;
-    // let date_purchase = el.date_purchase.value;
+
+    let cardNumber = document.getElementById('cardNumber').value;
+    let cvv = document.getElementById('cvv').value;
 
     let fail = "";
+    let fail_cardNumber = "";
+    let fail_cvv = "";
 
-    if(cardNumber == "" || cvv == ""){
-        fail = "Fil all field!";
-        document.getElementById('cardNumber').innerHTML = fail;
-        document.getElementById('cvv').innerHTML = fail;
-        document.getElementById('date_purchase').innerHTML = fail;
+    if(cardNumber === "" || cvv === ""){
+        fail = "Fill all fileds!!";
+        document.getElementById('error').innerHTML = fail;
     }
-    else if(cardNumber.length < 16 || /\p{L}/u.test(cardNumber)){
-        fail = "Fill card number correctly!";
-        document.getElementById('cardNumber').innerHTML = fail;
+    else if(cardNumber.length < 16 || /\p{L}/u.test(cardNumber) || cardNumber.length > 16){
+        fail_cardNumber = "Fill card number correctly!";
+        document.getElementById('cardNumberError').innerHTML = fail_cardNumber;
     }
-    else if(cvv.length > 3 || /\p{L}/u.test(cvv)){
-        fail = "CVV is not correct!";
-        document.getElementById('cvv').innerHTML = fail;
+    else if(cvv.length > 3 || /\p{L}/u.test(cvv) || cvv.length < 3){
+        fail_cvv = "Fill cvv correctly";
+        document.getElementById('cvvError').innerHTML = fail_cvv;
     }
-
-
     
-    // if(fail != ""){
-    //     document.getElementById('error').innerHTML = fail;
-    // }
-    // else{
-    //     alert("Succesfully bought!");
-    // }
-}
+    
+
+
+});
+

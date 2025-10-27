@@ -3,7 +3,7 @@
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎯 Multi-step form initialized');
+    console.log(' Multi-step form initialized');
     
     // Current step tracking
     let currentStep = 1;
@@ -311,6 +311,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('✅ Booking confirmed!');
                 submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Confirmed!';
                 
+                // Show success toast notification
+                if (typeof window.showToast === 'function') {
+                    window.showToast('🎉 Booking confirmed successfully! You will receive a confirmation email shortly.', 'success', 5000);
+                }
+                
                 setTimeout(() => {
                     showSuccessModal();
                 }, 500);
@@ -411,11 +416,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showError(message) {
-        alert('❌ ' + message);
+        // Use toast notification if available, fallback to alert
+        if (typeof window.showToast === 'function') {
+            window.showToast(message, 'error', 3000);
+        } else {
+            alert('❌ ' + message);
+        }
     }
     
     function showSuccess(message) {
-        console.log('✅ ' + message);
+        // Use toast notification if available
+        if (typeof window.showToast === 'function') {
+            window.showToast(message, 'success', 3000);
+        } else {
+            console.log('✅ ' + message);
+        }
     }
     
     console.log('✅ Multi-step form ready!');

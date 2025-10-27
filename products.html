@@ -6,10 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link class = "icon" rel = "shortcut icon" href = "logotype.png">
     <link rel = "stylesheet" href = "style.css">
-    <script src="accordeon_date.js"></script>
     <title>Products</title>
 </head>
 <body class = "products_body">
+    <div id = "progress"></div><br>
+
             <nav class="navbar navbar-expand-xl navbar-expand-xs navbar_color">
                 <div class="container-fluid">
                     <img class = "logotype_pr" src="logotype.png" alt="Barbershop Logo" style="width: 50px; height: 50px;">
@@ -61,10 +62,15 @@
                 </div>
             </nav>
     
+    
 
+    
+    
     <div class = "menu_products container">
         <span></span>
     </div>
+
+    
 
     <nav id = "nav_products_sb">
         <ul class="nav-list_pr">
@@ -82,14 +88,15 @@
         <button id = "changeBgColor" class = "pr_color_ch_button">Click me for change color</button>
     </div>
 
+    
 
     <br>
     <div class = "container_products_pr container">
             <div><h1 class = "h1_pr">Products</h1></div><br>
-            <form>
-                <span></span>
-                <input class = "search_products" type="search" name="searchin" placeholder="Search in products...">
-                <button type = "button" id = "searching_in_products" src = "searching_photo.jpeg">Search</button>
+            <form class = "searching_form_prodcuts">
+                <input class = "input_field" type="search" name="searchin" placeholder="Search in products...">
+                <p class = "search_res"></p>
+                <button type = "submit" id = "searching_in_products_button">Search</button>
             </form><br>
             <div class="item_pr item_1_pr">
                 <img src = "hair_pr_1.jpg" class = "pr_1_photo"> 
@@ -108,7 +115,8 @@
             <div class="item_pr item_3_pr">
                 <img class = "pr_3_photo" src = 'face_cream_pr.png' >
             </div>
-            <div class="item_pr item_4_pr"><p class = "p_custom" style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Face Cream </b><br>
+            <div class="item_pr item_4_pr">
+                <p class = "p_custom" style = "padding: 15px"><b style = "font-size: 20px;border-bottom: 2px solid rgb(241, 70, 70)">Face Cream </b><br>
                     Moisturizing and soothing cream designed for men's skin.
                      Provides hydration, reduces dryness, and leaves the skin fresh and healthy-looking.
                       Perfect for daily care after shaving</p><br>

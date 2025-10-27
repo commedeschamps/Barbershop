@@ -339,16 +339,30 @@ p {
 /*  */
 
 
-
-#searching_in_products{
-    width: auto;
+#progress{
+    height: 15px;
+    position: fixed;
+    background: #f33118;
+    top: 0;
+    left: 0;
+    z-index: 100000000000000000000000;
 }
 
-.search_products{
+
+
+#searching_in_products_button{
+    width: auto;
+    position: relative;
+    top: -90px;
+    left: 50px;
+}
+
+.input_field{
     position: relative;
     left: 200px;
     width: 700px;
 }
+
 
 
 

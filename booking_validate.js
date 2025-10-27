@@ -8,7 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const phoneInput = document.getElementById('phone');
     
     function showError(message) {
-        alert(message);
+        // Use toast notification if available, fallback to alert
+        if (typeof window.showToast === 'function') {
+            window.showToast(message, 'error', 3000);
+        } else {
+            alert(message);
+        }
     }
     
     function checkRequired(value, fieldName) {

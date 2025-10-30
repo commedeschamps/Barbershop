@@ -12,10 +12,12 @@ $(".searching_form_prodcuts").on("submit", (event) =>{
     let item_pr = $(".item_pr b").text();
     let splitWords = item_pr.split(" ");
     let inputValue = $(".input_field").val();
+    let search_res = $(".search_res");
 
     splitWords.forEach((elem) => {
         if(inputValue == elem){
-            $(".item_pr b").slideToggle("slow");
+            search_res = elem;
+            $(".search_res").slideToggle("slow");
         }
     })
     
@@ -33,8 +35,7 @@ $(".input_field").on("input", (e) => {
 
     const inputValue = e.target.value;
 
-    let output_search = $(".input_field");
-
+    let output_search = $(".inputValue");
     
 });
 
@@ -51,3 +52,10 @@ $(window).on("scroll", () => {
 
 
 
+
+$(document).ready(() =>{
+    $("#notificationProducts").show("fast")
+      .delay(3000)
+      .hide("slow");
+
+});

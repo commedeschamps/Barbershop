@@ -810,6 +810,24 @@ p {
     margin-top: 15px;
 }
 
+#notificationProducts{
+    position: fixed;
+    right: 10px;
+    top: 40%;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    background: rgb(251, 0, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 230), 
+                0 0 20px rgb(0, 136, 255);
+}
+
+.notificationText{
+    position: relative;
+    top: 30px;
+}
+
 /* ---------------------------------PURCHASE PART-------------------------------------------------- */
 
 

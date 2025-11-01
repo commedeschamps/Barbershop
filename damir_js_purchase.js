@@ -22,8 +22,5 @@ document.getElementById('purchase_form_id').addEventListener("submit", (event) =
         document.getElementById('cvvError').innerHTML = fail_cvv;
     }
     
-    
-
-
 });
 

@@ -353,7 +353,7 @@ p {
 #searching_in_products_button{
     width: auto;
     position: relative;
-    top: -90px;
+    top: -75px;
     left: 50px;
 }
 
@@ -361,6 +361,35 @@ p {
     position: relative;
     left: 200px;
     width: 700px;
+    box-shadow: 0 0 10px rgb(224, 98, 1), 
+                0 0 20px rgb(255, 106, 0);
+}
+
+.search_res{
+    background: rgb(40, 39, 39);
+    position:relative;
+    right: -210px;
+    top: -50px;
+    display: flex;
+    justify-content: flex-left;
+    width: 680px;
+    border-radius: 4px;
+}
+
+.search_res ul{
+    width: 680px;
+    padding-top: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search_res ul li{
+    list-style: none;
+    cursor: pointer;
+    padding-top: 15px;
+    display:flex;
+    
 }
 
 
@@ -380,26 +409,7 @@ p {
     transition: transform 0.2s ease-out; 
 }
 
-#pr_date{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background:#ff6b35;
-    border: 3px solid #2a2a2a;
-    border-radius: 20px;
-    height: 100px;
-    width: 200px;
-    position: fixed;
-    right: 10px;
-    top: 235px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
 
-#pr_date:hover{
-    background-color: #df5a2a;
-    fill: var(--text-white-color)
-}
 
 
 .kzFlag_button{
@@ -519,7 +529,7 @@ p {
     height: 50px;
     position: absolute;
     z-index: 1000;
-    top: 14%;
+    top: 16%;
     left: 1%;
     background: #ff6b35;
     border-radius: 8px;

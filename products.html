@@ -83,20 +83,17 @@
             <li><a href="contact.html" class = "lsb_contact">Contact</a></li>
         </ul>
     </nav>
-
-    <div>
-        <button id = "changeBgColor" class = "pr_color_ch_button">Click me for change color</button>
-    </div>
-
     
 
     <br>
     <div class = "container_products_pr container">
             <div><h1 class = "h1_pr">Products</h1></div><br>
             <form class = "searching_form_prodcuts">
-                <input class = "input_field" type="search" name="searchin" placeholder="Search in products...">
-                <p class = "search_res"></p>
-                <button type = "submit" id = "searching_in_products_button">Search</button>
+                <input class = "input_field" type="search" name="searchin" placeholder="Search in products..." maxlength="20" autocomplete="off">
+                <button type = "submit" id = "searching_in_products_button"><i>Search</i></button>
+                <div class = "search_res">
+                </div>
+                
             </form><br>
             <div class="item_pr item_1_pr">
                 <img loading = "lazy" src = "hair_pr_1.jpg" class = "pr_1_photo"> 

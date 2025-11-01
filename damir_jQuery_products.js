@@ -24,20 +24,36 @@ $(".searching_form_prodcuts").on("submit", (event) =>{
 });
 
 
-const name_of_products = {
-    names: ["Hair Styling Paste", "Face Cream", "Premium Hair Shampoo"]
-};
+const name_of_products = ["Hair Styling Paste", 
+                            "Face Cream", 
+                            "Premium Hair Shampoo"
+                        ];
 
 
 
-$(".input_field").on("input", (e) => {
-    e.preventDefault();
 
-    const inputValue = e.target.value;
+$(".input_field").on("keyup", (e) => {
+    let result = [];
 
-    let output_search = $(".inputValue");
-    
+    const inputValue = $(".input_field").val();
+
+    if(inputValue.length){
+        result = name_of_products.filter((keyword) => {
+            return keyword.toLowerCase().includes(inputValue.toLowerCase())
+        });
+        console.log(result);
+    }
+    display(result); 
 });
+
+
+function display(result){
+    const content = result.map((list) => {
+        return "<li>"+ list + "</li>";
+    });
+    $(".search_res").append("<ul>" + content.join('') + "</ul>");
+
+}
 
 
 

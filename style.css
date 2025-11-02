@@ -1335,6 +1335,151 @@ h2::before {
   font-size: 14px;
 }
 
+/* ===============================
+   Reviews Light Mode (Day Theme)
+=============================== */
+.reviews_light_mode,
+.reviews_light_mode * {
+  color: #222 !important;
+  background-color: transparent;
+}
+
+.reviews_light_mode {
+  background: linear-gradient(135deg, #fff 0%, #f7f7f7 100%) !important;
+}
+
+/* Navbar for Reviews Light Mode */
+.reviews_light_mode .navbar {
+  background: linear-gradient(135deg, #ffffff 0%, #eaeaea 100%) !important;
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  border-radius: 20px;
+}
+.reviews_light_mode .navbar .nav-link {
+  color: #222 !important;
+  border-radius: 20px;
+}
+
+.reviews_light_mode .navbar .nav-link:hover,
+.reviews_light_mode .navbar .nav-link.active {
+  background-color: #ff6b35 !important;
+  color: #fff !important;
+}
+
+/* Sidebar */
+.reviews_light_mode .sidebar {
+  background: #e9e9e9 !important;
+}
+
+.reviews_light_mode .sidebar h3 {
+  color: #ff6b35 !important;
+}
+
+.reviews_light_mode .sidebar ul li a {
+  color: #222 !important;
+}
+
+.reviews_light_mode .sidebar ul li a:hover {
+  color: #ff6b35 !important;
+}
+
+/* Review cards */
+.reviews_light_mode .review_item {
+  background-color: #ffffff !important;
+  color: #222 !important;
+  border-color: #ff6b35 !important;
+}
+
+/* Popup form */
+.reviews_light_mode .popup-content {
+  background-color: #fff !important;
+  color: #222 !important;
+  border: 2px solid #ff6b35 !important;
+}
+
+/* Footer */
+.reviews_light_mode .footer {
+  background: #e0e0e0 !important;
+  color: #222 !important;
+}
+
+/* ===============================
+   Theme Toggle Button
+=============================== */
+
+/* Default (Dark mode) button */
+#reviewThemeToggle {
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+/* Light mode toggle button styling */
+.reviews_light_mode #reviewThemeToggle {
+  border: 2px solid #000 !important;
+  color: #000 !important;
+  background-color: transparent !important;
+}
+
+/* Hover effects */
+#reviewThemeToggle:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.reviews_light_mode #reviewThemeToggle:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Icon color inherits current mode */
+#reviewThemeToggle i {
+  color: inherit !important;
+  transition: color 0.3s ease;
+}
+
+#reviewThemeToggle:hover i,
+.reviews_light_mode #reviewThemeToggle i,
+.reviews_light_mode #reviewThemeToggle:hover i {
+  color: inherit !important;
+}
+
+@media (max-width: 991.98px) {
+  /* Light mode dropdown background */
+  .reviews_light_mode .navbar-collapse {
+    background: linear-gradient(135deg, #e8e8e8 0%, #e8e8e8 100%) !important;
+  }
+
+  /* Light mode nav links in collapsed menu */
+  .reviews_light_mode .navbar-collapse .nav-link {
+    color: #222 !important;
+  }
+
+  .reviews_light_mode .navbar-collapse .nav-link:hover {
+    background-color: #ff6b35 !important;
+    color: #fff !important;
+  }
+
+  /* Light mode hamburger (toggler) styling */
+  .reviews_light_mode .navbar-toggler {
+    border-color: #000 !important;
+  }
+
+  .reviews_light_mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  }
+}
+
+/* Smooth transition for theme change */
+.navbar,
+.navbar-collapse,
+.navbar-toggler,
+.navbar .nav-link {
+  transition: all 0.3s ease !important;
+}
+
 /* Examples Section */
 
 .examples_body {
@@ -1467,6 +1612,138 @@ h2::before {
 }
 .carousel-indicators .active {
   background-color: #e55a2b;
+}
+
+/* ===============================
+   Examples Light Mode (Day Theme)
+=============================== */
+.examples_light_mode {
+  background: linear-gradient(135deg, #fff 0%, #f7f7f7 100%) !important;
+  color: #222 !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Avoid resetting everything globally to prevent font issues */
+.examples_light_mode p,
+.examples_light_mode a,
+.examples_light_mode li,
+.examples_light_mode span,
+.examples_light_mode button {
+  color: #222 !important;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Navbar */
+.examples_light_mode .navbar {
+  background: linear-gradient(135deg, #ffffff 0%, #eaeaea 100%) !important;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  border-radius: 20px;
+}
+
+.examples_light_mode .navbar .nav-link {
+  color: #222 !important;
+}
+
+.examples_light_mode .navbar .nav-link:hover,
+.examples_light_mode .navbar .nav-link.active {
+  background-color: #ff6b35 !important;
+  color: #fff !important;
+}
+
+/* Example Cards */
+.examples_light_mode .example-card {
+  background-color: #ffffff !important;
+  color: #222 !important;
+  border: 2px solid #ff6b35 !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.examples_light_mode .example-card h3 {
+  color: #ff6b35 !important;
+}
+
+.examples_light_mode .example-card p {
+  color: #333 !important;
+}
+
+/* Footer */
+.examples_light_mode .footer {
+  background: #e0e0e0 !important;
+  color: #222 !important;
+}
+
+/* ===============================
+   Theme Toggle Button
+=============================== */
+
+/* Default (Dark mode) button */
+#exampleThemeToggle {
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+/* Light mode button */
+.examples_light_mode #exampleThemeToggle {
+  border: 2px solid #000 !important;
+  color: #000 !important;
+  background-color: transparent !important;
+}
+
+/* Hover effects */
+#exampleThemeToggle:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.examples_light_mode #exampleThemeToggle:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Icon inherits mode color */
+#exampleThemeToggle i {
+  color: inherit !important;
+  transition: color 0.3s ease;
+}
+
+/* Mobile Navbar */
+@media (max-width: 991.98px) {
+  .examples_light_mode .navbar-collapse {
+    background: linear-gradient(135deg, #e8e8e8 0%, #e8e8e8 100%) !important;
+  }
+
+  .examples_light_mode .navbar-collapse .nav-link {
+    color: #222 !important;
+  }
+
+  .examples_light_mode .navbar-collapse .nav-link:hover {
+    background-color: #ff6b35 !important;
+    color: #fff !important;
+  }
+
+  .examples_light_mode .navbar-toggler {
+    border-color: #000 !important;
+  }
+
+  .examples_light_mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  }
+}
+
+/* Smooth transitions for theme changes */
+.navbar,
+.navbar-collapse,
+.navbar-toggler,
+.navbar .nav-link {
+  transition: all 0.3s ease !important;
 }
 
 /* ========================================

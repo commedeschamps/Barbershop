@@ -1,48 +1,79 @@
 /* home and services page styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Root variables for theme colors */
+:root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2a2a2a;
+    --bg-tertiary: #0f0f0f;
+    --text-primary: #f5f5f5;
+    --text-secondary: #e0e0e0;
+    --accent-color: #ff6b35;
+    --card-bg: #1f1f1f;
+    --card-border: #2d2d2d;
+    --navbar-bg-start: #1a1a1a;
+    --navbar-bg-end: #2a2a2a;
+    --hero-overlay: rgba(0,0,0,0.7);
+}
+
+/* Light theme variables */
+body.light-theme {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e8e8e8;
+    --text-primary: #1a1a1a;
+    --text-secondary: #2a2a2a;
+    --accent-color: #ff6b35;
+    --card-bg: #ffffff;
+    --card-border: #e0e0e0;
+    --navbar-bg-start: #ffffff;
+    --navbar-bg-end: #f0f0f0;
+    --hero-overlay: rgba(255,255,255,0.85);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1a1a1a;
-    color: #f5f5f5;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
 
 h1 {
-    color: white;
+    color: var(--text-primary);
     text-align: center;
     font-size: 2.5rem;
 }
 
 h2 {
-    color: #ff6b35;
+    color: var(--accent-color);
     text-align: center;
 }
 
 p {
-    color: #e0e0e0;
+    color: var(--text-secondary);
 }
 
 #main-header {
-    background-color: #000;
-    color: white;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
     padding: 20px 0;
 }
 
 #hero-section {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('barbershop_main.jpg');
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('barbershop_main.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--text-primary);
     padding: 80px 20px;
     text-align: center;
 }
 
 #about-section {
-    background-color: #2a2a2a;
+    background-color: var(--bg-secondary);
     padding: 60px 20px;
     text-align: center;
 }
@@ -5010,6 +5041,347 @@ h2::before {
     50% { opacity: 1; }
 }
 
+/* Theme Toggle Styles */
+#theme-toggle {
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Light theme specific overrides */
+body.light-theme .navbar {
+    background: linear-gradient(135deg, var(--navbar-bg-start) 0%, var(--navbar-bg-end) 100%) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.light-theme .navbar-brand span {
+    color: var(--accent-color) !important;
+}
+
+body.light-theme .nav-link {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .nav-link:hover {
+    color: var(--text-primary) !important;
+    background-color: var(--accent-color) !important;
+}
+
+body.light-theme .nav-link.active {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+body.light-theme .card {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--card-border);
+}
+
+body.light-theme .bg-dark {
+    background-color: var(--card-bg) !important;
+}
+
+body.light-theme .text-white {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .text-light {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .footer-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+body.light-theme .services-section,
+body.light-theme .reviews-section,
+body.light-theme #stats-section {
+    background: var(--bg-secondary) !important;
+}
+
+body.light-theme #date-time {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--card-border);
+}
+
+body.light-theme .stat-card,
+body.light-theme .service-card,
+body.light-theme .review-card {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-tertiary) 100%) !important;
+    border: 1px solid var(--card-border) !important;
+}
+
+body.light-theme .accordion-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+body.light-theme .accordion-title {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+body.light-theme .accordion-content {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+}
+
+body.light-theme .about-text {
+    color: var(--text-secondary);
+}
+
+body.light-theme .hero-subtitle .subtitle-text {
+    color: var(--text-secondary);
+}
+
+/* Light theme - Hero Section */
+body.light-theme #hero-section {
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('barbershop_main.jpg');
+}
+
+body.light-theme .hero-main-title,
+body.light-theme .title-gradient {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .hero-subtitle {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .decoration-text {
+    color: var(--text-primary) !important;
+}
+
+/* Light theme - About Section */
+body.light-theme #about-section {
+    background-color: var(--bg-secondary) !important;
+}
+
+body.light-theme .about-image {
+    border-color: var(--card-border) !important;
+}
+
+body.light-theme #about-section h2 {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme #about-section .fa-store {
+    color: var(--accent-color) !important;
+}
+
+body.light-theme .about-text {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .about-text strong {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .about-text i {
+    color: var(--accent-color) !important;
+}
+
+/* Light theme - Service Cards */
+body.light-theme .service-card-title,
+body.light-theme .card-title {
+    color: var(--accent-color) !important;
+}
+
+body.light-theme .service-card-text,
+body.light-theme .card-text {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .service-icon-circle {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ff8c61 100%) !important;
+}
+
+/* Light theme - Review Cards */
+body.light-theme .review-author {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .review-text {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .review-avatar {
+    background-color: var(--accent-color) !important;
+}
+
+body.light-theme .review-quote-bg {
+    color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Light theme - FAQ Section */
+body.light-theme .faq-section {
+    background: var(--bg-secondary) !important;
+}
+
+body.light-theme .faq-title {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .accordion-title {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--card-border) !important;
+}
+
+body.light-theme .accordion-title:hover {
+    background-color: var(--bg-tertiary) !important;
+}
+
+body.light-theme .accordion-title.active {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+body.light-theme .accordion-content p {
+    color: var(--text-secondary) !important;
+}
+
+/* Light theme - Stats Section */
+body.light-theme #stats-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%) !important;
+}
+
+body.light-theme #stats-section h2 {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme #stats-section .text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .stat-card {
+    background: var(--card-bg) !important;
+    border: 2px solid var(--card-border) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+body.light-theme .stat-card:hover {
+    box-shadow: 0 15px 40px rgba(255,107,53,0.2) !important;
+}
+
+body.light-theme .stat-card p {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme #counter-monthly-clients,
+body.light-theme #counter-services,
+body.light-theme #counter-masters,
+body.light-theme #counter-rating {
+    color: var(--accent-color) !important;
+}
+
+/* Light theme - Footer */
+body.light-theme .footer-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%) !important;
+}
+
+body.light-theme .footer-section h4,
+body.light-theme .footer-section p,
+body.light-theme .footer-section li,
+body.light-theme .footer-section span {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .footer-section .text-warning {
+    color: var(--accent-color) !important;
+}
+
+body.light-theme .footer-section hr {
+    border-color: var(--card-border) !important;
+}
+
+/* Light theme - Buttons */
+body.light-theme .btn-outline-warning {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+body.light-theme .btn-outline-warning:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+body.light-theme .btn-outline-primary {
+    color: var(--text-primary) !important;
+    border-color: var(--text-primary) !important;
+}
+
+body.light-theme .btn-outline-primary:hover {
+    background-color: var(--text-primary) !important;
+    color: white !important;
+}
+
+body.light-theme .hero-btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+body.light-theme .hero-btn-secondary {
+    background-color: var(--text-primary) !important;
+    border-color: var(--text-primary) !important;
+    color: white !important;
+}
+
+/* Light theme - Decorative Elements */
+body.light-theme .about-corner-tl,
+body.light-theme .about-corner-br,
+body.light-theme .review-corner-tl,
+body.light-theme .review-corner-br {
+    opacity: 0.5;
+}
+
+body.light-theme .hero-background-pattern {
+    opacity: 0.03;
+}
+
+body.light-theme .services-bg-pattern {
+    opacity: 0.02;
+}
+
+/* Light theme - Date Time Widget */
+body.light-theme #date-time {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 2px solid var(--card-border) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Light theme - Text colors */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme p {
+    color: var(--text-secondary) !important;
+}
+
+/* Light theme - Icon colors */
+body.light-theme .fa-crown,
+body.light-theme .fa-star,
+body.light-theme .fa-store,
+body.light-theme .fa-concierge-bell,
+body.light-theme .fa-question-circle,
+body.light-theme .fa-chart-bar,
+body.light-theme .fa-users,
+body.light-theme .fa-cut,
+body.light-theme .fa-copyright {
+    color: var(--accent-color) !important;
+}
+
 .map-section h3 {
     color: #ff6b35;
     font-weight: 700;
@@ -5040,3 +5412,194 @@ h2::before {
         inset 0 0 0 2px rgba(255, 107, 53, 0.3);
     transform: translateY(-8px) scale(1.02);
 }
+
+/* ============================================
+   COMPREHENSIVE LIGHT THEME OVERRIDES
+   (Override all inline styles)
+============================================ */
+
+/* Navbar inline styles override */
+body.light-theme .navbar-brand span[style] {
+    color: var(--accent-color) !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+body.light-theme .nav-link[style*="color"] {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .nav-link.active[style] {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* Stats Section inline styles override */
+body.light-theme #stats-section[style] {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%) !important;
+}
+
+body.light-theme #stats-section h2[style],
+body.light-theme #stats-section .text-light[style] {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme #stats-section .text-secondary[style] {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme #stats-section .stat-card[style] {
+    background: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+body.light-theme #stats-section .stat-card p[style] {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme #stats-section h3[style] {
+    color: var(--accent-color) !important;
+}
+
+/* Stats counter icon backgrounds - keep gradient but with light theme adaptation */
+body.light-theme #stats-section div[style*="background: linear-gradient"] {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ff8c61 100%) !important;
+}
+
+/* Override any inline background patterns */
+body.light-theme div[style*="background-image: url"] {
+    opacity: 0.03 !important;
+}
+
+/* Footer inline styles */
+body.light-theme .footer-section .text-warning[style] {
+    color: var(--accent-color) !important;
+}
+
+/* Review/Service card white text override */
+body.light-theme .text-white[style*="color"],
+body.light-theme .card .text-white,
+body.light-theme .service-card .text-white,
+body.light-theme .review-card .text-white {
+    color: var(--text-primary) !important;
+}
+
+/* Icon colors in light mode */
+body.light-theme i.fas[style*="color"] {
+    filter: brightness(1.2);
+}
+
+/* Specific stat icon color overrides */
+body.light-theme .fa-chart-bar[style],
+body.light-theme .fa-users[style*="color: white"],
+body.light-theme .fa-scissors[style*="color: white"],
+body.light-theme .fa-user-tie[style*="color: white"],
+body.light-theme .fa-star[style*="color: white"] {
+    color: white !important;
+}
+
+/* Hero section text shadow for light theme */
+body.light-theme .title-gradient,
+body.light-theme .hero-main-title {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* Date-time border for light theme */
+body.light-theme #date-time::before,
+body.light-theme #date-time::after {
+    opacity: 0.3;
+}
+
+/* Additional light theme overrides for better coverage */
+body.light-theme .services-section {
+    background: var(--bg-secondary) !important;
+}
+
+body.light-theme .reviews-section {
+    background: var(--bg-secondary) !important;
+}
+
+body.light-theme .services-bg-pattern,
+body.light-theme .hero-background-pattern {
+    opacity: 0.02 !important;
+}
+
+/* Light theme - ensure all Bootstrap utility classes work */
+body.light-theme .text-light {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .bg-dark {
+    background-color: var(--card-bg) !important;
+}
+
+/* Light theme - Review and Service icons inside cards */
+body.light-theme .service-icon-circle i,
+body.light-theme .review-avatar i {
+    color: white !important;
+}
+
+/* Light theme - ensure warning text stays orange */
+body.light-theme .text-warning {
+    color: var(--accent-color) !important;
+}
+
+/* Light theme - card hover effects */
+body.light-theme .service-card:hover,
+body.light-theme .review-card:hover {
+    box-shadow: 0 15px 40px rgba(255,107,53,0.2) !important;
+}
+
+/* ============================================
+   MASTERS PAGE LIGHT THEME
+============================================ */
+
+/* Masters page header section */
+body.light-theme .container-fluid[style*="background: linear-gradient(135deg, #1a1a1a"] {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%) !important;
+}
+
+body.light-theme #masters-heading {
+    color: var(--text-primary) !important;
+}
+
+/* Masters page content section */
+body.light-theme .container-fluid[style*="background-color: #1a1a1a"] {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Master cards */
+body.light-theme .master-card {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-secondary) 100%) !important;
+    border: 1px solid var(--card-border) !important;
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .master-card:hover {
+    box-shadow: 0 15px 40px rgba(255,107,53,0.2) !important;
+}
+
+body.light-theme .master-info h3,
+body.light-theme .master-title,
+body.light-theme .master-experience {
+    color: var(--text-primary) !important;
+}
+
+body.light-theme .master-bio p,
+body.light-theme .master-specialties li {
+    color: var(--text-secondary) !important;
+}
+
+body.light-theme .master-specialties h4 {
+    color: var(--accent-color) !important;
+}
+
+body.light-theme .master-specialties i {
+    color: var(--accent-color) !important;
+}
+
+body.light-theme .master-card .btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+

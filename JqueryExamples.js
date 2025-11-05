@@ -184,3 +184,41 @@ $(document).ready(function() {
   }
   $(window).on("scroll load", lazyLoad);
 });
+
+/* ===============================
+   Examples Page Theme Toggle
+=============================== */
+const exampleThemeToggle = document.getElementById("exampleThemeToggle");
+const body = document.body;
+
+// Load saved theme
+const savedTheme = localStorage.getItem("examples-theme");
+
+if (savedTheme === "examples-light") {
+  body.classList.add("examples_light_mode");
+  body.classList.remove("examples_body");
+  exampleThemeToggle.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
+} else {
+  body.classList.add("examples_body");
+  body.classList.remove("examples_light_mode");
+  exampleThemeToggle.innerHTML = '<i class="fa fa-sun"></i> Light Mode';
+}
+
+// Toggle theme on click
+exampleThemeToggle.addEventListener("click", () => {
+  if (body.classList.contains("examples_light_mode")) {
+    // Switch to dark
+    body.classList.remove("examples_light_mode");
+    body.classList.add("examples_body");
+    localStorage.setItem("examples-theme", "dark");
+    exampleThemeToggle.innerHTML = '<i class="fa fa-sun"></i> Light Mode';
+  } else {
+    // Switch to light
+    body.classList.remove("examples_body");
+    body.classList.add("examples_light_mode");
+    localStorage.setItem("examples-theme", "examples-light");
+    exampleThemeToggle.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
+  }
+});
+
+

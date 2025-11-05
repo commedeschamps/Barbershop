@@ -159,3 +159,40 @@ $(document).ready(function() {
     });
   });
 });
+
+/* ===============================
+   Task 6 – Reviews Theme Toggle
+=============================== */
+
+const reviewThemeToggle = document.getElementById("reviewThemeToggle");
+const body = document.body;
+
+// Load saved theme from localStorage
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "reviews-light") {
+  body.classList.add("reviews_light_mode");
+  body.classList.remove("reviews_body");
+  reviewThemeToggle.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
+} else {
+  body.classList.add("reviews_body");
+  body.classList.remove("reviews_light_mode");
+  reviewThemeToggle.innerHTML = '<i class="fa fa-sun"></i> Light Mode';
+}
+
+// Toggle theme on click
+reviewThemeToggle.addEventListener("click", () => {
+  if (body.classList.contains("reviews_light_mode")) {
+    // Switch to dark mode
+    body.classList.remove("reviews_light_mode");
+    body.classList.add("reviews_body");
+    localStorage.setItem("theme", "dark");
+    reviewThemeToggle.innerHTML = '<i class="fa fa-sun"></i> Light Mode';
+  } else {
+    // Switch to light mode
+    body.classList.remove("reviews_body");
+    body.classList.add("reviews_light_mode");
+    localStorage.setItem("theme", "reviews-light");
+    reviewThemeToggle.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
+  }
+});

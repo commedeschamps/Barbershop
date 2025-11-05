@@ -63,10 +63,10 @@
             <form id = 'purchase_form_id' method="get">
                 <p style = "text-align: center;font-weight: bold; font-size: px;">Form</p>
                 <label for = "cardNumber">Card statements</label>
-                <input type="text" name = "cardNumber" placeholder="Card number" id = "cardNumber">
+                <input type="text" name = "cardNumber" placeholder="Card number" id = "cardNumber" maxlength="16">
                 <p id = 'cardNumberError' style = "color: red;"></p>
                 <label for = "password">CVV</label>
-                <input type = "password" name = "cvv" placeholder="123" id = "cvv" minlength="3">
+                <input type = "password" name = "cvv" placeholder="123" id = 'cvv'  maxlength="3">
                 <p id = 'cvvError' style = "color: red;"></p>
                 <p id = "error"></p>
                 <input type = "submit" value="SUBMIT" style="background: #ff6b35;;">
@@ -75,7 +75,7 @@
     </div>
     
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src = "damir_js_purchase.js"></script>
 </body>
 </html>

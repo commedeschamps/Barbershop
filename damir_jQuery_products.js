@@ -42,7 +42,6 @@ $(".input_field").on("keyup", (e) => {
         result = name_of_products.filter((keyword) => {
             return keyword.toLowerCase().includes(inputValue.toLowerCase())
         });
-        console.log(result);
     }
     display(result); 
 });
@@ -71,8 +70,13 @@ $(window).on("scroll", () => {
 
 
 $(document).ready(() =>{
-    $("#notificationProducts").show("fast")
+    $("#notificationProducts").show("slow")
       .delay(3000)
       .hide("slow");
-
 });
+
+
+
+$("#change_term").click( () => {
+    
+})

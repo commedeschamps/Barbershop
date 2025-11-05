@@ -371,13 +371,15 @@ p {
 
 
 #progress{
-    height: 12px;
+    height: 9px;
     position: fixed;
     background: #f33118;
     top: 0;
     left: 0;
     z-index: 100000000000000000000000;
 }
+
+
 
 
 
@@ -426,20 +428,14 @@ p {
 
 
 
-.pr_color_ch_button{
-    text-align: center;
-    background:#ff6b35;
-    border: 3px solid #2a2a2a;
-    border-radius: 20px;
-    height: auto;
-    width: 200px;
-    position: fixed;
-    right: 10px;
-    top: 120px;
-    cursor: pointer;
-    transition: transform 0.2s ease-out; 
-}
 
+#change_term{
+    position: relative;
+    left: -40px;
+    top: 5px;
+    height: 55px;
+    
+}
 
 
 
@@ -779,23 +775,7 @@ p {
     justify-items: start;
 }
 
-/* .pr_1_button{
-    position: absolute;
-    bottom:0;
-    right:0;
-    width: 90px;
-    margin-bottom: 15px;
-    margin-right: 30px;
-}
 
-.pr_3_button{
-    position: absolute;
-    bottom:0;
-    right:0;
-    width: 90px;
-    margin-bottom: 15px;
-    margin-right: 30px;
-} */
 
 .btn-secondary{
     position: absolute;
@@ -807,10 +787,6 @@ p {
 }
 
 
-
-/* .item_2_pr{
-    
-} */
 
 
 .item_3_pr{
@@ -854,14 +830,14 @@ p {
 #notificationProducts{
     position: fixed;
     right: 10px;
-    top: 40%;
+    top: 80%;
     height: 100px;
     width: 200px;
     text-align: center;
-    background: rgb(251, 0, 255);
+    background: rgb(0, 255, 136);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgb(255, 0, 230), 
-                0 0 20px rgb(0, 136, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 38), 
+                0 0 10px rgb(0, 255, 8);
 }
 
 .notificationText{

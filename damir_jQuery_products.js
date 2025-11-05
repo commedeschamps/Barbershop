@@ -100,6 +100,7 @@ $("#change_term").click( () => {
     select.show();
 
     if(select == night){
+        $('.navbar_color').css('background', 'linear-gradient(to right,  #000000 25%,#d42b1f 100%)');
         $('body').css('background', '#1a1a1a');
         $('h1').css('color', 'white');
         $('p').css('color', 'white');
@@ -107,11 +108,11 @@ $("#change_term").click( () => {
         $('i').css('color', 'white');
     }else{
         $('body').css('background', '#FFCD94');
-        $('a').find('p').css('color', 'white');
+        $('a').css('color', 'white');
         $('h1').css('color', '#1a1a1a');
         $('p').css('color', '#1a1a1a');
         $('b').css('color', '#1a1a1a');
         $('i').css('color', '#1a1a1a');
-        $('.navbar_color').css('background', 'linear-gradient(to right,  #000000 25%,#d42b1f 100%)')
+        $('.navbar_color').css('background', 'linear-gradient(to right,  #edac6eff 25%,#d42b1f 100%)');
     }
 })

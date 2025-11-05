@@ -24,10 +24,11 @@ $(".searching_form_prodcuts").on("submit", (event) =>{
 });
 
 
-const name_of_products = ["Hair Styling Paste", 
-                            "Face Cream", 
-                            "Premium Hair Shampoo"
-                        ];
+const name_of_products = [
+    "Hair Styling Paste", 
+    "Face Cream", 
+    "Premium Hair Shampoo"
+];
 
 
 

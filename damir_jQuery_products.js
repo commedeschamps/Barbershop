@@ -77,6 +77,41 @@ $(document).ready(() =>{
 
 
 
+
+
+let night = $("#night");
+let light = $("#light")
+
+let night_light = [night, light];
+let counter_night_light = 0;
+
+light.hide();
+
+let select = night_light[0];
+select.show();
+
 $("#change_term").click( () => {
-    
+    select.hide();
+
+    select = night_light[counter_night_light];
+    counter_night_light = (counter_night_light + 1) % night_light.length;
+
+    console.log(select);
+    select.show();
+
+    if(select == night){
+        $('body').css('background', '#1a1a1a');
+        $('h1').css('color', 'white');
+        $('p').css('color', 'white');
+        $('b').css('color', 'white');
+        $('i').css('color', 'white');
+    }else{
+        $('body').css('background', '#FFCD94');
+        $('a').find('p').css('color', 'white');
+        $('h1').css('color', '#1a1a1a');
+        $('p').css('color', '#1a1a1a');
+        $('b').css('color', '#1a1a1a');
+        $('i').css('color', '#1a1a1a');
+        $('.navbar_color').css('background', 'linear-gradient(to right,  #000000 25%,#d42b1f 100%)')
+    }
 })

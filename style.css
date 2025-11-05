@@ -165,7 +165,7 @@ p {
 /* ================================SERVICES============================== */
 
 .services_body {
-    background-image: url('uslugi_bgimage.png');
+    background-image: url('/imgs_services/uslugi_bgimage.png');
     backdrop-filter: blur(3px); 
     -webkit-backdrop-filter: blur(3px); 
     background-size:cover;

@@ -107,6 +107,7 @@ $("#change_term").click( () => {
         $('b').css('color', 'white');
         $('i').css('color', 'white');
     }else{
+        light.css('transition', 'transform 0.2s ease-out');
         $('body').css('background', '#FFCD94');
         $('a').css('color', 'white');
         $('h1').css('color', '#1a1a1a');
@@ -116,3 +117,15 @@ $("#change_term").click( () => {
         $('.navbar_color').css('background', 'linear-gradient(to right,  #edac6eff 25%,#d42b1f 100%)');
     }
 })
+
+
+
+$(() => {
+    if($(window).width() < 667){
+        $('.menu_products').click(() => {
+            console.log("Showing");
+            
+
+        })
+    }
+});

@@ -355,24 +355,40 @@
                 order: 2;
             }
             
-            function resetForm() {
-                document.getElementById('multiStepForm').reset();
-                // Go to first step
-                const steps = document.querySelectorAll('.form-step');
-                steps.forEach(step => step.classList.remove('active'));
-                document.getElementById('step-1').classList.add('active');
-                
-                // Reset step indicators
-                const indicators = document.querySelectorAll('.step');
-                indicators.forEach(indicator => {
-                    indicator.classList.remove('active', 'completed');
-                });
-                document.getElementById('step-indicator-1').classList.add('active');
-            }
-                        <a class="nav-link px-3 py-2" href="services.html" 
-                           style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
-                           onmouseover="this.style.backgroundColor='#ff6b35';" 
-                           onmouseout="this.style.backgroundColor='transparent';">Services</a>
+        }
+        
+        
+        .summary-item {
+            font-size: 0.9rem;
+        }
+        
+        .copy-booking-btn {
+            font-size: 0.9rem;
+            padding: 10px 20px;
+        }
+        
+        .copy-tooltip-text {
+            font-size: 0.8rem;
+            padding: 6px 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="logotype.png" alt="Barbershop Elegance Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item me-2">
+                    <a class="nav-link px-3 py-2" href="services.html" 
+                       style="color: #f5f5f5 !important; font-weight: 500; border-radius: 20px; transition: all 0.3s ease;"
+                       onmouseover="this.style.backgroundColor='#ff6b35';" 
+                       onmouseout="this.style.backgroundColor='transparent';">Services</a>
                     </li>
                     <li class="nav-item me-2">
                         <a class="nav-link px-3 py-2" href="products.html" 

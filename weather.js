@@ -39,9 +39,25 @@ async function loadWeather() {
     const desc = getWeatherText(nowCode);
 
     weatherBox.innerHTML = `
-      <p>Now: <strong>${nowTemp}°C</strong> — ${desc}</p>
-      <p>Today: max ${maxTemp}°C, min ${minTemp}°C</p>
-      <p>Daily precipitation: rain ${rain} mm, snow ${snow} mm</p>
+      <div class="weather-desc">Now: <strong>${nowTemp}°C</strong> — ${desc}</div>
+      <div class="weather-metrics">
+        <div class="metric">
+          <div class="label">Max</div>
+          <div class="value">${maxTemp}°C</div>
+        </div>
+        <div class="metric">
+          <div class="label">Min</div>
+          <div class="value">${minTemp}°C</div>
+        </div>
+        <div class="metric">
+          <div class="label">Rain</div>
+          <div class="value">${rain} mm</div>
+        </div>
+        <div class="metric">
+          <div class="label">Snow</div>
+          <div class="value">${snow} mm</div>
+        </div>
+      </div>
       <p class="weather-tip">
         ${
           rain > 0 || snow > 0
@@ -52,6 +68,7 @@ async function loadWeather() {
     `;
   } catch (err) {
     console.error(err);
+    weatherBox.classList.add('weather-error');
     weatherBox.textContent = 'Failed to load weather data.';
   }
 }

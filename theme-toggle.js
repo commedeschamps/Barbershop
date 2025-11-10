@@ -12,11 +12,10 @@ $(document).ready(function() {
             'background-attachment': 'fixed'
         });
         
-        // Navbar
-        $('.navbar').css({
-            'background': 'linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)',
-            'box-shadow': '0 2px 10px rgba(0,0,0,0.1)'
-        });
+        // Navbar: switch to class-based theming to avoid overriding Bootstrap .fixed-top
+        $('.navbar')
+            .removeClass('dark-mode-nav')
+            .addClass('light-mode-nav');
         
         $('.navbar-brand span').css({
             'color': '#ff6b35',
@@ -48,8 +47,8 @@ $(document).ready(function() {
         $('.stat-card p').css('color', '#1a1a1a');
         $('#counter-monthly-clients, #counter-services, #counter-masters, #counter-rating').css('color', '#ff6b35');
         
-        // Hero Section
-        $('#hero-section').css('background-image', 'linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("barbershop_main.jpg")');
+    // Hero Section background handled by CSS variable now
+    $('#hero-section').css('background-image', '');
         $('.title-gradient').css('color', '#1a1a1a');
         $('.subtitle-text').css('color', '#2a2a2a');
         
@@ -247,11 +246,10 @@ $(document).ready(function() {
             'background-attachment': 'fixed'
         });
         
-        // Navbar
-        $('.navbar').css({
-            'background': 'linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)',
-            'box-shadow': ''
-        });
+        // Navbar: switch to dark class without touching positioning
+        $('.navbar')
+            .removeClass('light-mode-nav')
+            .addClass('dark-mode-nav');
         
         $('.navbar-brand span').css({
             'color': '#ff6b35',
@@ -283,8 +281,8 @@ $(document).ready(function() {
         $('.stat-card p').css('color', '#f5f5f5');
         $('#counter-monthly-clients, #counter-services, #counter-masters, #counter-rating').css('color', '#ff6b35');
         
-        // Hero Section
-        $('#hero-section').css('background-image', 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("barbershop_main.jpg")');
+    // Hero Section background handled by CSS variable now
+    $('#hero-section').css('background-image', '');
         $('.title-gradient').css('color', '#ffffff');
         $('.subtitle-text').css('color', '#e0e0e0');
         
@@ -481,6 +479,9 @@ $(document).ready(function() {
         body.addClass('light-theme');
         themeIcon.removeClass('fa-sun').addClass('fa-moon');
         applyLightTheme();
+    } else {
+        // ensure dark class applied on initial load
+        $('.navbar').addClass('dark-mode-nav');
     }
     
     // Toggle theme on button click

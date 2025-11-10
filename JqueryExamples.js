@@ -6,66 +6,91 @@
 $(document).ready(function() {
   console.log("✅ jQuery is ready!");
 
-  // ============================================
-  // Task 1: Real-time Search & Live Filter
-  // ============================================
-  // HTML example (place before your examples grid):
-  // <input type="text" id="searchInput" placeholder="Search styles..." class="form-control mb-4">
-  // <datalist id="suggestions"></datalist>
-
-  $("#searchInput").on("keyup", function() {
-    const query = $(this).val().toLowerCase();
-
-    $(".example-card").filter(function() {
-      const text = $(this).text().toLowerCase();
-      $(this).toggle(text.indexOf(query) > -1);
-    });
+// ============================================
+// Task 1: Real-time Search & Live Filter
+// ============================================
+function filterExamples(query) {
+  $(".example-card").filter(function () {
+    const text = $(this).text().toLowerCase();
+    const visible = text.indexOf(query) > -1;
+    $(this).toggle(visible);
+    return visible;
   });
+}
 
-  // ============================================
-  // Task 2: Autocomplete Search Suggestions
-  // ============================================
-  const titles = [
-    "Classic Gentleman's Cut", "Modern Fade", "Traditional Barber Cut",
-    "Pompadour", "Crew Cut", "Luxury Beard Style",
-    "Razor Fade", "Textured Crop", "Buzz Cut"
-  ];
+// ============================================
+// Task 2 & 3: Autocomplete & Highlighting
+// ============================================
+const titles = [
+  "Classic Gentleman's Cut", "Modern Fade", "Traditional Barber Cut",
+  "Pompadour", "Crew Cut", "Luxury Beard Style",
+  "Razor Fade", "Textured Crop", "Buzz Cut"
+];
 
-  $("#searchInput").on("input", function() {
-    const val = $(this).val().toLowerCase();
-    const $list = $("#suggestions");
-    $list.empty();
-
-    if (val.length > 0) {
-      const matches = titles.filter(t => t.toLowerCase().includes(val));
-      matches.forEach(m => $list.append(`<option value="${m}">`));
+function highlightText(keyword) {
+  $(".example-card h3, .example-card p").each(function () {
+    const text = $(this).text();
+    if (keyword.length > 0) {
+      const highlighted = text.replace(
+        new RegExp(`(${keyword})`, "gi"),
+        "<span class='highlight'>$1</span>"
+      );
+      $(this).html(highlighted);
+    } else {
+      $(this).html(text);
     }
   });
+}
 
-  // ============================================
-  // Task 3: Search Highlighting
-  // ============================================
-  $("#searchInput").on("input", function() {
-    const keyword = $(this).val().trim();
-    $(".example-card h3, .example-card p").each(function() {
-      const text = $(this).text();
-      if (keyword.length > 0) {
-        const highlighted = text.replace(
-          new RegExp(`(${keyword})`, "gi"),
-          "<span class='highlight'>$1</span>"
-        );
-        $(this).html(highlighted);
-      } else {
-        $(this).html(text);
-      }
-    });
-  });
+function updateSuggestions(val) {
+  const $list = $("#suggestions");
+  $list.empty();
+  if (val.length > 0) {
+    const matches = titles.filter(t => t.toLowerCase().includes(val.toLowerCase()));
+    matches.forEach(m => $list.append(`<option value="${m}">`));
+  }
+}
 
-  // Add highlight CSS dynamically
-  $("<style>")
-    .prop("type", "text/css")
-    .html(".highlight { background: yellow; color: black; font-weight: bold; }")
-    .appendTo("head");
+// ============================================
+// Task 4: Local Storage Integration
+// ============================================
+function saveSearch(query) {
+  localStorage.setItem("lastSearch", query);
+}
+
+function loadSearch() {
+  const lastSearch = localStorage.getItem("lastSearch") || "";
+  $("#searchInput").val(lastSearch);
+  filterExamples(lastSearch.toLowerCase());
+  highlightText(lastSearch);
+  updateSuggestions(lastSearch);
+}
+
+// ============================================
+// Event Handlers
+// ============================================
+$("#searchInput").on("input keyup", function () {
+  const query = $(this).val().trim();
+  filterExamples(query.toLowerCase());
+  highlightText(query);
+  updateSuggestions(query);
+  saveSearch(query);
+});
+
+// ============================================
+// Initial Load: Restore last search
+// ============================================
+$(document).ready(function () {
+  loadSearch();
+});
+
+// ============================================
+// Add highlight CSS dynamically
+// ============================================
+$("<style>")
+  .prop("type", "text/css")
+  .html(".highlight { background: yellow; color: black; font-weight: bold; }")
+  .appendTo("head");
 
   // ============================================
   // Task 4: Scroll Progress Bar
@@ -220,5 +245,6 @@ exampleThemeToggle.addEventListener("click", () => {
     exampleThemeToggle.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
   }
 });
+
 
 

@@ -1,15 +1,9 @@
-// ==========================================
-// MULTI-STEP FORM WITH CALLBACKS
-// ==========================================
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log(' Multi-step form initialized');
     
-    // Current step tracking
     let currentStep = 1;
     const totalSteps = 4;
     
-    // Form state storage
     const formState = {
         date: '',
         time: '',
@@ -21,21 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
         notes: ''
     };
     
-    // ==========================================
-    // CALLBACK FUNCTION FOR STEP NAVIGATION
-    // ==========================================
+    const authorizedPhone = typeof BookingAuth !== 'undefined' ? BookingAuth.getUserPhone() : null;
+    if (authorizedPhone) {
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.value = authorizedPhone;
+            formState.phone = authorizedPhone;
+        }
+    }
     
-    /**
-     * Callback function to handle step transitions
-     * This demonstrates the use of callbacks for user interactions
-     * @param {number} stepNumber - The step to navigate to
-     * @param {function} validationCallback - Optional validation function
-     * @param {function} successCallback - Function to call on successful navigation
-     */
     function handleStepNavigation(stepNumber, validationCallback, successCallback) {
         console.log(`📍 Navigating to step ${stepNumber}`);
         
-        // Execute validation callback if provided
         if (validationCallback && typeof validationCallback === 'function') {
             const isValid = validationCallback();
             if (!isValid) {
@@ -44,36 +35,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Save current step data using callback
         saveStepData(currentStep, function(saved) {
             if (saved) {
                 console.log(`✅ Step ${currentStep} data saved`);
                 
-                // Hide all steps
                 document.querySelectorAll('.form-step').forEach(step => {
                     step.classList.remove('active');
                 });
                 
-                // Show target step
                 const targetStep = document.getElementById(`step-${stepNumber}`);
                 if (targetStep) {
                     targetStep.classList.add('active');
                     currentStep = stepNumber;
                     
-                    // Update step indicators
                     updateStepIndicators(stepNumber);
                     
-                    // If moving to review step, populate summary
                     if (stepNumber === totalSteps) {
                         populateSummary();
                     }
                     
-                    // Execute success callback
                     if (successCallback && typeof successCallback === 'function') {
                         successCallback(stepNumber);
                     }
                     
-                    // Scroll to top smoothly
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             }
@@ -81,10 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return true;
     }
-    
-    // ==========================================
-    // VALIDATION CALLBACKS
-    // ==========================================
     
     function validateStep1() {
         const date = document.getElementById('date').value;
@@ -100,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
         
-        // Check if date is not in the past
         const selectedDate = new Date(date);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
@@ -141,15 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
     
-    // ==========================================
-    // SAVE STEP DATA (CALLBACK PATTERN)
-    // ==========================================
-    
-    /**
-     * Saves form data for current step using callback pattern
-     * @param {number} step - Current step number
-     * @param {function} callback - Function to call after save
-     */
     function saveStepData(step, callback) {
         switch(step) {
             case 1:
@@ -171,20 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
         
-        // Simulate async save operation with callback
         setTimeout(() => {
             callback(true);
         }, 100);
     }
     
-    // ==========================================
-    // POPULATE SUMMARY (STEP 4)
-    // ==========================================
-    
     function populateSummary() {
         console.log('📋 Populating summary with form state:', formState);
         
-        // Format date nicely
         const dateObj = new Date(formState.date);
         const formattedDate = dateObj.toLocaleDateString('en-US', {
             weekday: 'long',
@@ -196,12 +160,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('summary-date').textContent = formattedDate || '-';
         document.getElementById('summary-time').textContent = formatTime(formState.time) || '-';
         
-        // Get service name
         const serviceSelect = document.getElementById('service');
         const serviceText = serviceSelect.options[serviceSelect.selectedIndex]?.text || '-';
         document.getElementById('summary-service').textContent = serviceText;
         
-        // Get barber name
         const barberSelect = document.getElementById('barber');
         const barberText = barberSelect.value ? barberSelect.options[barberSelect.selectedIndex].text : 'No preference';
         document.getElementById('summary-barber').textContent = barberText;
@@ -209,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('summary-name').textContent = formState.name || '-';
         document.getElementById('summary-phone').textContent = formState.phone || '-';
         
-        // Optional fields
         if (formState.email) {
             document.getElementById('summary-email-row').style.display = 'flex';
             document.getElementById('summary-email').textContent = formState.email;
@@ -221,16 +182,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // ==========================================
-    // STEP NAVIGATION FUNCTIONS (USING CALLBACKS)
-    // ==========================================
-    
     window.nextStep = function(fromStep) {
         console.log(`➡️ Next from step ${fromStep}`);
         
         let validationCallback;
         
-        // Assign validation callback based on current step
         switch(fromStep) {
             case 1:
                 validationCallback = validateStep1;
@@ -243,7 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
         
-        // Use callback pattern for navigation
         handleStepNavigation(
             fromStep + 1,
             validationCallback,
@@ -257,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.prevStep = function(fromStep) {
         console.log(`⬅️ Back from step ${fromStep}`);
         
-        // Save current step data before going back (no validation needed)
         handleStepNavigation(
             fromStep - 1,
             null,
@@ -266,10 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         );
     };
-    
-    // ==========================================
-    // UPDATE STEP INDICATORS
-    // ==========================================
     
     function updateStepIndicators(activeStep) {
         for (let i = 1; i <= totalSteps; i++) {
@@ -286,10 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // ==========================================
-    // FORM SUBMISSION WITH CALLBACK
-    // ==========================================
-    
     const form = document.getElementById('multiStepForm');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -297,13 +243,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('🚀 Form submitted!');
         console.log('📦 Final form state:', formState);
         
-        // Show loading state
         const submitBtn = form.querySelector('.btn-submit');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
         submitBtn.disabled = true;
         
-        // Simulate async submission with callback
         submitFormData(formState, function(success, message) {
             submitBtn.disabled = false;
             
@@ -311,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('✅ Booking confirmed!');
                 submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Confirmed!';
                 
-                // Show success toast notification
                 if (typeof window.showToast === 'function') {
                     window.showToast('🎉 Booking confirmed successfully! You will receive a confirmation email shortly.', 'success', 5000);
                 }
@@ -327,25 +270,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    /**
-     * Simulate async form submission with callback
-     * @param {object} data - Form data to submit
-     * @param {function} callback - Callback function (success, message)
-     */
     function submitFormData(data, callback) {
-        // Simulate API call with setTimeout
         setTimeout(() => {
-            // Simulate success (in real app, this would be an actual API call)
-            const success = true;
-            const message = success ? 'Booking confirmed successfully!' : 'Failed to book appointment';
-            
-            callback(success, message);
+            if (typeof BookingAuth !== 'undefined' && BookingAuth.saveBookingData) {
+                const success = BookingAuth.saveBookingData(data);
+                const message = success ? 'Booking confirmed successfully!' : 'Failed to book appointment';
+                callback(success, message);
+            } else {
+                const success = true;
+                const message = success ? 'Booking confirmed successfully!' : 'Failed to book appointment';
+                callback(success, message);
+            }
         }, 1500);
     }
-    
-    // ==========================================
-    // SUCCESS MODAL
-    // ==========================================
     
     function showSuccessModal() {
         const modal = document.createElement('div');
@@ -402,10 +339,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(modal);
     }
     
-    // ==========================================
-    // UTILITY FUNCTIONS
-    // ==========================================
-    
     function formatTime(time) {
         if (!time) return '-';
         const [hours, minutes] = time.split(':');
@@ -416,7 +349,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showError(message) {
-        // Use toast notification if available, fallback to alert
         if (typeof window.showToast === 'function') {
             window.showToast(message, 'error', 3000);
         } else {
@@ -425,7 +357,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showSuccess(message) {
-        // Use toast notification if available
         if (typeof window.showToast === 'function') {
             window.showToast(message, 'success', 3000);
         } else {

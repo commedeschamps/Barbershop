@@ -284,5 +284,16 @@
     <script src="accordeon_date.js"></script>
     <!-- Theme Toggle -->
     <script src="theme-toggle.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authorizedPhone = typeof BookingAuth !== 'undefined' ? BookingAuth.getUserPhone() : null;
+            if (authorizedPhone) {
+                const phoneInput = document.getElementById('phone');
+                if (phoneInput) {
+                    phoneInput.value = authorizedPhone;
+                }
+            }
+        });
+    </script>
 </body>
 </html>

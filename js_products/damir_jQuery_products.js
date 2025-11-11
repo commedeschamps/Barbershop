@@ -49,7 +49,9 @@ $(".input_field").on("keyup", (e) => {
 
 function display(result){
     const content = result.map((list) => {
-        return "<li>"+ list + "</li>";
+        $(".item_3_pr").hide("fast");
+        $(".item_4_pr").hide("fast");
+
     });
     $(".search_res").append("<ul>" + content.join('') + "</ul>");
 

@@ -1,12 +1,9 @@
-// ==========================================
 // COPY TO CLIPBOARD FUNCTIONALITY WITH JQUERY
-// Task 8: Copied to Clipboard Button
-// ==========================================
+
 
 $(document).ready(function() {
-    console.log('📋 Copy to Clipboard functionality loaded');
+    console.log('Copy to Clipboard functionality loaded');
     
-    // Copy booking information to clipboard
     $('#copyBookingBtn').on('click', function() {
         const button = $(this);
         const buttonIcon = button.find('i');
@@ -18,7 +15,7 @@ $(document).ready(function() {
         
         // Copy to clipboard using modern Clipboard API
         navigator.clipboard.writeText(bookingInfo).then(function() {
-            console.log('✅ Booking info copied to clipboard!');
+            console.log('Booking info copied to clipboard!');
             
             // Change button appearance
             button.addClass('copied');
@@ -37,7 +34,7 @@ $(document).ready(function() {
             }, 2000);
             
         }).catch(function(err) {
-            console.error('❌ Failed to copy:', err);
+            console.error('Failed to copy:', err);
             
             // Fallback method for older browsers
             fallbackCopyToClipboard(bookingInfo);
@@ -170,5 +167,5 @@ $(document).ready(function() {
         }
     );
     
-    console.log('✅ Copy to Clipboard ready!');
+    console.log('Copy to Clipboard ready!');
 });

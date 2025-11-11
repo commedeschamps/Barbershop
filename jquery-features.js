@@ -4,8 +4,8 @@
 // ==========================================
 
 $(document).ready(function() {
-    console.log("✅ jQuery is ready!");
-    console.log("🎯 Initializing jQuery features...");
+    console.log("jQuery is ready!");
+    console.log("Initializing jQuery features...");
     
     // ==========================================
     // TASK 3: SEARCH HIGHLIGHTING FOR FAQ
@@ -80,6 +80,7 @@ $(document).ready(function() {
                                                      font-weight: 500; 
                                                      font-size: 0.95rem;
                                                      display: none;"></div>
+                <div id="recent-searches" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:10px;"></div>
             </div>
         `;
         
@@ -128,6 +129,22 @@ $(document).ready(function() {
         });
         
         window.faqKeywords = Array.from(keywords).sort();
+
+        // Restore last search and recent list from localStorage
+        try {
+            const last = localStorage.getItem('faqSearchTerm') || '';
+            const recentsJson = localStorage.getItem('faqRecentTerms');
+            const recents = recentsJson ? JSON.parse(recentsJson) : [];
+            if (recents && Array.isArray(recents)) {
+                renderRecentSearches(recents);
+            }
+            if (last && typeof last === 'string') {
+                $('#faq-search').val(last).trigger('input');
+                $('#clear-search').show();
+            }
+        } catch (e) {
+            console.warn('FAQ localStorage not available', e);
+        }
     }
     
     // Autocomplete functionality
@@ -203,6 +220,21 @@ $(document).ready(function() {
     let searchTimeout;
     $('#faq-search').on('input', function() {
         const searchTerm = $(this).val().trim();
+        // Persist last term and maintain recent list (max 5, unique)
+        try {
+            if (searchTerm.length > 0) {
+                localStorage.setItem('faqSearchTerm', searchTerm);
+                const recentsJson = localStorage.getItem('faqRecentTerms');
+                let recents = recentsJson ? JSON.parse(recentsJson) : [];
+                recents = Array.isArray(recents) ? recents : [];
+                // Put at front if new or move to front if exists
+                recents = [searchTerm, ...recents.filter(t => t.toLowerCase() !== searchTerm.toLowerCase())].slice(0,5);
+                localStorage.setItem('faqRecentTerms', JSON.stringify(recents));
+                renderRecentSearches(recents);
+            } else {
+                localStorage.removeItem('faqSearchTerm');
+            }
+        } catch (e) { /* ignore storage errors */ }
         
         // Show/hide clear button
         if (searchTerm.length > 0) {
@@ -297,6 +329,9 @@ $(document).ready(function() {
     $('#clear-search').on('click', function(e) {
         e.preventDefault();
         $('#faq-search').val('').trigger('input').focus();
+        try {
+            localStorage.removeItem('faqSearchTerm');
+        } catch (e) {}
     });
     
     // Hover effect for clear button
@@ -313,11 +348,29 @@ $(document).ready(function() {
     function escapeRegex(string) {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
+
+    // Render recent search pills and click to apply
+    function renderRecentSearches(terms) {
+        const $wrap = $('#recent-searches');
+        if (!$wrap.length) return;
+        if (!terms || !terms.length) { $wrap.empty(); return; }
+        const html = terms.map(t => `
+            <button type="button" class="recent-pill" data-term="${t}"
+                style="border:1px solid #444; background:#2a2a2a; color:#fff; padding:6px 10px; border-radius:14px; font-size:.85rem;">
+                <i class="fas fa-history" style="color:#ff6b35; margin-right:6px;"></i>${t}
+            </button>
+        `).join('');
+        $wrap.html(html);
+    }
+
+    // Delegate click on recent pills
+    $(document).on('click', '.recent-pill', function(){
+        const term = $(this).data('term') || '';
+        $('#faq-search').val(term).trigger('input').focus();
+    });
     
     
-    // ==========================================
-    // TASK 4: SCROLL PROGRESS BAR
-    // ==========================================
+    // SCROLL PROGRESS BAR
     
     // Create progress bar if it doesn't exist
     if ($('#scroll-progress-bar').length === 0) {
@@ -355,7 +408,7 @@ $(document).ready(function() {
     
     
     // ==========================================
-    // TASK 5: ANIMATED NUMBER COUNTER
+    //    ANIMATED NUMBER COUNTER
     // ==========================================
     
     function animateCounter($element, start, end, duration, decimals = 0) {
@@ -411,7 +464,7 @@ $(document).ready(function() {
     
     
     // ==========================================
-    // TASK 7: NOTIFICATION SYSTEM (TOAST)
+    // NOTIFICATION SYSTEM (TOAST)
     // ==========================================
     
     // Create toast container if it doesn't exist
@@ -522,7 +575,7 @@ $(document).ready(function() {
     
     
     // ==========================================
-    // TASK 9: LAZY LOADING IMAGES
+    //LAZY LOADING IMAGES
     // ==========================================
     
     function lazyLoadImages() {
@@ -539,7 +592,7 @@ $(document).ready(function() {
                     $img.addClass('loaded');
                     $img.css('opacity', '0').animate({opacity: 1}, 600);
                     
-                    console.log('🖼️ Lazy loaded image:', src);
+                    console.log('Lazy loaded image:', src);
                 }
             }
         });
@@ -595,7 +648,7 @@ $(document).ready(function() {
     // Scroll to top on click
     $('#scroll-to-top').on('click', function() {
         $('html, body').animate({scrollTop: 0}, 800);
-        showToast('Scrolled to top! 🚀', 'info', 2000);
+        showToast('Scrolled to top!', 'info', 2000);
     });
     
     // Hover effect for scroll to top button
@@ -630,5 +683,5 @@ $(document).ready(function() {
     }, 1000);
     
     
-    console.log("✅ All jQuery features initialized successfully!");
+    console.log("All jQuery features initialized successfully!");
 });

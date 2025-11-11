@@ -58,6 +58,17 @@ $(document).ready(function() {
     });
   });
 
+  // Store last search term in localStorage
+  $searchInput.on("keyup", function() {
+  const value = $(this).val().toLowerCase();
+  localStorage.setItem("lastSearch", value);
+  });
+
+  // Restore search term on page load
+  const savedSearch = localStorage.getItem("lastSearch");
+  if (savedSearch) {
+    $searchInput.val(savedSearch).trigger("keyup");
+  }
 
   /* =========================
      Part 2 – UX Engagement
@@ -196,3 +207,4 @@ reviewThemeToggle.addEventListener("click", () => {
     reviewThemeToggle.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
   }
 });
+

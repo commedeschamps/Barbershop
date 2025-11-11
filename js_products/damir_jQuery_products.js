@@ -126,8 +126,6 @@ $(() => {
     if($(window).width() < 667){
         $('.menu_products').click(() => {
             console.log("Showing");
-            
-
         })
     }
 });

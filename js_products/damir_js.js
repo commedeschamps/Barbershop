@@ -56,7 +56,7 @@ let other_lang = {
 
 
 
-// document.getElementsByClassName('Flag_button').addEventListener("click", changeToKz);
+
 
 const button = document.querySelectorAll('.Flag_button');
 console.log(button);

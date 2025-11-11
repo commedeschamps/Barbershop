@@ -412,6 +412,8 @@ p {
     border-radius: 6px;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    left: 100px;
 }
 
 .search_res ul li{

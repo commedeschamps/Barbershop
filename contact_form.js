@@ -3,7 +3,7 @@
 // ==========================================
 
 $(document).ready(function() {
-    console.log('📧 Contact form handler initialized');
+    console.log('Contact form handler initialized');
     
     // ==========================================
     // FORM SUBMISSION HANDLER
@@ -60,7 +60,7 @@ $(document).ready(function() {
             submitBtn.html(originalText).prop('disabled', false);
             
             // Log to console (in real app, send to server)
-            console.log('✅ Contact Form Submitted:', {
+            console.log('Contact Form Submitted:', {
                 name: name,
                 email: email,
                 phone: phone || 'Not provided',

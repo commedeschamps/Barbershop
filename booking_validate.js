@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // If all checks passed
         if (isValid) {
-            alert('✅ Booking successfully submitted!');
+            alert('Booking successfully submitted!');
             console.log('Form data:', {
                 date: dateInput.value,
                 time: timeInput.value,

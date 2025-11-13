@@ -6,57 +6,6 @@ $(document).ready(function(){
 
 
 
-$(".searching_form_prodcuts").on("submit", (event) =>{
-    event.preventDefault();
-
-    let item_pr = $(".item_pr b").text();
-    let splitWords = item_pr.split(" ");
-    let inputValue = $(".input_field").val();
-    let search_res = $(".search_res");
-
-    splitWords.forEach((elem) => {
-        if(inputValue == elem){
-            search_res = elem;
-            $(".search_res").slideToggle("slow");
-        }
-    })
-    
-});
-
-
-const name_of_products = [
-    "Hair Styling Paste", 
-    "Face Cream", 
-    "Premium Hair Shampoo"
-];
-
-
-
-
-$(".input_field").on("keyup", (e) => {
-    let result = [];
-
-    const inputValue = $(".input_field").val();
-
-    if(inputValue.length){
-        result = name_of_products.filter((keyword) => {
-            return keyword.toLowerCase().includes(inputValue.toLowerCase())
-        });
-    }
-    display(result); 
-});
-
-
-function display(result){
-    const content = result.map((list) => {
-        $(".item_3_pr").hide("fast");
-        $(".item_4_pr").hide("fast");
-
-    });
-    $(".search_res").append("<ul>" + content.join('') + "</ul>");
-
-}
-
 
 
 $(window).on("scroll", () => {
@@ -73,7 +22,7 @@ $(window).on("scroll", () => {
 
 $(document).ready(() =>{
     $("#notificationProducts").show("slow")
-      .delay(3000)
+      .delay(2000)
       .hide("slow");
 });
 
@@ -117,6 +66,7 @@ $("#change_term").click( () => {
         $('b').css('color', '#1a1a1a');
         $('i').css('color', '#1a1a1a');
         $('.navbar_color').css('background', 'linear-gradient(to right,  #edac6eff 25%,#d42b1f 100%)');
+        $('#nav_products_sb').css('background', 'linear-gradient(to right,  #edac6eff 25%,#d42b1f 100%)');
     }
 })
 
